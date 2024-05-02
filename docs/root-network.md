@@ -6,7 +6,7 @@ title: "Root Network"
 
 The root network is a special kind of subnet. The root network has the `netuid` of 0.
 
-**Root network validators**: The largest 64 subnet validators, in terms of their stake, from amongst all the subnet validators in all the active subnets in the Bittensor network, are, by default, the validators in the root network. 
+**Root network validators**: The largest 64 subnet validators, in terms of their stake, from amongst all the subnet validators in all the active subnets in the Cybertensor network, are, by default, the validators in the root network. 
 
 **Root network miners**: There are no network miners in the root network. Instead, the 32 subnets take their place. The 64 root network validators set the weights for the 32 subnets. 
     

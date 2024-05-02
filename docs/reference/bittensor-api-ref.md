@@ -1,70 +1,70 @@
 ---
-title: "Bittensor API Reference"
+title: "Cybertensor API Reference"
 ---
 
-# Bittensor API Reference
+# Cybertensor API Reference
 
-## bt.subtensor 
+## ct.cwtensor 
 
-The `Subtensor` is utilized for managing interactions with the subtensor chain. It serves as an interface to communicate with "Finney", Bittensor's main blockchain network, or others, enabling operations like querying and transacting.
+The `Cwtensor` is utilized for managing interactions with the subtensor chain. It serves as an interface to communicate with "Finney", Cybertensor's main blockchain network, or others, enabling operations like querying and transacting.
 
 ### Examples 
 
 ```python dark
 # Creating a default chain connection to remote finney instance.
-sub = bt.subtensor()
+sub = ct.cwtensor()
 
 # Parsing --subtensor.network and --subtensor.chain_endpoint from the command line
-sub = bt.subtensor( config = bt.subtensor.config() )
+sub = ct.cwtensor( config = ct.cwtensor.config() )
 
 # Connecting subtensor's default local entrypoint "ws://127.0.0.1:9944"
-sub = bt.subtensor( network = 'local' )
+sub = ct.cwtensor( network = 'local' )
 
 # Connecting to a specific endpoint
-sub = bt.subtensor( chain_endpoint = "ws://127.0.0.1:9944" )
+sub = ct.cwtensor( chain_endpoint = "ws://127.0.0.1:9944" )
 ```
 
 ### Methods 
 
 #### nominate
 ```python
-nominate(self, wallet: 'bittensor.Wallet', wait_for_finalization: bool = False, wait_for_inclusion: bool = True) -> bool
+nominate(self, wallet: 'cybertensor.Wallet', wait_for_finalization: bool = False, wait_for_inclusion: bool = True) -> bool
 ```
 Designates the wallet's hotkey as a delegate.
 
 #### delegate
 ```python
-delegate(self, wallet: 'bittensor.wallet', delegate_ss58: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
+delegate(self, wallet: 'cybertensor.wallet', delegate_ss58: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
 ```
 Adds a specific amount of stake to a delegate using a wallet.
 
 #### undelegate
 ```python
-undelegate(self, wallet: 'bittensor.wallet', delegate_ss58: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
+undelegate(self, wallet: 'cybertensor.wallet', delegate_ss58: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
 ```
 Removes a specific amount of stake from a delegate using a wallet.
 
 #### set_weights
 ```python
-set_weights(self, wallet: 'bittensor.wallet', netuid: int, uids: Union[torch.LongTensor, list], weights: Union[torch.FloatTensor, list], version_key: int = bittensor.__version_as_int__, wait_for_inclusion:bool = False, wait_for_finalization:bool = False, prompt:bool = False) -> bool
+set_weights(self, wallet: 'cybertensor.wallet', netuid: int, uids: Union[torch.LongTensor, list], weights: Union[torch.FloatTensor, list], version_key: int = cybertensor.__version_as_int__, wait_for_inclusion:bool = False, wait_for_finalization:bool = False, prompt:bool = False) -> bool
 ```
 Sets weights for a given netuid.
 
 #### register
 ```python
-register(self, wallet: 'bittensor.Wallet', netuid: int, wait_for_inclusion: bool = False, wait_for_finalization: bool = True, prompt: bool = False, max_allowed_attempts: int = 3, output_in_place: bool = True, cuda: bool = False, dev_id: Union[List[int], int] = 0, TPB: int = 256, num_processes: Optional[int] = None, update_interval: Optional[int] = None, log_verbose: bool = False) -> bool
+register(self, wallet: 'cybertensor.Wallet', netuid: int, wait_for_inclusion: bool = False, wait_for_finalization: bool = True, prompt: bool = False, max_allowed_attempts: int = 3, output_in_place: bool = True, cuda: bool = False, dev_id: Union[List[int], int] = 0, TPB: int = 256, num_processes: Optional[int] = None, update_interval: Optional[int] = None, log_verbose: bool = False) -> bool
 ```
 Registers the wallet to the chain.
 
 #### burned_register
 ```python
-burned_register(self, wallet: 'bittensor.Wallet', netuid: int, wait_for_inclusion: bool = False, wait_for_finalization: bool = True, prompt: bool = False) -> bool
+burned_register(self, wallet: 'cybertensor.Wallet', netuid: int, wait_for_inclusion: bool = False, wait_for_finalization: bool = True, prompt: bool = False) -> bool
 ```
 Registers the wallet to the chain by recycling TAO.
 
 #### transfer
 ```python
-transfer(self, wallet: 'bittensor.wallet', dest: str, amount: Union[Balance, float], wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
+transfer(self, wallet: 'cybertensor.wallet', dest: str, amount: Union[Balance, float], wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
 ```
 Transfers funds from the wallet to a destination public key address.
 
@@ -76,13 +76,13 @@ Returns the existential deposit for the chain.
 
 #### serve
 ```python
-serve(self, wallet: 'bittensor.wallet', ip: str, port: int, protocol: int, netuid: int, placeholder1: int = 0, placeholder2: int = 0, wait_for_inclusion: bool = False, wait_for_finalization = True, prompt: bool = False) -> bool
+serve(self, wallet: 'cybertensor.wallet', ip: str, port: int, protocol: int, netuid: int, placeholder1: int = 0, placeholder2: int = 0, wait_for_inclusion: bool = False, wait_for_finalization = True, prompt: bool = False) -> bool
 ```
 Starts serving on a specific IP, port and protocol for a given netuid.
 
 #### serve_axon
 ```python
-serve_axon(self, netuid: int, axon: 'bittensor.Axon', use_upnpc: bool = False, wait_for_inclusion: bool = False, wait_for_finalization: bool = True, prompt: bool
+serve_axon(self, netuid: int, axon: 'cybertensor.Axon', use_upnpc: bool = False, wait_for_inclusion: bool = False, wait_for_finalization: bool = True, prompt: bool
 
  = False) -> bool
 ```
@@ -90,33 +90,33 @@ Starts serving an Axon for a given netuid.
 
 #### serve_prometheus
 ```python
-serve_prometheus(self, wallet: 'bittensor.wallet', port: int, netuid: int, wait_for_inclusion: bool = False, wait_for_finalization: bool = True) -> bool
+serve_prometheus(self, wallet: 'cybertensor.wallet', port: int, netuid: int, wait_for_inclusion: bool = False, wait_for_finalization: bool = True) -> bool
 ```
 Starts serving a Prometheus server on a specific port for a given netuid.
 
 #### add_stake
 ```python
-add_stake(self, wallet: 'bittensor.wallet', hotkey_ss58: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
+add_stake(self, wallet: 'cybertensor.wallet', hotkey_ss58: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
 ```
 Adds a specific amount of stake to a hotkey uid.
 
 #### add_stake_multiple
 ```python
-add_stake_multiple(self, wallet: 'bittensor.wallet', hotkey_ss58s: List[str], amounts: List[Union[Balance, float]] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
+add_stake_multiple(self, wallet: 'cybertensor.wallet', hotkey_ss58s: List[str], amounts: List[Union[Balance, float]] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
 ```
 Adds stake to each hotkey in the list from a common coldkey.
 
 
 #### unstake
 ```python
-unstake(self, wallet: 'bittensor.wallet', hotkey_ss58: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion:bool = True, wait_for_finalization:bool = False, prompt: bool = False) -> bool
+unstake(self, wallet: 'cybertensor.wallet', hotkey_ss58: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion:bool = True, wait_for_finalization:bool = False, prompt: bool = False) -> bool
 ```
 Removes stake into the wallet coldkey from the specified hotkey uid.
 
 
 #### unstake_multiple
 ```python
-unstake_multiple(self, wallet: 'bittensor.wallet', hotkey_ss58s: List[str], amounts: List[Union[Balance, float]] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
+unstake_multiple(self, wallet: 'cybertensor.wallet', hotkey_ss58s: List[str], amounts: List[Union[Balance, float]] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
 ```
 Removes stake from each hotkey in the list to a common coldkey.
 
@@ -145,7 +145,7 @@ Returns the network Difficulty hyperparameter if the network exists. Inputs are 
 
 ### burn
 ```python
-burn (self, netuid: int, block: Optional[int] = None ) -> Optional[bittensor.Balance]
+burn (self, netuid: int, block: Optional[int] = None ) -> Optional[cybertensor.Balance]
 ```
 Returns the network Burn hyperparameter if the network exists. Inputs are `netuid` and an optional `block` number.
 
@@ -271,27 +271,27 @@ Returns the network Tempo hyperparameter if the network exists. Inputs are `netu
 
 ### get_total_stake_for_hotkey
 ```python
-get_total_stake_for_hotkey( self, ss58_address: str, block: Optional[int] = None ) -> Optional['bittensor.Balance']
+get_total_stake_for_hotkey( self, ss58_address: str, block: Optional[int] = None ) -> Optional['cybertensor.Balance']
 ```
 Returns the total stake held on a hotkey including delegated. Inputs are `ss58_address` and an optional `block` number.
 
 
 ### get_total_stake_for_coldkey
 ```python
-get_total_stake_for_coldkey( self, ss58_address: str, block: Optional[int] = None ) -> Optional['bittensor.Balance']
+get_total_stake_for_coldkey( self, ss58_address: str, block: Optional[int] = None ) -> Optional['cybertensor.Balance']
 ```
 Returns the total stake held on a coldkey across all hotkeys including delegates. Inputs are `ss58_address` and an optional `block` number.
 
 
 ### get_stake_for_coldkey_and_hotkey
 ```python
-get_stake_for_coldkey_and_hotkey( self, hotkey_ss58: str, coldkey_ss58: str, block: Optional[int] = None ) -> Optional['bittensor.Balance']
+get_stake_for_coldkey_and_hotkey( self, hotkey_ss58: str, coldkey_ss58: str, block: Optional[int] = None ) -> Optional['cybertensor.Balance']
 ```
 Returns the stake under a coldkey - hotkey pairing. Inputs are `hotkey_ss58`, `coldkey_ss58` and an optional `block` number.
 
 ### get_stake
 ```python
-get_stake( self, hotkey_ss58: str, block: Optional[int] = None ) -> List[Tuple[str,'bittensor.Balance']]
+get_stake( self, hotkey_ss58: str, block: Optional[int] = None ) -> List[Tuple[str,'cybertensor.Balance']]
 ```
 Returns a list of stake tuples (coldkey, balance) for each delegating coldkey including the owner. Inputs are `hotkey_ss58` and an optional `block` number.
 
@@ -332,14 +332,14 @@ Property that returns the current chain block.
 
 ### total_issuance
 ```python
-total_issuance (self, block: Optional[int] = None ) -> 'bittensor.Balance'
+total_issuance (self, block: Optional[int] = None ) -> 'cybertensor.Balance'
 ```
 Returns the total issuance of tokens as of a specified block. If no block is provided, the default is the current block.
 
 
 ### total_stake
 ```python
-total_stake (self,block: Optional[int] = None ) -> 'bittensor.Balance'
+total_stake (self,block: Optional[int] = None ) -> 'cybertensor.Balance'
 ```
 Returns the total amount of stake as of a specified block. If no block is provided, the default is the current block.
 
@@ -538,7 +538,7 @@ Returns True if the neuron with the given uid has a validator permit for the spe
 
 ### neuron_for_wallet
 ```python
-neuron_for_wallet( self, wallet: 'bittensor.Wallet', netuid = int, block: Optional[int] = None ) -> Optional[NeuronInfo]
+neuron_for_wallet( self, wallet: 'cybertensor.Wallet', netuid = int, block: Optional[int] = None ) -> Optional[NeuronInfo]
 ```
 Returns the neuron information for the given wallet on a specified subnet. If no block is specified, the current block is used.
 
@@ -572,7 +572,7 @@ Returns a list of lightweight neurons (without weights and bonds) from the chain
 
 ### metagraph
 ```python
-metagraph( self, netuid: int, lite: bool = True ) -> 'bittensor.Metagraph'
+metagraph( self, netuid: int, lite: bool = True ) -> 'cybertensor.Metagraph'
 ```
 Returns the metagraph for the subnet associated with a given network user id (netuid). If 'lite' is True, it returns a metagraph using the lightweight sync (no weights, no bonds).
 
@@ -619,14 +619,14 @@ The string returned by this method is identical to the one provided by the `__st
 To initialize an instance of the `Subtensor` class, you'll need to provide three arguments:
 
 ```python dark
-import bittensor as bt
-obj = bt.subtensor( config, network, chain_endpoint )
+import cybertensor as ct
+obj = ct.cwtensor( config, network, chain_endpoint )
 ```
 
 ### Arguments 
 
-- `config (bt.Config, optional, defaults=bt.subtensor.config())`:
-    Subtensor config object containing arguments from bt.subtensor.config() which are automatically parsed from command line and ENV vars.
+- `config (ct.Config, optional, defaults=ct.cwtensor.config())`:
+    Subtensor config object containing arguments from ct.cwtensor.config() which are automatically parsed from command line and ENV vars.
 - `network (str, optional, default='finney')`:
     The subtensor network flag. The likely choices are:
             -- local (local running network)
@@ -638,7 +638,7 @@ obj = bt.subtensor( config, network, chain_endpoint )
     The subtensor endpoint flag. If set, overrides the network argument.
 
 
-## Bt.metagraph
+## ct.metagraph
 
 ### Chain state Torch interface
 
@@ -647,24 +647,24 @@ The `Metagraph` class holds the chain state of a particular subnetwork at a spec
 #### Examples 
 
 ```python dark
-import bittensor as bt
+import cybertensor as ct
 
 # Creating metagraph and sync state from a netuid parameter, defaults to connecting to network `finney`
-metagraph = bt.metagraph( netuid = 1 )
+metagraph = ct.metagraph( netuid = 1 )
 
 # Create metagraph and sync with lite = False to sync weights and bonds matrices.
-metagraph = bt.metagraph( netuid = 1, lite = False)
+metagraph = ct.metagraph( netuid = 1, lite = False)
 
 # Create metagraph and sync state from local entrypoint, assuming a subtensor chain is currently running.
-metagraph = bt.metagraph( netuid = 1, network = 'local' )
+metagraph = ct.metagraph( netuid = 1, network = 'local' )
 
 # Create an empty metagraph object with no state syncing.
-metagraph = bt.metagraph( netuid = 1, sync = False )
+metagraph = ct.metagraph( netuid = 1, sync = False )
 
 # Sync the metagraph at a particular block
 metagraph.sync( block = 100000 )
 
-# Save the metagraph to ~/.bittensor/metagraphs/network-$NETWORK_NAME/netuid-#NETUID/block-$BLOCK.pt
+# Save the metagraph to ~/.cybertensor/metagraphs/network-$NETWORK_NAME/netuid-#NETUID/block-$BLOCK.pt
 metagraph.save()
 
 # Load the latest metagraph by block.
@@ -819,52 +819,52 @@ def load_from_path(self, dir_path:str) -> 'metagraph'
 ```
 Loads the Metagraph object's state_dict from the specified directory path.
 
-## Bt.logging
+## ct.logging
 
 The `Logging` interfaces with bittensor internal logging system.
 
 ### Examples
 
 ```python dark
-import bittensor as bt
+import cybertensor as ct
 
 # Turn on debug logs
-bt.debug()
+ct.debug()
 
 # Turn on trace logs
-bt.trace()
+ct.trace()
 
 # Turn off debug logs
-bt.set_debug(False)
+ct.set_debug(False)
 
 # Turn off trace logs
-bt.set_trace(False)
+ct.set_trace(False)
 
 # Turn on logging from class definition
-bt.logging( set_debug = True )
+ct.logging( set_debug = True )
 
 # Instantiate logging from command line args
-bt.logging( bt.logging.config() )
+ct.logging( ct.logging.config() )
 
 # Turn on logging to file
-bt.logging( record_log = True, logging_dir = '/path/to/logs/' )
+ct.logging( record_log = True, logging_dir = '/path/to/logs/' )
 
 # Log
-bt.logging.info(message)
-bt.logging.debug(message)
-bt.logging.trace(message)
-bt.logging.success(message)
-bt.logging.critical(message)
-bt.logging.error(message)
+ct.logging.info(message)
+ct.logging.debug(message)
+ct.logging.trace(message)
+ct.logging.success(message)
+ct.logging.critical(message)
+ct.logging.error(message)
 >>> 2023-05-29 09:27:25.426 |       INFO       | message
 
 # Log using prefex suffix design
-bt.logging.info(prefix, message)
-bt.logging.debug(prefix, message)
-bt.logging.trace(prefix, message)
-bt.logging.success(prefix, message)
-bt.logging.critical(prefix, message)
-bt.logging.error(prefix, message)
+ct.logging.info(prefix, message)
+ct.logging.debug(prefix, message)
+ct.logging.trace(prefix, message)
+ct.logging.success(prefix, message)
+ct.logging.critical(prefix, message)
+ct.logging.error(prefix, message)
 >>> 2023-05-29 09:27:47.184 |       INFO       | cat                           dogs
 ```
 

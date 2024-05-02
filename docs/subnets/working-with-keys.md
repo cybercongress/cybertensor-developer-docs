@@ -7,11 +7,11 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Working with Keys
 
-The Bittensor wallet holds the core ownership of the assets on the Bittensor network. It is the identity technology underlying all the operations in the Bittensor network. This section describes how to work with the Bittensor wallet keys. For a step-by-step guide on how to create a Bittensor wallet, see [Create Wallet](../getting-started/wallets.md).
+The Cybertensor wallet holds the core ownership of the assets on the Cybertensor network. It is the identity technology underlying all the operations in the Cybertensor network. This section describes how to work with the Cybertensor wallet keys. For a step-by-step guide on how to create a Cybertensor wallet, see [Create Wallet](../getting-started/wallets.md).
 
 ## Coldkey and hotkey
 
-A Bittensor wallet consists of a **coldkey** and a **hotkey**. The coldkey and hotkey are used for different operations in the Bittensor ecosystem. These two keys are logically connected via the Bittensor API.
+A Cybertensor wallet consists of a **coldkey** and a **hotkey**. The coldkey and hotkey are used for different operations in the Cybertensor ecosystem. These two keys are logically connected via the Cybertensor API.
 
 :::tip Coldkey and hotkey each are pairings of separate private and public keys
 Each key is a pairing of two seperate [EdDSA cryptographic keypairs](https://en.wikipedia.org/wiki/EdDSA#Ed25519). Hence, a coldkey is a pairing of a private key and a public key. Similarly, a hotkey is a pairing of another set of private key and public keys. In this sense, a coldkey or a hotkey is each analogous to an account on a blockchain, where the account is defined by a pair of a public and a private key.
@@ -19,13 +19,13 @@ Each key is a pairing of two seperate [EdDSA cryptographic keypairs](https://en.
 
 ### Coldkey
 
-The coldkey is synonymous with the wallet name. For example, `--wallet.name` option in a `btcli` command always accepts only `<coldkey>` as its value and `--wallet.hotkey` option only accepts `<hotkey>` as its value. This is because one coldkey can have multiple hotkeys, hence the wallet name is assigned from the coldkey.
+The coldkey is synonymous with the wallet name. For example, `--wallet.name` option in a `ctcli` command always accepts only `<coldkey>` as its value and `--wallet.hotkey` option only accepts `<hotkey>` as its value. This is because one coldkey can have multiple hotkeys, hence the wallet name is assigned from the coldkey.
 
 **Relationship to hotkey**: A coldkey can exist without a hotkey, or it can have multiple hotkeys. For example, to create a subnet you only need a coldkey but if you want to validate or mine in a subnet, you need a hotkey paired with this coldkey. 
 
 **Purpose**: A coldkey is primarily for secure TAO storage and high-risk transactions, as described below (**Also see in the diagram in [Operational uses of keys](#operational-uses-of-keys))**:
 
-- Funds (TAO tokens) in your Bittensor wallet are held in its coldkey.
+- Funds (TAO tokens) in your Cybertensor wallet are held in its coldkey.
 - Delegating and undelegating your TAO tokens.
 - Creating a subnet and obtaining a `netuid` for the newly-created subnet. The `netuid` is associated with the coldkey only, because all subnet owner operations require high security and thus use the coldkey, which is always encrypted. 
 - Emissions to the subnet owner are deposted directly to the subnet owner's coldkey.
@@ -51,7 +51,7 @@ style={{width: 750}}
 
 **Relationship to coldkey**: You can create multiple hotkeys paired to your single coldkey. However, when you are validating or mining in a subnet, you are identified by a hotkey in that subnet, so that your coldkey is not exposed. Hence you cannot use the same hotkey for two UIDs in a given subnet. You can, however, use the same hotkey for multiple UIDs but with each UID in a separate subnet. Also see [Register, Validate and Mine](../subnets/register-validate-mine.md#register).
 
-**Purpose**: Used for regular operational tasks in the Bittensor network, such as described below (**Also see in the diagram in [Operational uses of keys](#operational-uses-of-keys)**):
+**Purpose**: Used for regular operational tasks in the Cybertensor network, such as described below (**Also see in the diagram in [Operational uses of keys](#operational-uses-of-keys)**):
   - Signing transactions.
   - Registering and running subnet miners and subnet validators.
   - If you are subnet validator, then you can nominate your own hotkey so that the TAO holders can send their TAO to the hotkey.
@@ -62,12 +62,12 @@ style={{width: 750}}
 :::tip Why hotkey
 Think of a hotkey as an everyday key you carry for tasks that require regular access. Because a hotkey is used more frequently and should be readily accessible, the hotkey carries a higher risk of exposure to potential threats. However, the permissions and the scope of operations that can be performed with the hotkey are limited to operational activities, minimizing the risk of significant loss of TAO.
 
-This dual-key system helps balance convenience and security, allowing you to participate actively in the Bittensor network without constantly exposing your primary, TAO-holding coldkey.
+This dual-key system helps balance convenience and security, allowing you to participate actively in the Cybertensor network without constantly exposing your primary, TAO-holding coldkey.
 :::
 
 ## Operational uses of keys
 
-The below diagram shows a few operations you can do with a hotkey and coldkey. Not all possible operations are shown below. You can use the `btcli` to perform any of these operations. See [Bitttensor Wallet CLI](../btcli.md#wallets) for command syntax.
+The below diagram shows a few operations you can do with a hotkey and coldkey. Not all possible operations are shown below. You can use the `ctcli` to perform any of these operations. See [Bitttensor Wallet CLI](../btcli.md#wallets) for command syntax.
 
 <center>
 <ThemedImage

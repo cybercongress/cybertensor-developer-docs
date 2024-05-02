@@ -1,15 +1,15 @@
 ---
-title: "Bittensor Building Blocks"
+title: "Cybertensor Building Blocks"
 ---
 
 import ThemedImage from '@theme/ThemedImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Bittensor Building Blocks
+# Cybertensor Building Blocks
 
-The Bittensor API provides basic building blocks you can use to develop your incentive mechanism. This section presents:
+The Cybertensor API provides basic building blocks you can use to develop your incentive mechanism. This section presents:
 - An overview of a subnet.
-- Introduction to the Bittensor building blocks. 
+- Introduction to the Cybertensor building blocks. 
 
 ## Subnet
 
@@ -23,17 +23,17 @@ sources={{
   }}
 />
 
--  A node in a neural network is represented in a Bittensor subnet as either a subnet validator or a subnet miner. A node is also referred as a **neuron** in a subnet terminology. A neuron is the basic computing node in a Bittensor subnet. 
+-  A node in a neural network is represented in a Cybertensor subnet as either a subnet validator or a subnet miner. A node is also referred as a **neuron** in a subnet terminology. A neuron is the basic computing node in a Cybertensor subnet. 
 :::tip Node requirements 
-For example, see [Minimum compute requirements](https://github.com/opentensor/bittensor-subnet-template/blob/main/min_compute.yml) for compute, memory, bandwidth and storage requirements for a subnet node, i.e., for a subnet neuron.
+For example, see [Minimum compute requirements](https://github.com/cybercongress/cybertensor-subnet-template/blob/main/min_compute.yml) for compute, memory, bandwidth and storage requirements for a subnet node, i.e., for a subnet neuron.
 ::: 
 - The classical neural network graph (shown on the left) is bipartite, i.e., a node in the input layer is connected only to a node in the next layer (hidden layer). A subnet graph (shown on the right) is also bipartite. Hence:
   - A subnet validator in a subnet is only connected to a subnet miner. 
   - No two subnet validators are connected. Similarly, no two subnet miners are connected. 
-- In the classical neural network, the inputs from the external world are connected only to the input layer, and the hidden nodes are isolated from the external world (hence, "hidden"). Similarly, in a Bittensor subnet:
+- In the classical neural network, the inputs from the external world are connected only to the input layer, and the hidden nodes are isolated from the external world (hence, "hidden"). Similarly, in a Cybertensor subnet:
   - Inputs from the external world can connect only to the subnet validators. 
   - Only subnet validators are allowed to connect to subnet miners, hence isolating subnet miners from the external world. 
-- **Many-to-many bidirectional**: Notice that in the classical neural network shown on the left, the connection from input layer to the hidden layer is only feedforward. However, in a Bittensor subnet, shown on the right, a subnet miner can directly communicate to the subnet validator. This bi-drectional communication between a subnet validator and a subnet miner forms the core of a protocol in an incentive mechanism. This closely resembles the architecture of a [Restricted Botlzmann Machine (RBM)](https://en.wikipedia.org/wiki/Restricted_Boltzmann_machine).
+- **Many-to-many bidirectional**: Notice that in the classical neural network shown on the left, the connection from input layer to the hidden layer is only feedforward. However, in a Cybertensor subnet, shown on the right, a subnet miner can directly communicate to the subnet validator. This bi-drectional communication between a subnet validator and a subnet miner forms the core of a protocol in an incentive mechanism. This closely resembles the architecture of a [Restricted Botlzmann Machine (RBM)](https://en.wikipedia.org/wiki/Restricted_Boltzmann_machine).
 
 ## Neuron-to-neuron communication 
 
@@ -53,9 +53,9 @@ sources={{
 
 ### Axon
 
-The `axon` module in Bittensor API uses FastAPI library to create and run API servers. For example, when a subnet miner calls,
+The `axon` module in Cybertensor API uses FastAPI library to create and run API servers. For example, when a subnet miner calls,
 ```python
-axon = bt.axon(wallet=self.wallet, config=self.config)
+axon = ct.axon(wallet=self.wallet, config=self.config)
 ```
 then an API server with the name `axon` is spawned on the subnet miner node. This `axon` API server receives incoming Synapse objects from subnet validators, i.e., the `axon` starts to serve on behalf of the subnet miner.
 
@@ -66,7 +66,7 @@ Similarly in your subnet miner code you must use the `axon` API to spawn an API 
 Axon is a **server** instance. Hence a subnet validator will instantiate a `dendrite` **client** on itself to transmit information to axons that are on the subnet miners. For example, when a subnet validator runs the below code fragment:
 
 ```python
-    responses: List[bt.Synapse] = await self.dendrite(
+    responses: List[ct.Synapse] = await self.dendrite(
         axons=axons,
         synapse=synapse,
         timeout=timeout,
@@ -90,4 +90,4 @@ A metagraph is a data structure that contains comprehensive information about cu
 
 ## Subtensor
 
-A subtensor is a Bittensor object that handles the interactions with the blockchain, whether the chain is local or testchain or mainchain. 
+A subtensor is a Cybertensor object that handles the interactions with the blockchain, whether the chain is local or testchain or mainchain. 

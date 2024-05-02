@@ -7,11 +7,11 @@ title: "Subnet Hyperparameters"
 This document presents the description of the allowed subnet hyperparameters. For any subnet, you can see the subnet hyperparameters by running this below command and selecting the `netuid` (i.e., selecting the subnet):
 
 ```bash
-btcli subnet hyperparameters
+ctcli subnet hyperparameters
 ```
 
 :::tip Current hyperparameters list
-**Not all the hyperparameters in the output of `btcli subnet hyperparameters` are editable**. See [this line of code](https://github.com/opentensor/bittensor/blob/30d3d646571ed462e36c65c399c09ec866de7c79/bittensor/commands/network.py#L293) for the editable hyperparameters.
+**Not all the hyperparameters in the output of `ctcli subnet hyperparameters` are editable**. See [this line of code](https://github.com/opentensor/bittensor/blob/30d3d646571ed462e36c65c399c09ec866de7c79/bittensor/commands/network.py#L293) for the editable hyperparameters.
 ::: 
 
 ## Setting the hyperparameters
@@ -19,7 +19,7 @@ btcli subnet hyperparameters
 Use the below command to set these hyperparameters:
 
 ```bash
-btcli sudo set
+ctcli sudo set
 ```
 
 ## serving_rate_limit
@@ -190,7 +190,7 @@ By default this change from `0` to `0.97` does not effect already registered sub
 :::
 
 ```bash
-btcli sudo set --param adjustment_alpha --value 17893341751498265066 --netuid <NETUID>
+ctcli sudo set --param adjustment_alpha --value 17893341751498265066 --netuid <NETUID>
 ```
 
 **Setting**

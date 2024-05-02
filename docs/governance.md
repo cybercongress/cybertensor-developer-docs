@@ -4,7 +4,7 @@ title: "Governance"
 
 # Governance
 
-Bittensor's governance protocol transitions the management of the network from centralization within the foundation to community-ownership over time. 
+Cybertensor's governance protocol transitions the management of the network from centralization within the foundation to community-ownership over time. 
 
 The first stage of this transition to decentralized management is the creation of a bicameral legislature. In this stage, the [Triumvirate](./glossary.md#triumvirate) creates proposals for the [Senate](./senate.md) to approve. 
 
@@ -38,7 +38,7 @@ Consider the following:
 
 **Triumvirate**
 
-`Bob` has a novel concept for a subnet, and wishes to deploy it on the Bittensor network. `Bob` creates a proposal with the calldata:
+`Bob` has a novel concept for a subnet, and wishes to deploy it on the Cybertensor network. `Bob` creates a proposal with the calldata:
 ```python
 SubtensorModule.SudoAddNetwork(netuid, tempo, modality)
 ```
@@ -47,7 +47,7 @@ and sends the transaction to the network in order to broadcast the proposal.
 **Senate**
 
 - `Dave`, `Eve`, and `Ferdie` all own the nominated delegate hotkeys, all of which individually control greater than two percent of all total stake in the network. 
-- Using `btcli`, they are able to view the proposal and the calldata which it will execute upon approval. 
+- Using `ctcli`, they are able to view the proposal and the calldata which it will execute upon approval. 
 - `Dave` and `Ferdie` decide that they wish to approve this new subnet, and they both approve the proposal. 
 - `Eve` disagrees with the concept, and decides to disapprove of the proposal.
 
@@ -57,4 +57,4 @@ Even though the Senate may hold twelve members at any time, it is not a guarante
 
 `Alice` sees that the proposal has been passed by the Senate, and executes the `close` extrinsic in order to execute the calldata within the proposal.
 
-Bittensor now has a new subnet on which `Alice`, `Bob`, or `Charlie` can create further proposals in order to change hyperparameters, allow or disallow registration, and any other configuration which was prevously controlled by the `sudo` private key.
+Cybertensor now has a new subnet on which `Alice`, `Bob`, or `Charlie` can create further proposals in order to change hyperparameters, allow or disallow registration, and any other configuration which was prevously controlled by the `sudo` private key.

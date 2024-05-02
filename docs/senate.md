@@ -26,13 +26,13 @@ In the case that the Senate has all twelve seats filled, and a delegate wishes t
 Delegates elect to join the Senate by using the below command:
 
 ```
-btcli root register
+ctcli root register
 ```
 as long as they meet all the requirements listed in the above [Requirements](#requirements) section.
 
-After executing the above `btcli root register` command and the transaction has been included in a block, they can confirm their membership with:
+After executing the above `ctcli root register` command and the transaction has been included in a block, they can confirm their membership with:
 ```
-btcli root list
+ctcli root list
 ```
 
 ## Voting
@@ -41,9 +41,9 @@ Any delegate who has elected to participate in the Senate have the ability to vo
 
 Using:
 ```
-btcli root proposals
+ctcli root proposals
 ```
 the delegate:
 - Copies the proposal hash from the overview
-- Runs `btcli root senate_vote` and passes the proposal hash, either with the argument `--proposal` or when prompted to enter the proposal hash by the command. 
-- After they've entered a proposal hash, they will then be prompted to either cast an approval or a disapproval. Once confirmed, the vote will be included in the next block and counted in the vote. This can be confirmed with both `btcli root proposals`.
+- Runs `ctcli root senate_vote` and passes the proposal hash, either with the argument `--proposal` or when prompted to enter the proposal hash by the command. 
+- After they've entered a proposal hash, they will then be prompted to either cast an approval or a disapproval. Once confirmed, the vote will be included in the next block and counted in the vote. This can be confirmed with both `ctcli root proposals`.

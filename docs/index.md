@@ -27,20 +27,20 @@ import { GoCommandPalette } from "react-icons/go";
 import { FaPython } from "react-icons/fa";
 
 
-# Bittensor Developer Documentation
+# Cybertensor Developer Documentation
 
 :::tip See what's new
 See [what's new in docs](./whats-new-in-docs.md).
 :::
 
-**Welcome!** Bittensor is an open source platform on which you can produce competitive digital commodities. These digital commodities can be machine intelligence, storage space, compute power, protein folding, financial markets prediction, and many more. **You are rewarded in TAO** when you produce best digital commodities. See the below diagram for a top-level view of the Bittensor ecosystem. 
+**Welcome!** Cybertensor is an open source platform on which you can produce competitive digital commodities. These digital commodities can be machine intelligence, storage space, compute power, protein folding, financial markets prediction, and many more. **You are rewarded in TAO** when you produce best digital commodities. See the below diagram for a top-level view of the Cybertensor ecosystem. 
 
 <center>
 <ThemedImage
-alt="Bittensor Platform Big Picture"
+alt="Cybertensor Platform Big Picture"
 sources={{
-    light: useBaseUrl('/img/docs/Bittensor-ecosystem-top-level.svg'),
-    dark: useBaseUrl('/img/docs/dark-Bittensor-ecosystem-top-level.svg'),
+    light: useBaseUrl('/img/docs/bittensor-ecosystem-top-level.svg'),
+    dark: useBaseUrl('/img/docs/dark-bittensor-ecosystem-top-level.svg'),
   }}
 style={{width: 600}}
 />
@@ -50,44 +50,44 @@ Each category of the digital commodity is produced in a distinct **subnet**. App
 
 Subnets, which exist outside the blockchain and are connected to it, are off-chain competitions where only the best producers are rewarded. A subnet consists of off-chain **subnet validators** who initiate the competition for a specific digital commodity, and off-chain **subnet miners** who compete and respond by producing the best quality digital commodity. 
 
-Scores are assigned to the top subnet miners and subnet validators. The on-chain Yuma Consensus determines **the TAO rewards for these top performers**. The Bittensor blockchain, called **subtensor**, runs on decentralized validation nodes, just like any blockchain. 
+Scores are assigned to the top subnet miners and subnet validators. The on-chain Yuma Consensus determines **the TAO rewards for these top performers**. The Cybertensor blockchain, called **subtensor**, runs on decentralized validation nodes, just like any blockchain. 
 
 For example, in the [Subnet 1 Prompting](https://github.com/opentensor/prompting) the subnet miners compete to generate answers that are closest to a machine learning base model chosen by the subnet validators. 
 
 
-:::tip looking for a non-technical introduction to Bittensor?
+:::tip looking for a non-technical introduction to Cybertensor?
 See [Questions and Answers](./questions-and-answers.md).
 :::
 
-Opentensor Foundation provides all the open source tools, the codebase and the documentation, with step-by-step tutorials and guides, to enable you to participate in the Bittensor ecosystem. 
+Opentensor Foundation provides all the open source tools, the codebase and the documentation, with step-by-step tutorials and guides, to enable you to participate in the Cybertensor ecosystem. 
 
-:::danger This documentation is for bittensor platform only
+:::danger This documentation is for Cybertensor platform only
 
-This documentation and the Bittensor codebase is for the Bittensor platform only. For subnets and applications, refer to subnet-specific websites, which are maintained by subnet owners. See [Subnet Pages](./subnet-pages/index.md).
+This documentation and the Cybertensor codebase is for the Cybertensor platform only. For subnets and applications, refer to subnet-specific websites, which are maintained by subnet owners. See [Subnet Pages](./subnet-pages/index.md).
 :::
 
 ---
 
 ## Start here
 
-If you are new to Bittensor, start by learning the concepts. Then install the Bittensor software and create a wallet. Follow the below links. 
+If you are new to Cybertensor, start by learning the concepts. Then install the Cybertensor software and create a wallet. Follow the below links. 
 
 <Cards>
     <Card 
     icon={HiAcademicCap}
     title='Learn the concepts'
     link='learn/introduction'
-    body='Start by learning the Bittensor concept, building blocks and incentive mechanism.' />
+    body='Start by learning the Cybertensor concept, building blocks and incentive mechanism.' />
     <Card
     icon={MdInstallDesktop}
     title='Install'
     link='getting-started/installation'
-    body='To validate or mine, or run your own subnet, install Bittensor and create wallet to get started.' />
+    body='To validate or mine, or run your own subnet, install Cybertensor and create wallet to get started.' />
     
 </Cards>
 
 :::tip How to participate
-A straightforward way to participate in the Bittensor network is to be a subnet miner or a subnet validator in an existing subnet. It is not necessary to create a subnet. Follow the below links in the [Validate or mine](#validate-or-mine) section. Alternately, if you want to create your own custom incentive mechanism, then you create your own subnet and launch your own competition. See the below [Running a subnet](#running-a-subnet) section.
+A straightforward way to participate in the Cybertensor network is to be a subnet miner or a subnet validator in an existing subnet. It is not necessary to create a subnet. Follow the below links in the [Validate or mine](#validate-or-mine) section. Alternately, if you want to create your own custom incentive mechanism, then you create your own subnet and launch your own competition. See the below [Running a subnet](#running-a-subnet) section.
 :::
 
 ---
@@ -116,12 +116,12 @@ You can participate in an existing subnet as either a subnet validator or a subn
     icon={RiTeamLine}
     title='4. Staking and Delegation'
     link='staking-and-delegation'
-    body='Get to know how staking and delegating your TAO works in the Bittensor network.' />
+    body='Get to know how staking and delegating your TAO works in the Cybertensor network.' />
     <Card
     icon={RiGovernmentLine}
     title='Governance'
     link='governance'
-    body='Learn how the Bittensor governance works as it transitions into full community-ownership over time.' />
+    body='Learn how the Cybertensor governance works as it transitions into full community-ownership over time.' />
     <Card
     icon={FaGalacticSenate}
     title='Senate'
@@ -167,21 +167,21 @@ Ready to run your own subnet? Follow the below links.
 
 ---
 
-## Bittensor CLI and API
+## Cybertensor CLI and API
 
-Use the Bittensor CLI and Bittensor API to develop and participate in the Bittensor network.
+Use the Cybertensor CLI and Cybertensor API to develop and participate in the Cybertensor network.
 
 <Cards>
     <Card 
     icon={GoCommandPalette}
-    title='Bittensor CLI'
-    link='btcli'
-    body='With Bittensor CLI, you can stake or unstake funds, check network state and much more.' />
+    title='Cybertensor CLI'
+    link='ctcli'
+    body='With Cybertensor CLI, you can stake or unstake funds, check network state and much more.' />
     <Card
     icon={FaPython}
-    title='Bittensor API'
+    title='Cybertensor API'
     link='bt-api-ref'
-    body='A comprehensive Python API reference documentation for the open-sourced Bittensor API.' />
+    body='A comprehensive Python API reference documentation for the open-sourced Cybertensor API.' />
 </Cards>
 
 

@@ -10,11 +10,11 @@ When you are preparing to be a subnet validator or a subnet miner, use the below
 Read the documentation for the existing subnets to complete these checklist items. You will find each subnet's documentation in that subnet's GitHub repo. See [Subnet Pages](../subnet-pages/index.md) for GitHub repo links for each subnet.
 :::
 
-1. See the subnets that are active on the Bittensor network. 
+1. See the subnets that are active on the Cybertensor network. 
 2. Understand what kind of digital commodities these subnets are creating and optimizing. 
 3. Understand the computing requirements for running a subnet miner or a subnet validator in these subnets. 
     :::tip Typical compute requirements
-    For example, see [Minimum compute requirements](https://github.com/opentensor/bittensor-subnet-template/blob/main/min_compute.yml) for compute, memory, bandwidth and storage requirements for a typical subnet node, i.e., for a typical subnet neuron.
+    For example, see [Minimum compute requirements](https://github.com/cybercongress/cybertensor-subnet-template/blob/main/min_compute.yml) for compute, memory, bandwidth and storage requirements for a typical subnet node, i.e., for a typical subnet neuron.
     :::
 4. Decide which subnet suits you best, based on the expertise you can provide and the cost of computing you can bear. **Read the subnet documentation for guidance on which subnet works best for you.**
 5. **Note on Windows machine**: While wallet transactions like delegating, transfer, registering, staking can be performed on a Windows machine using WSL (Windows Subsystem for Linux), mining and validating are not recommended and are not supported on Windows machines.

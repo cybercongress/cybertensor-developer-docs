@@ -14,7 +14,7 @@ Read the [Root Network](./root-network.md) document before you proceed.
 
 The emission process works like this:
 
-- Every block, i.e., every 12 seconds on the Bittensor blockchain, a single TAO ($\tau$) is minted, i.e., newly created.
+- Every block, i.e., every 12 seconds on the Cybertensor blockchain, a single TAO ($\tau$) is minted, i.e., newly created.
 - A percentage portion of this single TAO ($\tau$) is allocated to each of the 32 subnets in accordance with the subnet's performance. The root network determines the percentage portion for each subnet. Hence, all such partial percentage allocations will sum to 100%, i.e., one TAO ($\tau$). 
     :::tip Taostats
     See the [percentage numbers in each "**SN**" column on the root network page on Taostats](https://taostats.io/subnets/netuid-0/). These percentages for SN1 through SN32 all add up to `100`. 
@@ -37,7 +37,7 @@ Consider a snapshot of root network at a given block. You can read the root netw
 
 ```python
 import torch
-metagraph = bt.metagraph(netuid=0, lite=False)
+metagraph = ct.metagraph(netuid=0, lite=False)
 metagraph.weights.shape
 ```
 

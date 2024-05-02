@@ -14,7 +14,7 @@ To participate either as a subnet validator or subnet miner, you must register f
 Run the below command to register your keys. The `YOUR_PREFERRED_NETUID` is the `netuid` of your preferred subnet.
 
 ```bash
-btcli subnet register --netuid YOUR_PREFERRED_NETUID --wallet.name YOUR_COLDKEY --wallet.hotkey YOUR_HOTKEY
+ctcli subnet register --netuid YOUR_PREFERRED_NETUID --wallet.name YOUR_COLDKEY --wallet.hotkey YOUR_HOTKEY
 ```
 
 Registering works like this:
@@ -53,7 +53,7 @@ You stake by attaching TAO to your hotkey. Attaching TAO to your hotkey can be a
 By staking your own TAO funds to your hotkey that holds the UID in the subnet where you want to validate.
 ```bash
 # Stake funds to your hotkey account within the subnet.
-btcli stake add
+ctcli stake add
     --wallet.name YOUR_WALLET_NAME
     --wallet.hotkey YOUR_HOTKEY_NAME
 ```
@@ -64,7 +64,7 @@ By attracting delegated stake from the nominators. For this you must first nomin
 
 ```bash
 # Nominate your hotkey as a delegate
-btcli root nominate
+ctcli root nominate
     --wallet.name YOUR_WALLET_NAME
     --wallet.hotkey YOUR_HOTKEY_NAME
 ```
@@ -79,11 +79,11 @@ Only the largest 64 subnet validators, in terms of stake, on any particular subn
 
 #### Calculate TAO required 
 
-The amount of TAO needed to acquire a validator permit depends on how the other largest 64 wallets distribute TAO across themselves. You can calculate the minimum using [bt.metagraph](../reference/bittensor-api-ref.md#btmetagraph):
+The amount of TAO needed to acquire a validator permit depends on how the other largest 64 wallets distribute TAO across themselves. You can calculate the minimum using [ct.metagraph](../reference/bittensor-api-ref.md#btmetagraph):
 
 ```python
-import bittensor as bt
-subnet = bt.metagraph(1)
+import cybertensor as ct
+subnet = ct.metagraph(1)
 top_64_stake = subnet.S.sort()[0][-64:].tolist()
 print (f'Current requirement for validator permits based on the top 64 stake stands at {min(top_64_stake)} tao')
 ```
@@ -92,9 +92,9 @@ print (f'Current requirement for validator permits based on the top 64 stake sta
 
 This information can be obtained from the metagraph using your UID.
 ```python
-import bittensor as bt
-subnet = bt.metagraph(1)
-wallet = bt.wallet( name = 'my_wallet_name', hotkey = 'my_validator_hotkey_name' )
+import cybertensor as ct
+subnet = ct.metagraph(1)
+wallet = ct.Wallet( name = 'my_wallet_name', hotkey = 'my_validator_hotkey_name' )
 my_uid = subnet.hotkeys.index( wallet.hotkey.ss58_address )
 print ('validator permit', subnet.validator_permit[ my_uid ])
 ```
@@ -149,7 +149,7 @@ sources={{
 style={{width: 990}}
 />
 
-- Blocks are processed in the subtensor (Bittensor blockchain) at every 12 seconds. 
+- Blocks are processed in the subtensor (Cybertensor blockchain) at every 12 seconds. 
 - A subnet miner registers a hotkey and receives a UID&mdash;and its immunity period starts.
 - The subnet miner starts running and publishes its Axon's `IP:PORT` for the subnet validators.
 - The subnet validators refresh their metagraph and will know about the hotkey change on the UID and the new miner Axon's ``IP:PORT`` information. 
@@ -166,7 +166,7 @@ Note that the subnet miner incentive, instead of growing as a continuous graph a
 After you obtain a UID slot you can view the status of your registered wallet by running:
 
 ```bash
-btcli wallet overview --netuid
+ctcli wallet overview --netuid
 ```
 
 After providing your wallet name at the prompt, you will see the following output:
@@ -205,11 +205,11 @@ To check the registration status of your UID, use any one of the below Python co
 In the below code, replace the `hotkey` field value with the SS58 version of your hotkey:
 
 ```python
-import bittensor as bt
+import cybertensor as ct
 # Replace below with your SS58 hotkey 
 hotkey = "5HEo565WAy4Dbq3Sv271SAi7syBSofyfhhwRNjFNSM2gP9M2"
 network = "finney"
-sub = bt.subtensor(network)
+sub = ct.cwtensor(network)
 print(f"Registration status for hotkey {hotkey} is: {sub.is_hotkey_registered(hotkey)}")
 ```
 
@@ -218,12 +218,12 @@ print(f"Registration status for hotkey {hotkey} is: {sub.is_hotkey_registered(ho
 In the below code, replace the `hotkey` field value with the SS58 version of your hotkey and the `netuid` field value with the `netuid` of the subnet you have registered into:
 
 ```python
-import bittensor as bt
+import cybertensor as ct
 # Replace below with your SS58 hotkey 
 hotkey = "5HEo565WAy4Dbq3Sv271SAi7syBSofyfhhwRNjFNSM2gP9M2"
 network = "finney"
 netuid = 1 # subnet uid
-sub = bt.subtensor(network)
+sub = ct.cwtensor(network)
 mg = sub.metagraph(netuid)
 if hotkey not in mg.hotkeys:
   print(f"Hotkey {hotkey} deregistered")
@@ -236,12 +236,12 @@ else:
 Additionally, if you also know your UID, replace `uid` value with your UID:
 
 ```python
-import bittensor as bt
+import cybertensor as ct
 # Replace below with your SS58 hotkey 
 hotkey = "5HEo565WAy4Dbq3Sv271SAi7syBSofyfhhwRNjFNSM2gP9M2"
 network = "finney"
 netuid = 1 # subnet uid
-sub = bt.subtensor(network)
+sub = ct.cwtensor(network)
 mg = sub.metagraph(netuid)
 uid = 2 # Your UID
 registered = mg.hotkeys[uid] == hotkey

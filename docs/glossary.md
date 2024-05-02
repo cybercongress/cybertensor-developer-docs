@@ -16,7 +16,7 @@ A type of public subtensor node that stores the entire blockchain history, allow
 
 ### Axon
 
-A module in the Bittensor API that uses the FastAPI library to create and run API servers. Axons receive incoming Synapse objects. Typically an Axon is the entry point advertised by a subnet miner on the Bittensor blockchain, allowing subnet validators to communicate with the miner.
+A module in the Cybertensor API that uses the FastAPI library to create and run API servers. Axons receive incoming Synapse objects. Typically an Axon is the entry point advertised by a subnet miner on the Cybertensor blockchain, allowing subnet validators to communicate with the miner.
 
 ## B
 
@@ -24,19 +24,19 @@ A module in the Bittensor API that uses the FastAPI library to create and run AP
 
 A two-tier legislative system comprising the Triumvirate and the Senate for proposal approval.
 
-### Bittensor Wallet
+### Cybertensor Wallet
 
-A digital wallet that holds the core ownership in the Bittensor network and serves as the user's identity technology underlying all operations.
+A digital wallet that holds the core ownership in the Cybertensor network and serves as the user's identity technology underlying all operations.
 
 ### Block
 
-A unit of data in the Bittensor blockchain, containing a collection of transactions and a unique identifier (block hash). A single block is processed every 12 seconds in the Bittensor blockchain. 
+A unit of data in the Cybertensor blockchain, containing a collection of transactions and a unique identifier (block hash). A single block is processed every 12 seconds in the Cybertensor blockchain. 
 
 ## C
 
 ### Coldkey
 
-A component of a Bittensor wallet responsible for securely storing funds and performing high-risk operations such as transfers and staking. It is encrypted on the user's device. This is analogous to a private key.
+A component of a Cybertensor wallet responsible for securely storing funds and performing high-risk operations such as transfers and staking. It is encrypted on the user's device. This is analogous to a private key.
 
 ### Coldkey-hotkey pair
 
@@ -66,7 +66,7 @@ The process of delegating TAO to a subnet validator (delegate), allowing the val
 
 ### Delegator
 
-A participant in the Bittensor network who delegates their TAO to a subnet validator (delegate), helping the validator increase their stake and secure a validator permit. Also known as a nominator.
+A participant in the Cybertensor network who delegates their TAO to a subnet validator (delegate), helping the validator increase their stake and secure a validator permit. Also known as a nominator.
 
 ### Dendrite  
 
@@ -88,7 +88,7 @@ A portion of the TAO emission received by subnet validators as a reward for thei
 
 ### EdDSA Cryptographic Keypairs
 
-A cryptographic algorithm used to generate public and private key pairs for coldkeys and hotkeys in the Bittensor wallet.
+A cryptographic algorithm used to generate public and private key pairs for coldkeys and hotkeys in the Cybertensor wallet.
 
 ### Effective stake
 
@@ -104,13 +104,13 @@ An optional security measure for the hotkey.
 
 ### External Wallet
 
-A Bittensor wallet created through the Bittensor website or using a tool like [subkey](https://docs.substrate.io/reference/command-line-tools/subkey/), allowing users to use TAO without installing Bittensor.
+A Cybertensor wallet created through the Cybertensor website or using a tool like [subkey](https://docs.substrate.io/reference/command-line-tools/subkey/), allowing users to use TAO without installing Cybertensor.
 
 ## H 
 
 ### Hotkey
 
-A component of a Bittensor wallet responsible for less secure operations such as signing messages into the network, secure a UID slot in a subnet, running subnet miners and subnet validators in a subnet. It can be encrypted or unencrypted, but is unencrypted by default. The terms "account" and "hotkey" are used synonymously.
+A component of a Cybertensor wallet responsible for less secure operations such as signing messages into the network, secure a UID slot in a subnet, running subnet miners and subnet validators in a subnet. It can be encrypted or unencrypted, but is unencrypted by default. The terms "account" and "hotkey" are used synonymously.
 
 ### Hotkey-Coldkey Pair
 
@@ -128,7 +128,7 @@ A portion of the TAO emission received by the subnet miners when they provide va
 
 ### Incentive Mechanism
 
-A system that drives the behavior of subnet miners and governs consensus among subnet validators in a Bittensor subnet. Each subnet has its own incentive mechanism, which should be designed carefully to promote desired behaviors and penalize undesired ones.
+A system that drives the behavior of subnet miners and governs consensus among subnet validators in a Cybertensor subnet. Each subnet has its own incentive mechanism, which should be designed carefully to promote desired behaviors and penalize undesired ones.
 
 ## L 
 
@@ -138,21 +138,21 @@ A type of public subtensor node that stores limited blockchain data and relies o
 
 ### Local Blockchain
 
-A private blockchain used for developing and testing subnet incentive mechanisms. A local blockchain is not public and is isolated from any Bittensor network.
+A private blockchain used for developing and testing subnet incentive mechanisms. A local blockchain is not public and is isolated from any Cybertensor network.
 
 ### Local Wallet
 
-A Bittensor wallet created on the user's machine, requiring the installation of Bittensor.
+A Cybertensor wallet created on the user's machine, requiring the installation of Cybertensor.
 
 ### Loss Function
 
-In the context of machine learning, a mathematical function that measures the difference between the predicted output and the ground truth. In Bittensor, incentive mechanisms act as loss functions that steer subnet miners towards desirable outcomes.
+In the context of machine learning, a mathematical function that measures the difference between the predicted output and the ground truth. In Cybertensor, incentive mechanisms act as loss functions that steer subnet miners towards desirable outcomes.
 
 ## M 
 
 ### Mainchain
 
-The primary Bittensor blockchain network, used for production purposes and connected to lite or archive nodes.
+The primary Cybertensor blockchain network, used for production purposes and connected to lite or archive nodes.
 
 ### Metagraph
 
@@ -172,21 +172,21 @@ The software component that subnet miners run to perform task operations and com
 
 ### Mnemonic
 
-A sequence of words used to regenerate keys, in case of loss, and restore coldkeys and hotkeys in the Bittensor wallet.
+A sequence of words used to regenerate keys, in case of loss, and restore coldkeys and hotkeys in the Cybertensor wallet.
 
 ## N 
 
 ### NaCl Format
 
-A secure encryption format, using the [NaCl](https://nacl.cr.yp.to/) library, used for updating legacy Bittensor wallets to improve security.
+A secure encryption format, using the [NaCl](https://nacl.cr.yp.to/) library, used for updating legacy Cybertensor wallets to improve security.
 
 ### Netuid
 
-A unique identifier assigned to a subnet within the Bittensor network.
+A unique identifier assigned to a subnet within the Cybertensor network.
 
 ### Neuron
 
-The basic computing node in a Bittensor subnet, representing a node in a neural network. Neurons can be either subnet validators or subnet miners.
+The basic computing node in a Cybertensor subnet, representing a node in a neural network. Neurons can be either subnet validators or subnet miners.
 
 ### Nominate
 
@@ -210,7 +210,7 @@ In the context of machine learning and subnet operations, this refers to the goa
 
 ### Private Key
 
-A private component of the cryptographic key pair, crucial for securing and authorizing transactions and operations within the Bittensor network.
+A private component of the cryptographic key pair, crucial for securing and authorizing transactions and operations within the Cybertensor network.
 
 ### Proposal
 
@@ -222,11 +222,11 @@ A unique identifier for a proposal used in the voting process.
 
 ### Public Key
 
-A cryptographic key that is publicly available and used for verifying signatures, encrypting messages, and identifying accounts in the Bittensor network. This is the publicly shareable part of the cryptographic key pair associated with both the coldkey and hotkey, allowing others to securely interact with the wallet.
+A cryptographic key that is publicly available and used for verifying signatures, encrypting messages, and identifying accounts in the Cybertensor network. This is the publicly shareable part of the cryptographic key pair associated with both the coldkey and hotkey, allowing others to securely interact with the wallet.
 
 ### Public Subtensor
 
-A publicly accessible node in the Bittensor network that can be run as a lite node or an archive node and synchronized with either the mainchain or testchain.
+A publicly accessible node in the Cybertensor network that can be run as a lite node or an archive node and synchronized with either the mainchain or testchain.
 
 ## R 
 
@@ -283,7 +283,7 @@ The rewards earned by a delegate for performing subnet validation tasks. These r
 
 ### Subnet
 
-A network structure that closely follows how a classical feedforward neural network is connected. In a Bittensor subnet, nodes are represented as either subnet validators or subnet miners. Subnet validators or subnet miners are also referred to as neurons. In a subnet a group of validators and miners work together to perform specific tasks and earn TAO (τ) rewards.
+A network structure that closely follows how a classical feedforward neural network is connected. In a Cybertensor subnet, nodes are represented as either subnet validators or subnet miners. Subnet validators or subnet miners are also referred to as neurons. In a subnet a group of validators and miners work together to perform specific tasks and earn TAO (τ) rewards.
 
 ### Subnet Incentive Mechanism
 
@@ -291,7 +291,7 @@ The framework that governs the behavior of subnet miners and ensures consensus a
 
 ### Subnet Miner
 
-The task-performing entity within a Bittensor subnet. A subnet miner is a type of node in a Bittensor subnet that is connected only to subnet validators. Subnet miners are isolated from the external world and communicate bidirectionally with subnet validators. A subnet miner is responsible for performing tasks given to them by the subnet validators in that subnet. 
+The task-performing entity within a Cybertensor subnet. A subnet miner is a type of node in a Cybertensor subnet that is connected only to subnet validators. Subnet miners are isolated from the external world and communicate bidirectionally with subnet validators. A subnet miner is responsible for performing tasks given to them by the subnet validators in that subnet. 
 
 ### Subnet Owner
 
@@ -319,11 +319,11 @@ The importance assigned to each subnet by the root network validators, used to d
 
 ### Subtensor
 
-A Bittensor object that handles interactions with the Subtensor blockchain, whether it is a local, testchain, or mainchain.
+A Cybertensor object that handles interactions with the Subtensor blockchain, whether it is a local, testchain, or mainchain.
 
 ### Subtensor Blockchain
 
-The underlying blockchain technology of the Bittensor network that records transactions, rankings, and the distribution of rewards.
+The underlying blockchain technology of the Cybertensor network that records transactions, rankings, and the distribution of rewards.
 
 ### Sudo
 
@@ -337,7 +337,7 @@ A data object used by subnet validators and subnet miners as the main vehicle to
 
 ### TAO (τ)
 
-The native cryptocurrency of the Bittensor network, used to reward subnet miners and validators. A single TAO is newly created (i.e., minted) every 12 seconds on the Bittensor blockchain.
+The native cryptocurrency of the Cybertensor network, used to reward subnet miners and validators. A single TAO is newly created (i.e., minted) every 12 seconds on the Cybertensor blockchain.
 
 ### Tempo
 
@@ -345,7 +345,7 @@ A 360-block period during which the Yuma Consensus calculates and distributes re
 
 ### Transfer
 
-The process of sending TAO tokens from one wallet address to another in the Bittensor network.
+The process of sending TAO tokens from one wallet address to another in the Cybertensor network.
 
 ### Triumvirate
 
@@ -383,11 +383,11 @@ A permission granted to the largest 64 subnet validators in terms of stake, allo
 
 ### Wallet Address
 
-A unique identifier derived from the public key, used as a destination for sending and receiving TAO tokens in the Bittensor network.
+A unique identifier derived from the public key, used as a destination for sending and receiving TAO tokens in the Cybertensor network.
 
 ### Wallet Location
 
-The directory path where the generated Bittensor wallets are stored locally on the user's machine.
+The directory path where the generated Cybertensor wallets are stored locally on the user's machine.
 
 ### Weight Matrix
 
@@ -401,4 +401,4 @@ A vector maintained by each subnet validator, with each element representing the
 
 ### Yuma Consensus
 
-The consensus mechanism in the Bittensor blockchain that distributes rewards to subnet validators and subnet miners. 
+The consensus mechanism in the Cybertensor blockchain that distributes rewards to subnet validators and subnet miners. 

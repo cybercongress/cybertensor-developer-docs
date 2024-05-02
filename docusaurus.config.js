@@ -13,18 +13,18 @@ const katex = require("rehype-katex");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Bittensor",
+  title: "Cybertensor",
   tagline: "Developer Documentation",
   favicon: "img/favicon.ico",
   // Set the production url of your site here
-  url: "https://docs.bittensor.com",
+  url: "http://docs.spacepussy.ai",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "opentensor", // Usually your GitHub org/user name.
-  projectName: "developer-docs", // Usually your repo name.
+  organizationName: "cybercongress", // Usually your GitHub org/user name.
+  projectName: "cybertensor-developer-docs", // Usually your repo name.
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   // Even if you don't use internalization, you can use this field to set useful
@@ -34,7 +34,7 @@ const config = {
   customFields: {
     enableIssueLinks: true, // Set to true to enable issue links
     enableEditUrlLinks: true, // Set to true to enable edit url links
-    issueBaseUrl: "https://github.com/opentensor/developer-docs/issues",
+    issueBaseUrl: "https://github.com/cybercongress/cybertensor-developer-docs/issues",
     enableFeedback: false, // Set to false to disable feedback
   },
 
@@ -56,7 +56,7 @@ const config = {
           sidebarCollapsible: true,
           showLastUpdateTime: true,
           docItemComponent: "@theme/DocItem",
-          editUrl: "https://github.com/opentensor/developer-docs/blob/main/",
+          editUrl: "https://github.com/cybercongress/cybertensor-developer-docs/blob/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -71,8 +71,8 @@ const config = {
       {
         redirects: [
           {
-            to: "/btcli",
-            from: "/reference/btcli",
+            to: "/ctcli",
+            from: "/reference/ctcli",
           },
           {
             to: "/subnets/checklist-for-validating-mining",
@@ -139,10 +139,10 @@ const config = {
 
       navbar: {
         logo: {
-          alt: "Bittensor",
-          src: "img/logo.svg",
-          srcDark: "img/logo-dark-mode.svg",
-          href: "https://bittensor.com",
+          alt: "Cybertensor",
+          src: "img/logo-dark-mode.png",
+          srcDark: "img/logo-dark-mode.png",
+          href: "https://spacepussy.ai/cybernet",
           style: {
             objectFit: "contain",
             width: 21,
@@ -193,10 +193,10 @@ const config = {
       footer: {
         copyright: `
 					<div className="copyRight">
-						© ${new Date().getFullYear()} <a href="https://bittensor.com">Bittensor</a> • Opentensor Foundation. <span>all rights reserved.</span>
+						© ${new Date().getFullYear()} <a href="https://spacepussy.ai/cybernet">Cybertensor</a> • <a href="https://github.com/opentensor">Opentensor Foundation</a>  • <a href="https://github.com/cybercongress">Cybercongress</a>
 					</div>
-					<a href='https://bittensor.com/'>
-					<img src="img/logo-dark-mode.svg" alt="logo"/>
+					<a href='https://spacepussy.ai/cybernet/'>
+					<img src="img/logo-dark-mode.png" alt="logo"/>
 					</a>
 				`,
       },

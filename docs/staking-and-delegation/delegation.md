@@ -14,7 +14,7 @@ TAO holders can delegate any amount of their stake to a subnet validator through
 - The delegate (the subnet validator) then pools all such delegated stake, along with their own stake, and uses this total stake to perform validation tasks in one or more subnets. Daily staking rewards, in proportion to the total stake of the delegate, are credited to the delegate as a result of such validation tasks.
 - After deducting a percentage for the delegate, these staking rewards are given back to the delegate's nominators. 
 :::tip Delegate take %
-The default value of the delegate take is 18%. As a delegate you can set your own delegate take % by using the `btcli root set_delegate_take` command. See [Setting your delegate take](#setting-your-delegate-take).
+The default value of the delegate take is 18%. As a delegate you can set your own delegate take % by using the `ctcli root set_delegate_take` command. See [Setting your delegate take](#setting-your-delegate-take).
 :::
 - The above percentage of the staking reward is distributed among the delegate's nominators in proportion to the nominators' staked TAO amount with this delegate.
 
@@ -50,14 +50,14 @@ The nominators will then delegate their TAO to this hotkey, i.e., the nominators
 Run the below command (for self nominating as a delegate):
 
 ```bash
-btcli root nominate
+ctcli root nominate
     --wallet.name YOUR_WALLET_NAME
     --wallet.hotkey YOUR_HOTKEY_NAME
 ```
 
 #### Step 2: Provide your delegate information 
 
-Next, provide your delegate information, such as your delegate name, URL and description. This information will then be available in the list of active delegates, for example, when a nominator runs `btcli root list_delegates` to see available delegates. 
+Next, provide your delegate information, such as your delegate name, URL and description. This information will then be available in the list of active delegates, for example, when a nominator runs `ctcli root list_delegates` to see available delegates. 
 
 To provide this information and sign it, follow the instructions on this [Bittensor Delegates repo](https://github.com/opentensor/bittensor-delegates#2023-03-23---first-version).
 
@@ -66,7 +66,7 @@ To provide this information and sign it, follow the instructions on this [Bitten
 As a delegate you can set your delegate percentage by running the below command:
 
 ```bash
-btcli root set_delegate_take --wallet.name my_wallet --wallet.hotkey my_hotkey --take 0.1
+ctcli root set_delegate_take --wallet.name my_wallet --wallet.hotkey my_hotkey --take 0.1
 ```
 where the value for the `--take` option is a floating point number between 0 and 1. In the above example, `--take 0.1` sets the delegate take as 10%.
 
@@ -77,7 +77,7 @@ where the value for the `--take` option is a floating point number between 0 and
 If you are looking for trusted delegate(s) to delegate your funds to, start by seeing a list of delegates who are already active on the Bittensor network. Run the below command on your terminal:  
 
 ```bash
-btcli root list_delegates
+ctcli root list_delegates
 ```
 
 You will get an output like this (click on the image to zoom):
@@ -105,7 +105,7 @@ See below for an explanation of the column headings in the above terminal output
 
 The below command will show a list of delegates sorted by their total stake. Select a delegate from this list to send your stake to.
 ```bash 
-btcli root delegate
+ctcli root delegate
 ```
 
 ### Show your delegations 
@@ -117,7 +117,7 @@ Use `--all` option to show delegations across all your wallets.
 :::
 
 ```bash
-btcli root my_delegates
+ctcli root my_delegates
 ```
 
 

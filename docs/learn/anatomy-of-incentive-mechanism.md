@@ -11,18 +11,18 @@ This section describes a conceptual “anatomy” of a subnet incentive mechanis
 
 :::tip before you proceed
 Before you proceed, read the following sections:
-- [Introduction](./introduction.md) that describes how subnets form the heartbeat of the Bittensor network.
-- [Bittensor Building Blocks](./bittensor-building-blocks.md) that presents the basic building blocks you use to develop your incentive mechanism.
+- [Introduction](./introduction.md) that describes how subnets form the heartbeat of the Cybertensor network.
+- [Cybertensor Building Blocks](./bittensor-building-blocks.md) that presents the basic building blocks you use to develop your incentive mechanism.
 :::
 
 ## Overview
 
-In a Bittensor subnet:
+In a Cybertensor subnet:
 
 - The task-performing entities are called **subnet miners**.
 - Entities that create the tasks, score the output of the subnet miners and reward them, are called **subnet validators**. 
 
-Incentive mechanisms are a fundamental part of Bittensor. They drive the behaviour of the subnet miners and govern the consensus amongst the subnet validators.
+Incentive mechanisms are a fundamental part of Cybertensor. They drive the behaviour of the subnet miners and govern the consensus amongst the subnet validators.
 Each subnet has its own incentive mechanism. Subnet developers should design incentive mechanisms carefully so that these mechanisms comprehensively and explicitly promote all the desired behaviors and penalize undesired behaviors. 
 
 :::tip Machine learning analogy
@@ -40,7 +40,7 @@ A subnet owner is responsible for:
 
 ### Design with Yuma Consensus as a black box
 
-Though a subnet incentive mechanism works in conjunction with the Yuma Consensus in the Bittensor network, you must design your subnet incentive mechanism **by treating Yuma Consensus as a black box**. 
+Though a subnet incentive mechanism works in conjunction with the Yuma Consensus in the Cybertensor network, you must design your subnet incentive mechanism **by treating Yuma Consensus as a black box**. 
 
 ### Make it easy for participation
 
@@ -71,7 +71,7 @@ sources={{
 See **1** and **3** in the above diagram. A subnet protocol, which is unique to the subnet, must define how a subnet validator will query the subnet miners, and how a subnet miner should respond to the query. 
 
 :::tip Axon, dendrite and Synapse building blocks
-Use the Bittensor building blocks Axon, dendrite and Synapse to develop your subnet protocol. See [Neuron to neuron communication](./bittensor-building-blocks.md#neuron-to-neuron-communication).
+Use the Cybertensor building blocks Axon, dendrite and Synapse to develop your subnet protocol. See [Neuron to neuron communication](./bittensor-building-blocks.md#neuron-to-neuron-communication).
 :::
 
 For example, a subnet validator might send a query containing the task description to the subnet miners. The subnet miners will perform the task and then respond to the subnet validators with the results of the task the miners performed. Note, however, that query-response is only one of the ways of subnet miner-and-subnet validator interaction. An alternative example is when the subnet validators and subnet miners use additional shared resources such as databases, and these resources can be used to evaluate miner performance.

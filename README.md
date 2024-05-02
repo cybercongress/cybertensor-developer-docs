@@ -3,12 +3,12 @@
     <img alt="Tao Logo" src="./static/img/tao-logo.png" />
   </a>
 </h1>
-<h2 align="center">Bittensor Developer Docs</h2>
+<h2 align="center">Cybertensor Developer Docs</h2>
 <h3 align="center">https://docs.bittensor.com</h3>
 
 -----------------------------------------------------------------------------
 
-Welcome to Bittensor Developer Docs. These docs are built using [Docusaurus](https://docusaurus.io/). See the below instructions to build these docs locally.
+Welcome to Cybertensor Developer Docs. These docs are built using [Docusaurus](https://docusaurus.io/). See the below instructions to build these docs locally.
 
 ### Installation
 

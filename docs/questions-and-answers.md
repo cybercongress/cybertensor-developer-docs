@@ -7,11 +7,11 @@ hide_table_of_contents: false
 
 ## General
 
-This General section presents a highly simplistic explanation of Bittensor. Do not expect to understand all the details after you read this Q and A section. Follow the links provided throughout this section for a more developer-level comprehension of the details. 
+This General section presents a highly simplistic explanation of Cybertensor. Do not expect to understand all the details after you read this Q and A section. Follow the links provided throughout this section for a more developer-level comprehension of the details. 
 
-### Is Bittensor a blockchain or an AI platform?
+### Is Cybertensor a blockchain or an AI platform?
 
-In Bittensor there is one blockchain and many platforms that are connected to this one blockchain. We call these platforms as subnets. So, a subnet can be AI-related or can be something else. The Bittensor network has 32 distinct subnets. All these subnets are connected to the single blockchain. We use the term "subtensor" for the blockchain. If you are thinking, "So, subnets are connected to subtensor?" then the answer is "yes, exactly."
+In Cybertensor there is one blockchain and many platforms that are connected to this one blockchain. We call these platforms as subnets. So, a subnet can be AI-related or can be something else. The Cybertensor network has 32 distinct subnets. All these subnets are connected to the single blockchain. We use the term "subtensor" for the blockchain. If you are thinking, "So, subnets are connected to subtensor?" then the answer is "yes, exactly."
 
 ### So what is a subnet?
 
@@ -37,25 +37,25 @@ See [Introduction](./learn/introduction.md) and [Anatomy of Incentive Mechanism]
 
 ### So we have 32 subnets, do they talk to each other?
 
-A new abstract base class, called `SubnetsAPI` is released in Bittensor `6.8.0` and your application can use this to enable cross subnet communication. Normally, however, if you are not using the `SubnetsAPI`, then the subtensor blockchain does not mix data from one subnet with another subnet data and a subnet does not communicate with another subnet. 
+A new abstract base class, called `SubnetsAPI` is released in Cybertensor `6.8.0` and your application can use this to enable cross subnet communication. Normally, however, if you are not using the `SubnetsAPI`, then the subtensor blockchain does not mix data from one subnet with another subnet data and a subnet does not communicate with another subnet. 
 
 :::tip See also
-See [Bittensor Subnets API](https://github.com/opentensor/bittensor/blob/master/README.md#bittensor-subnets-api).
+See [Cybertensor Subnets API](https://github.com/cybercongress/cybertensor/blob/master/README.md#bittensor-subnets-api).
 :::
 
 ## Mining and validation
 
-### I don't understand Bittensor mining and validation
+### I don't understand Cybertensor mining and validation
 
-In Bittensor, the term "mining" is not related to Bitcoin mining. Similarly Bittensor "validation" has nothing to do with blockchain validation. In Bittensor, mining is "subnet mining" and validation is "subnet validation". Subnet miners perform some useful task given to them by subnet validators. See the above [General](#general) section. 
+In Cybertensor, the term "mining" is not related to Bitcoin mining. Similarly Cybertensor "validation" has nothing to do with blockchain validation. In Cybertensor, mining is "subnet mining" and validation is "subnet validation". Subnet miners perform some useful task given to them by subnet validators. See the above [General](#general) section. 
 
 :::tip See also
 See more here in [How a subnet works](learn/introduction.md#how-a-subnet-works). 
 :::
 
-### So is there a separate blockchain validation on Bittensor?
+### So is there a separate blockchain validation on Cybertensor?
 
-Yes. As we saw in the above [So where does the blockchain come in](#so-where-does-the-blockchain-come-in) section, the subtensor blockchain is an essential part of the Bittensor. This subtensor blockchain is like any blockchain, i.e., there are validator nodes, hosted by the Opentensor Foundation and functioning via Proof-of-Authority, that validate the transactions coming into the subtensor blockchain and post them in the subtensor blockchain ledger. Blocks containing such transactions are processed at the rate of one block every 12 seconds. You can run your own public subtensor node to synchronize with the Bittensor mainchain or testchain. 
+Yes. As we saw in the above [So where does the blockchain come in](#so-where-does-the-blockchain-come-in) section, the subtensor blockchain is an essential part of the Cybertensor. This subtensor blockchain is like any blockchain, i.e., there are validator nodes, hosted by the Opentensor Foundation and functioning via Proof-of-Authority, that validate the transactions coming into the subtensor blockchain and post them in the subtensor blockchain ledger. Blocks containing such transactions are processed at the rate of one block every 12 seconds. You can run your own public subtensor node to synchronize with the Cybertensor mainchain or testchain. 
 
 :::tip See also
 See [Subtensor Nodes](./subtensor-nodes/index.md). 

@@ -18,7 +18,7 @@ In addition to running your own subnet miner or subnet validator, you can delega
 Follow the below steps:
 
 
-1. Add your Bittensor wallet to the [Polkadot Extension](https://polkadot.js.org/extension/) wallet in your browser (you will need your mnemonic to do this). After you have done so, navigate to [Polkadot JS](https://polkadot.js.org/apps/?rpc=wss://entrypoint-finney.opentensor.ai:443#/accounts) and your account will be displayed there.
+1. Add your Cybertensor wallet to the [Polkadot Extension](https://polkadot.js.org/extension/) wallet in your browser (you will need your mnemonic to do this). After you have done so, navigate to [Polkadot JS](https://polkadot.js.org/apps/?rpc=wss://entrypoint-finney.opentensor.ai:443#/accounts) and your account will be displayed there.
 
 
 2. Navigate to [**Developer** >  **Extrinsics**](https://polkadot.js.org/apps/?rpc=wss://entrypoint-finney.opentensor.ai:443#/extrinsics).

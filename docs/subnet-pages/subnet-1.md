@@ -6,22 +6,22 @@ title: "Subnet 1"
 
 ## Name
 
-Text prompting
+Availability subnet
 
 ## Netuid
 1
 
 ## Description
 
-Incentivizes subnet miners who produce the best prompt completions in response to the prompts sent by the subnet validators in that subnet.
+Incentivizes subnet miners who are available online.
 
 ## Subnet owner
 
-Macrocosmos
+[pussy1ggda2n35v7zkwucufzp25mp34p0adp0x9zqrt3](https://spacepussy.ai/neuron/pussy1ggda2n35v7zkwucufzp25mp34p0adp0x9zqrt3)
 
 ## GitHub
 
-https://github.com/opentensor/prompting 
+[github.com/cybercongress/cybertensor-subnet-template](https://github.com/cybercongress/cybertensor-subnet-template/blob/main/docs/running_availability_subnet.md)
 
 <!-- 
 ## Hyperparameters

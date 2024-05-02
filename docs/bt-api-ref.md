@@ -1,5 +1,5 @@
 ---
-title: "Bittensor API"
+title: "Cybertensor API"
 ---
 
 import { HiAcademicCap } from "react-icons/hi2";
@@ -16,9 +16,9 @@ import { CiWallet } from "react-icons/ci";
 
 
 
-# Bittensor API
+# Cybertensor API
 
-This section presents the Python API reference documentation for Bittensor. Follow the below links to specific Python modules or [click here for API reference documentation homepage](https://docs.bittensor.com/python-api/html/index.html). 
+This section presents the Python API reference documentation for Cybertensor. Follow the below links to specific Python modules or [click here for API reference documentation homepage](https://docs.Cybertensor.com/python-api/html/index.html). 
 
 <Cards>
     <Card 
@@ -35,12 +35,12 @@ This section presents the Python API reference documentation for Bittensor. Foll
     icon={GiBrainTentacle}
     title='Metagraph'
     link='pathname:///python-api/html/autoapi/bittensor/metagraph/index.html'
-    body='Metagraph neural graph is a dynamic representation of the Bittensor network state.' />
+    body='Metagraph neural graph is a dynamic representation of the Cybertensor network state.' />
     <Card
     icon={PiBrainFill}
     title='Subtensor'
     link='pathname:///python-api/html/autoapi/bittensor/subtensor/index.html'
-    body='Subtensor class provides a gateway to the blockchain layer of Bittensor.' />
+    body='Subtensor class provides a gateway to the blockchain layer of Cybertensor.' />
     <Card
     icon={GiBrainStem}
     title='Synapse'

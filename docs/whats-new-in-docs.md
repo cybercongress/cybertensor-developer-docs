@@ -9,6 +9,10 @@ hide_table_of_contents: false
 
 Key updates to this documentation.
 
+## 01 May 2024
+
+- Forked from [Bittensor Developer Docs](https://github.com/opentensor/developer-docs)
+
 ## 22 April 2024
 
 - Fixed the subtensor node installation instructions for testchain. See the updated command line settings for [Lite node on testchain](./subtensor-nodes/using-source#lite-node-on-testchain) and [Archive node on testchain](./subtensor-nodes/using-source#archive-node-on-testchain).
@@ -32,7 +36,7 @@ Key updates to this documentation.
 
 ## 02 April 2024
 
-- Added [a diagram](./index.md) and description in the front page distinguishing the Bittensor platform from subnets and end-user applications. 
+- Added [a diagram](./index.md) and description in the front page distinguishing the Cybertensor platform from subnets and end-user applications. 
 
 ## 22 March 2024
 
@@ -62,11 +66,11 @@ The following changes are documented:
 
 ## 23 February 2024
 
-- A new [Questions and Answers](./questions-and-answers.md) doc is added, intended for first-time explorers of Bittensor.
+- A new [Questions and Answers](./questions-and-answers.md) doc is added, intended for first-time explorers of Cybertensor.
 
 ## 22 February 2024
 
-- Updated [`btcli wallet` command options](./btcli.md#check-balance-in-all-wallets).
+- Updated [`ctcli wallet` command options](./btcli.md#check-balance-in-all-wallets).
 - Added a note on [mining and validating on Windows](./subnets/register-validate-mine.md#register).
 - Added a note on running a [public subtensor on cloud](subtensor-nodes/using-source.md).
 
@@ -79,11 +83,11 @@ The following changes are documented:
 
 ## 05 February 2024
 
-- Enhanced the docs homepage to clarify that you do not need to create a subnet to participate in the Bittensor network. See [Start here](./index.md#start-here). 
+- Enhanced the docs homepage to clarify that you do not need to create a subnet to participate in the Cybertensor network. See [Start here](./index.md#start-here). 
 
-- Added a new homepage for the [Bittensor API](bt-api-ref).
+- Added a new homepage for the [Cybertensor API](bt-api-ref).
 
-- Enhanced the rendering of the [Python docstrings for Bittensor API](https://docs.bittensor.com/python-api/html/index.html).
+- Enhanced the rendering of the [Python docstrings for Cybertensor API](https://docs.bittensor.com/python-api/html/index.html).
 
 - Added a new section on [Miner deregistration](subnets/register-validate-mine.md#miner-deregistration).
 
@@ -99,7 +103,7 @@ The following changes are documented:
 
 ## 10 January 2024
 
-- Added the `btcli wallet history` [command description](/btcli.md#show-history).  
+- Added the `ctcli wallet history` [command description](/btcli.md#show-history).  
 
 ## 02 January 2024
 
@@ -111,7 +115,7 @@ The following changes are documented:
 - A new [Emissions](./emissions.md) document is published. This document presents how to calculate emissions, trust, rank and consensus for a subnet. 
 - A new section [Moving a subnet miner to a different machine](subnets/register-validate-mine.md#moving-a-subnet-miner-to-a-different-machine) is added.
 - A new section for [Subnets](./btcli.md#subnets) is added in the CLI document.
-- Dark-mode display problems with [Bittensor API Reference (see navbar above)](https://docs.bittensor.com/python-api/html/index.html) are fixed.
+- Dark-mode display problems with [Cybertensor API Reference (see navbar above)](https://docs.bittensor.com/python-api/html/index.html) are fixed.
 - Styling for this documentation site is enhanced to reflect Opentensor Foundation visual theme. 
 
 
@@ -122,10 +126,10 @@ The following changes are documented:
 ## 29 November 2023
 
 - Release of new and revised documentation hosted on `docs.bittensor.com`, which will now be the default site for Bittensor developer documentation. 
-- A new [Learn Bittensor Concepts](./learn/introduction.md) section comprising of:
+- A new [Learn Cybertensor Concepts](./learn/introduction.md) section comprising of:
   - [Introduction](./learn/introduction.md).
-  - [Bittensor Building Blocks](./learn/bittensor-building-blocks.md).
+  - [Cybertensor Building Blocks](./learn/bittensor-building-blocks.md).
   - [Anatomy of Incentive Mechanism](./learn/anatomy-of-incentive-mechanism.md).
 - A new [Code Walkthrough of Text Prompting Subnet](subnets/walkthrough-prompting.md) section.
-- A comprehensive Bittensor API Reference section (see the top navbar).
+- A comprehensive Cybertensor API Reference section (see the top navbar).
 - General revisions, removing obsolete content and cleanup.

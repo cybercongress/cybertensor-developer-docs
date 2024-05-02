@@ -4,10 +4,10 @@ title: "Yuma Consensus"
 
 # Yuma Consensus
 
-The Bittensor API is designed to enable subnet owners to write their own incentive mechanisms. These incentive mechanisms allow the subnet validators to express their own subjective preferences about what the network should learn. Such an approach:
+The Cybertensor API is designed to enable subnet owners to write their own incentive mechanisms. These incentive mechanisms allow the subnet validators to express their own subjective preferences about what the network should learn. Such an approach:
 
 1. Facilitates the economic market in which producers (subnet miners) are constantly driven to make their knowledge output more useful in terms of speed, intelligence and diversity.
-2. And also decentralizes Bittensor's governance across multiple diverse stakeholders, ensuring that no single group has full control over what is learned.
+2. And also decentralizes Cybertensor's governance across multiple diverse stakeholders, ensuring that no single group has full control over what is learned.
 
 ## Weights
 
@@ -20,8 +20,8 @@ Such weights $w_i$ are aggregated across all the subnet validators in the subnet
 For example, the below code prints the $W$ matrix of a subnet with the `netuid` of `1`. You can print such $W$ matrix for any other subnet by passing its `netuid`.
 
 ```python
-import bittensor as bt
-subnet = bt.metagraph( netuid = 1, lite = False)
+import cybertensor as ct
+subnet = ct.metagraph( netuid = 1, lite = False)
 print ('weights', subnet.W )
 ```
 
@@ -31,13 +31,13 @@ The Yuma Consensus algorithm translates the weight matrix $W$ into incentives fo
 
 However, radical divergence from consensus view points is dangerous, especially if bad actor validators manipulate incentives in ways that benefits themselves, for example, lying about the value produced by miners. 
 
-To avoid this scenario Bittensor uses a mechanism called Yuma Consensus. The Yuma Consensus rewards subnet validators with **dividends** for producing miner-value evaluations that are in agreement with the subjective evaluations produced by other subnet validators, weighted by **stake**.
+To avoid this scenario Cybertensor uses a mechanism called Yuma Consensus. The Yuma Consensus rewards subnet validators with **dividends** for producing miner-value evaluations that are in agreement with the subjective evaluations produced by other subnet validators, weighted by **stake**.
 
 The below example code prints the values of `S`, subnet validator stake, and `W`, subnet validator weights for a subnet with the `netuid` of `1`:
 
 ```python
-import bittensor as bt
-subnet = bt.metagraph( netuid = 1, lite = False)
+import cybertensor as ct
+subnet = ct.metagraph( netuid = 1, lite = False)
 print ('subnet 1 validator stake', subnet.S )
 print ('subnet 1 validator weights', subnet.W )
 ```
