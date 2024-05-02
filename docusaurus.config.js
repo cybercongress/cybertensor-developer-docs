@@ -98,10 +98,10 @@ const config = {
             to: "/subnets/walkthrough-prompting",
             from: "/subnets/code-walkthrough-text-prompting",
           },
-          {
-            to: "/subtensor-nodes",
-            from: "/getting-started/running-a-public-subtensor",
-          },
+          // {
+          //   to: "/subtensor-nodes",
+          //   from: "/getting-started/running-a-public-subtensor",
+          // },
         ],
       },
     ],
@@ -152,7 +152,7 @@ const config = {
           // {
           //   position: "left",
           //   label: "Bittensor API",
-          //   to: "bt-api-ref",
+          //   to: "ct-api-ref",
           // },
           // {
           //   position: "left",

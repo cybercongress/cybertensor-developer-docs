@@ -180,7 +180,7 @@ Use the Cybertensor CLI and Cybertensor API to develop and participate in the Cy
     <Card
     icon={FaPython}
     title='Cybertensor API'
-    link='bt-api-ref'
+    link='ct-api-ref'
     body='A comprehensive Python API reference documentation for the open-sourced Cybertensor API.' />
 </Cards>
 

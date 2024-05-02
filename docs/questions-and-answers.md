@@ -55,16 +55,22 @@ See more here in [How a subnet works](learn/introduction.md#how-a-subnet-works).
 
 ### So is there a separate blockchain validation on Cybertensor?
 
-Yes. As we saw in the above [So where does the blockchain come in](#so-where-does-the-blockchain-come-in) section, the subtensor blockchain is an essential part of the Cybertensor. This subtensor blockchain is like any blockchain, i.e., there are validator nodes, hosted by the Opentensor Foundation and functioning via Proof-of-Authority, that validate the transactions coming into the subtensor blockchain and post them in the subtensor blockchain ledger. Blocks containing such transactions are processed at the rate of one block every 12 seconds. You can run your own public subtensor node to synchronize with the Cybertensor mainchain or testchain. 
+Yes. As we saw in the above [So where does the blockchain come in](#so-where-does-the-blockchain-come-in) section, the subtensor blockchain is an essential part of the Cybertensor. 
+This subtensor blockchain is like any blockchain, i.e., there are validator nodes, hosted by the Opentensor Foundation and functioning via Proof-of-Authority, that validate the transactions coming into the subtensor blockchain and post them in the subtensor blockchain ledger. 
+Blocks containing such transactions are processed at the rate of one block every 12 seconds. 
+You can run your own public subtensor node to synchronize with the Cybertensor mainchain or testchain. 
 
 :::tip See also
-See [Subtensor Nodes](./subtensor-nodes/index.md). 
+See [Space Pussy Nodes](https://github.com/greatweb/space-pussy). 
 :::
 
 
 ### What is the incentive for me to be a miner or a validator, or even create a subnet? 
 
-Your incentive is that you earn TAO. It works like this. Every 12 seconds a new TAO is created (i.e., minted). This single TAO is then distributed among the 32 subnets. So every 12 seconds each subnet gets a fraction of this newly-created TAO, based on the performance of the subnet. This fractional TAO reward that a subnet receives, called emission, is, in turn, distributed within the subnet like this: 
+Your incentive is that you earn TAO. It works like this. Every 12 seconds a new TAO is created (i.e., minted). 
+This single TAO is then distributed among the 32 subnets. 
+So every 12 seconds each subnet gets a fraction of this newly-created TAO, based on the performance of the subnet. 
+This fractional TAO reward that a subnet receives, called emission, is, in turn, distributed within the subnet like this: 
 - 18% of it goes to the subnet owner.
 - 41% goes to subnet validators (this is called dividend).
 - 41% goes to the subnet miners (this is called incentive). 

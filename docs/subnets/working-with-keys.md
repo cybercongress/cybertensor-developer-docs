@@ -14,7 +14,7 @@ The Cybertensor wallet holds the core ownership of the assets on the Cybertensor
 A Cybertensor wallet consists of a **coldkey** and a **hotkey**. The coldkey and hotkey are used for different operations in the Cybertensor ecosystem. These two keys are logically connected via the Cybertensor API.
 
 :::tip Coldkey and hotkey each are pairings of separate private and public keys
-Each key is a pairing of two seperate [EdDSA cryptographic keypairs](https://en.wikipedia.org/wiki/EdDSA#Ed25519). Hence, a coldkey is a pairing of a private key and a public key. Similarly, a hotkey is a pairing of another set of private key and public keys. In this sense, a coldkey or a hotkey is each analogous to an account on a blockchain, where the account is defined by a pair of a public and a private key.
+Each key is a pairing of two separate [EdDSA cryptographic keypairs](https://en.wikipedia.org/wiki/EdDSA#Ed25519). Hence, a coldkey is a pairing of a private key and a public key. Similarly, a hotkey is a pairing of another set of private key and public keys. In this sense, a coldkey or a hotkey is each analogous to an account on a blockchain, where the account is defined by a pair of a public and a private key.
 :::
 
 ### Coldkey
@@ -67,7 +67,7 @@ This dual-key system helps balance convenience and security, allowing you to par
 
 ## Operational uses of keys
 
-The below diagram shows a few operations you can do with a hotkey and coldkey. Not all possible operations are shown below. You can use the `ctcli` to perform any of these operations. See [Bitttensor Wallet CLI](../btcli.md#wallets) for command syntax.
+The below diagram shows a few operations you can do with a hotkey and coldkey. Not all possible operations are shown below. You can use the `ctcli` to perform any of these operations. See [Cybertensor Wallet CLI](../ctcli#wallets) for command syntax.
 
 <center>
 <ThemedImage
