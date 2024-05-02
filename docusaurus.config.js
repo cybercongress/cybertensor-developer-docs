@@ -87,8 +87,8 @@ const config = {
             from: "/delegation",
           },
           {
-            to: "/staking-and-delegation/staking-polkadot-js",
-            from: "/staking/staking-polkadot-js",
+            to: "/staking-and-delegation/staking",
+            from: "/staking/staking",
           },
           {
             to: "/staking-and-delegation",

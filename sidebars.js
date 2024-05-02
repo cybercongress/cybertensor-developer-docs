@@ -73,7 +73,7 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       link: {type: "doc", id: "staking-and-delegation/index",},
-      items: ["staking-and-delegation/staking-polkadot-js", "staking-and-delegation/delegation",],
+      items: ["staking-and-delegation/staking", "staking-and-delegation/delegation",],
     },
     {
       type: "category",
