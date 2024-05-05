@@ -1,10 +1,10 @@
 <h1 align="center">
-  <a href="https://www.docs.bittensor.com">
-    <img alt="Tao Logo" src="./static/img/tao-logo.png" />
+  <a href="https://www.docs.spacepussy.ai">
+    <img alt="Cybertensor Logo" src="./static/img/logo-dark-mode.png" />
   </a>
 </h1>
 <h2 align="center">Cybertensor Developer Docs</h2>
-<h3 align="center">https://docs.bittensor.com</h3>
+<h3 align="center">https://docs.spacepussy.ai</h3>
 
 -----------------------------------------------------------------------------
 

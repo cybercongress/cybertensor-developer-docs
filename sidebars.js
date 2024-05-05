@@ -16,7 +16,7 @@ const sidebars = {
   bittensorSidebar: [
     // 	{
     // 	type: 'link',
-    // 	href: 'https://docs.bittensor.com',
+    // 	href: 'https://docs.spacepussy.ai',
     // 	label: "Search",
     // 	className: 'sidebarSearch', //  based on Class name it will add search component
     // },

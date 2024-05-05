@@ -49,14 +49,14 @@ torch.Size([64, 33])
 
 As expected, the shape of the weights reflects the 64 root network validators that set the weights for the 32 subnets. The root network itself is counted, hence `33` in the above output, instead of 32.
 
-You can then read the weights matrix $W$ from the metagraph as below. See the [`metagraph` API documentation](https://docs.bittensor.com/python-api/html/autoapi/bittensor/metagraph/index.html#bittensor.metagraph.metagraph.W).
+You can then read the weights matrix $W$ from the metagraph as below. See the [`metagraph` API documentation](https://docs.spacepussy.ai/python-api/html/autoapi/bittensor/metagraph/index.html#bittensor.metagraph.metagraph.W).
 
 ```python
 # Create a weight matrix with FP32 resolution
 W = metagraph.W.float()
 ```
 
-Next, read the stake vector $S$. See [`metagraph` property `S` documentation](https://docs.bittensor.com/python-api/html/autoapi/bittensor/metagraph/index.html#bittensor.metagraph.metagraph.S).
+Next, read the stake vector $S$. See [`metagraph` property `S` documentation](https://docs.spacepussy.ai/python-api/html/autoapi/bittensor/metagraph/index.html#bittensor.metagraph.metagraph.S).
 
 ```python
 # Create "normalized" stake vector

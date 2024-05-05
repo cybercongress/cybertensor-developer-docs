@@ -1,7 +1,7 @@
 /* 
 DESCRIPTION
 ===========
-This "bt-next-adjustment-block.js" script queries a Cybertensor subnet to find out how many blocks to go before the recycle register cost is recalculated. In any subnet, the recycle register cost is recalculated after every "adjustment_interval" number of blocks. See "Subnet Hyperparameters" documentation section https://docs.bittensor.com/subnets/subnet-hyperparameters. This script works like this: It gets the "lastAdjustmentBlock", i.e., the block number when the recalculation was performed last, and adds the value of the subnet's "adjustment_interval" parameter to it. This gives the block number for the next recalculation. Finally, the script checks the current block number and outputs how many blocks to go for the next recalculation.
+This "bt-next-adjustment-block.js" script queries a Cybertensor subnet to find out how many blocks to go before the recycle register cost is recalculated. In any subnet, the recycle register cost is recalculated after every "adjustment_interval" number of blocks. See "Subnet Hyperparameters" documentation section https://docs.spacepussy.ai/subnets/subnet-hyperparameters. This script works like this: It gets the "lastAdjustmentBlock", i.e., the block number when the recalculation was performed last, and adds the value of the subnet's "adjustment_interval" parameter to it. This gives the block number for the next recalculation. Finally, the script checks the current block number and outputs how many blocks to go for the next recalculation.
 
 INSTALLATION STEPS
 ==================

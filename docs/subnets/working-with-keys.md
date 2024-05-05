@@ -67,7 +67,7 @@ This dual-key system helps balance convenience and security, allowing you to par
 
 ## Operational uses of keys
 
-The below diagram shows a few operations you can do with a hotkey and coldkey. Not all possible operations are shown below. You can use the `ctcli` to perform any of these operations. See [Cybertensor Wallet CLI](../ctcli#wallets) for command syntax.
+The below diagram shows a few operations you can do with a hotkey and coldkey. Not all possible operations are shown below. You can use the `ctcli` to perform any of these operations. See [Cybertensor Wallet CLI](../ctcli) for command syntax.
 
 <center>
 <ThemedImage
