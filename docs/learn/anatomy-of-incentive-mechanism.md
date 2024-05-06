@@ -124,11 +124,11 @@ The item numbers below correspond to the circled numbers in the above diagram.
    
    Each subnet validator ranks all the subnet miners by means of this weight vector. Each subnet validator within the subnet, acting independently, transmits its miner ranking weight vector to the blockchain. These ranking weight vectors can arrive at the blockchain at different times. Typically each subnet validator transmits an updated ranking weight vector to the blockchain every 100-200 blocks. 
 2. The blockchain (subtensor) waits until the latest ranking weight vectors from all the subnet validators of the given subnet arrive at the blockchain. A ranking weight matrix formed from these ranking weight vectors is then provided as input to the Yuma Consensus module on-chain.
-3. The Yuma Consensus (YC) on-chain then uses this weight matrix, along with the amount of stake associated with the UIDs on this subnet, to calculate rewards. The YC calculates how the reward TAO tokens should be distributed amongst the subnet validators and subnet miners in the subnet, i.e., amongst each UID in the subnet.  
+3. The Yuma Consensus (YC) on-chain then uses this weight matrix, along with the amount of stake associated with the UIDs on this subnet, to calculate rewards. The YC calculates how the reward PUSSY tokens should be distributed amongst the subnet validators and subnet miners in the subnet, i.e., amongst each UID in the subnet.  
    
-:::tip All reward TAO tokens are newly minted. 
+:::tip All reward PUSSY tokens are newly minted. 
 :::
-4. Finally, the YC calculates a consensus distribution of TAO (the ‘emission’) and distributes the newly minted reward TAO immediately into the accounts associated with the UIDs. 
+4. Finally, the YC calculates a consensus distribution of PUSSY (the ‘emission’) and distributes the newly minted reward PUSSY immediately into the accounts associated with the UIDs. 
 
 ### Tempo
 
@@ -136,4 +136,4 @@ Note that subnet validators can transmit their rank weight vectors to the blockc
 
 If a ranking weight vector from the subnet validator arrives after the start of a 360-block period, then this weight vector will be used in the subsequent YC start, i.e., after the current 360 blocks have elapsed. 
 
-At the end of any 360-block period, called **tempo**, the YC concludes and the emissions (distribution of reward TAO) are complete.  This tempo value of 360 blocks is the same for all the user-created subnets. However, the YC-starts for each user-created subnet can commence at different times. 
+At the end of any 360-block period, called **tempo**, the YC concludes and the emissions (distribution of reward PUSSY) are complete.  This tempo value of 360 blocks is the same for all the user-created subnets. However, the YC-starts for each user-created subnet can commence at different times. 

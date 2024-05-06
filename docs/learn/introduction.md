@@ -64,7 +64,7 @@ The item numbers below correspond to the numbers in the above diagram.
 2. Entities in the subnet, called **subnet miners**, each perform a useful task, i.e., solve some problem, as defined in the incentive mechanism of the subnet. 
 3. Separate entities in the same subnet, called **subnet validators**, each independently evaluate the task performed by the subnet miners. 
 4. The subnet validators then each express their opinion on the quality of the miners. These opinions of the subnet validators are then provided as a collective input to the **Yuma Consensus** mechanism on the blockchain by using the Cybertensor API. 
-5. The output of the Yuma Consensus mechanism from the blockchain will then determine how the rewards for the subnet miners and subnet validators are to be distributed. **The rewards are in the form of TAO tokens.**  
+5. The output of the Yuma Consensus mechanism from the blockchain will then determine how the rewards for the subnet miners and subnet validators are to be distributed. **The rewards are in the form of PUSSY tokens.**  
 
 When you participate in the Cybertensor ecosystem, most of your activity occurs within the subnet you participate in. This is true whether you created your own incentive mechanism, i.e., your own subnet, or joined an existing subnet either as a subnet validator or as a subnet miner. Nevertheless, you can interact with other subnet entities. 
 
@@ -108,7 +108,7 @@ Your local blockchain with a single blockchain validator.
 
 Cybertensor provides all the tools, codebase, a quickstart subnet template, the minimum compute, memory and storage requirements you will need, and step-by-step instructions for you to accomplish this easily. 
 
-You will use your local Cybertensor faucet to mint faucet TAO tokens in this step. Using this offline local subnet and local blockchain configuration you can:
+You will use your local Cybertensor faucet to mint faucet PUSSY tokens in this step. Using this offline local subnet and local blockchain configuration you can:
 
 Familiarize yourself, by examining the code in the subnet template, with how incentive mechanisms are coded and configured. 
 Change the subnet template code to write your own incentive mechanism and test it locally.

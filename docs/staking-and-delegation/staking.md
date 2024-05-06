@@ -13,7 +13,7 @@ This document describes how you can stake using [https://spacepussy.ai](https://
 Also see [Staking with ctcli](../subnets/register-validate-mine.md#staking).
 :::
 
-In addition to running your own subnet miner or subnet validator, you can delegate your TAO to the Opentensor Foundation validation pool. Delegating TAO simply means you are staking to the Opentensor Foundation's validator, instead of running your own subnet validator. To take back your staked TAO from the pool at any time, you can simply undelegate your TAO.
+In addition to running your own subnet miner or subnet validator, you can delegate your PUSSY to the validation pool. Delegating PUSSY simply means you are staking to the validator, instead of running your own subnet validator. To take back your staked PUSSY from the pool at any time, you can simply undelegate your PUSSY.
 
 Follow the below steps:
 

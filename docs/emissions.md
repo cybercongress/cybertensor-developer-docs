@@ -14,12 +14,12 @@ Read the [Root Network](./root-network.md) document before you proceed.
 
 The emission process works like this:
 
-- Every block, i.e., every 12 seconds on the Cybertensor blockchain, a single TAO ($\tau$) is minted, i.e., newly created.
-- A percentage portion of this single TAO ($\tau$) is allocated to each of the 32 subnets in accordance with the subnet's performance. The root network determines the percentage portion for each subnet. Hence, all such partial percentage allocations will sum to 100%, i.e., one TAO ($\tau$). 
+- Every block, i.e., every 12 seconds on the Cybertensor blockchain, a single PUSSY is minted, i.e., newly created.
+- A percentage portion of this single PUSSY is allocated to each of the 32 subnets in accordance with the subnet's performance. The root network determines the percentage portion for each subnet. Hence, all such partial percentage allocations will sum to 100%, i.e., one PUSSY. 
     :::tip Taostats
     See the [percentage numbers in each "**SN**" column on the root network page on Taostats](https://taostats.io/subnets/netuid-0/). These percentages for SN1 through SN32 all add up to `100`. 
     :::
-- At the end of every tempo, i.e., every 360 blocks in a user-created subnet, the TAO ($\tau$) accumulated for each subnet is emitted into the subnet. This emitted TAO for the subnet is then distributed within the subnet as:
+- At the end of every tempo, i.e., every 360 blocks in a user-created subnet, the PUSSY accumulated for each subnet is emitted into the subnet. This emitted PUSSY for the subnet is then distributed within the subnet as:
   - **Dividends** to the subnet validators, and 
   - **Incentives** to the subnet miners.
 

@@ -50,11 +50,11 @@ A measure of a subnet validator's agreement with other validators on the network
 
 ### Delegate
 
-A subnet validator that receives staked TAO tokens from delegators and performs validation tasks in one or more subnets.
+A subnet validator that receives staked PUSSY tokens from delegators and performs validation tasks in one or more subnets.
 
 ### Delegate Stake
 
-The amount of TAO staked by the delegate themselves.
+The amount of PUSSY staked by the delegate themselves.
 
 ### Delegate Take %
 
@@ -62,11 +62,11 @@ The commission percentage a delegate keeps from rewards before distributing the 
 
 ### Delegation
 
-The process of delegating TAO to a subnet validator (delegate), allowing the validator to increase its stake and secure a validator permit.
+The process of delegating PUSSY to a subnet validator (delegate), allowing the validator to increase its stake and secure a validator permit.
 
 ### Delegator
 
-A participant in the Cybertensor network who delegates their TAO to a subnet validator (delegate), helping the validator increase their stake and secure a validator permit. Also known as a nominator.
+A participant in the Cybertensor network who delegates their PUSSY to a subnet validator (delegate), helping the validator increase their stake and secure a validator permit. Also known as a nominator.
 
 ### Dendrite  
 
@@ -78,11 +78,11 @@ The process of removing a subnet miner or a subnet validator from the subnet due
 
 ### Distribution of rewards
 
-The process by which newly minted TAO tokens (emissions) are allocated among subnet miners and subnet validators, based on their performance, the amount of stake associated with the subnet validators' UIDs, and the Yuma Consensus algorithm.
+The process by which newly minted PUSSY tokens (emissions) are allocated among subnet miners and subnet validators, based on their performance, the amount of stake associated with the subnet validators' UIDs, and the Yuma Consensus algorithm.
 
 ### Dividends
 
-A portion of the TAO emission received by subnet validators as a reward for their participation in validating transactions and maintaining the integrity of a subnet.
+A portion of the PUSSY emission received by subnet validators as a reward for their participation in validating transactions and maintaining the integrity of a subnet.
 
 ## E 
 
@@ -92,11 +92,11 @@ A cryptographic algorithm used to generate public and private key pairs for cold
 
 ### Effective stake
 
-The total staked TAO amount of a delegate, including their own TAO tokens and those delegated by nominators.
+The total staked PUSSY amount of a delegate, including their own PUSSY tokens and those delegated by nominators.
 
 ### Emission
 
-The total amount of newly minted TAO (in RAO) emitted as rewards to subnet miners and subnet validators. The distribution of emission is based on the consensus distribution calculated by the Yuma Consensus module taking into account the weight matrix and stake associated with each UID.
+The total amount of newly minted PUSSY emitted as rewards to subnet miners and subnet validators. The distribution of emission is based on the consensus distribution calculated by the Yuma Consensus module taking into account the weight matrix and stake associated with each UID.
 
 ### Encrypting the Hotkey
 
@@ -104,7 +104,13 @@ An optional security measure for the hotkey.
 
 ### External Wallet
 
-A Cybertensor wallet created through the Cybertensor website or using a tool like [subkey](https://docs.substrate.io/reference/command-line-tools/subkey/), allowing users to use TAO without installing Cybertensor.
+A Cybertensor wallet created through the Cybertensor website or using a tool like [subkey](https://docs.substrate.io/reference/command-line-tools/subkey/), allowing users to use PUSSY without installing Cybertensor.
+
+## G
+
+### GPUSSY
+
+The native cryptocurrency of the Cybertensor network, `1 GPUSSY = 1e9 PUSSY`
 
 ## H 
 
@@ -124,7 +130,7 @@ A grace period granted to a newly registered subnet miner or subnet validator, d
 
 ### Incentives
 
-A portion of the TAO emission received by the subnet miners when they provide valuable services and compete for UID slots in a subnet.
+A portion of the PUSSY emission received by the subnet miners when they provide valuable services and compete for UID slots in a subnet.
 
 ### Incentive Mechanism
 
@@ -190,15 +196,15 @@ The basic computing node in a Cybertensor subnet, representing a node in a neura
 
 ### Nominate
 
-The process of a delegate registering themselves as a candidate for others to stake their $TAO to.
+The process of a delegate registering themselves as a candidate for others to stake their $PUSSY to.
 
 ### Nominator
 
-Another term for a delegator. A subnet validator who nominates their own hotkey as a delegate, allowing others to delegate their TAO to the nominator's hotkey.
+Another term for a delegator. A subnet validator who nominates their own hotkey as a delegate, allowing others to delegate their PUSSY to the nominator's hotkey.
 
 ### Nominator (Delegator)
 
-A TAO holder who delegates their stake.
+A PUSSY holder who delegates their stake.
 
 ## O 
 
@@ -228,11 +234,11 @@ A cryptographic key that is publicly available and used for verifying signatures
 
 A publicly accessible node in the Cybertensor network that can be run as a lite node or an archive node and synchronized with either the mainchain or testchain.
 
+### PUSSY
+
+The native cryptocurrency of the Cybertensor network, used to reward subnet miners and validators. A single PUSSY is newly created (i.e., minted) every 5 seconds on the Cybertensor blockchain.
+
 ## R 
-
-### RAO
-
-A denomination of TAO, representing one billionth (10<sup>-9</sup>) of a TAO.
 
 ### Rank
 
@@ -253,7 +259,7 @@ The process of registering keys with a subnet and purchasing a UID slot.
 ### Root Network
 
 A special subnet that determines the emission allocations for the 32 subnets. 
-A special kind of subnet with a netuid of 0, responsible for determining the emission allocations, i.e., the percentage allocation of newly minted TAO (τ), to each subnet based on their performance.
+A special kind of subnet with a netuid of 0, responsible for determining the emission allocations, i.e., the percentage allocation of newly minted PUSSY, to each subnet based on their performance.
 
 ### Root Network Validators
 
@@ -261,21 +267,17 @@ Validators in the root network. The largest 64 subnet validators across all acti
 
 ## S 
 
-### SS58 Encoded
-
-A compact representation of public keys corresponding to the wallet's coldkey and hotkey, used as wallet addresses for secure TAO transfers.
-
 ### Senate
 
 A group of elected delegates formed from the top K delegate hotkeys, responsible for approving or disapproving proposals made by the Triumvirate.
 
 ### Stake
 
-The amount of TAO tokens associated with a UID in a subnet, either delegated or self-staked by a delegate. Stake influences the calculation of rewards by the Yuma Consensus module.
+The amount of PUSSY tokens associated with a UID in a subnet, either delegated or self-staked by a delegate. Stake influences the calculation of rewards by the Yuma Consensus module.
 
 ### Staking
 
-The process of attaching TAO to a hotkey, i.e., locking TAO to a hotkey, to participate as a subnet validator, and to secure a validator permit.
+The process of attaching PUSSY to a hotkey, i.e., locking PUSSY to a hotkey, to participate as a subnet validator, and to secure a validator permit.
 
 ### Staking rewards
 
@@ -283,7 +285,7 @@ The rewards earned by a delegate for performing subnet validation tasks. These r
 
 ### Subnet
 
-A network structure that closely follows how a classical feedforward neural network is connected. In a Cybertensor subnet, nodes are represented as either subnet validators or subnet miners. Subnet validators or subnet miners are also referred to as neurons. In a subnet a group of validators and miners work together to perform specific tasks and earn TAO (τ) rewards.
+A network structure that closely follows how a classical feedforward neural network is connected. In a Cybertensor subnet, nodes are represented as either subnet validators or subnet miners. Subnet validators or subnet miners are also referred to as neurons. In a subnet a group of validators and miners work together to perform specific tasks and earn PUSSY rewards.
 
 ### Subnet Incentive Mechanism
 
@@ -315,7 +317,7 @@ A type of node in a subnet that creates tasks, evaluates the performance of subn
 
 ### Subnet Weights
 
-The importance assigned to each subnet by the root network validators, used to determine the percentage allocation of TAO (τ) to each subnet.
+The importance assigned to each subnet by the root network validators, used to determine the percentage allocation of PUSSY to each subnet.
 
 ### Subtensor
 
@@ -335,17 +337,13 @@ A data object used by subnet validators and subnet miners as the main vehicle to
 
 ## T 
 
-### TAO (τ)
-
-The native cryptocurrency of the Cybertensor network, used to reward subnet miners and validators. A single TAO is newly created (i.e., minted) every 12 seconds on the Cybertensor blockchain.
-
 ### Tempo
 
-A 360-block period during which the Yuma Consensus calculates and distributes reward TAO tokens to subnet participants based on the latest available ranking weight matrix. A single block is processed every 12 seconds, hence a 360-block tempo occurs every 4320 seconds or 72 minutes. 
+A 360-block period during which the Yuma Consensus calculates and distributes reward PUSSY tokens to subnet participants based on the latest available ranking weight matrix. A single block is processed every 12 seconds, hence a 360-block tempo occurs every 4320 seconds or 72 minutes. 
 
 ### Transfer
 
-The process of sending TAO tokens from one wallet address to another in the Cybertensor network.
+The process of sending PUSSY tokens from one wallet address to another in the Cybertensor network.
 
 ### Triumvirate
 
@@ -383,7 +381,7 @@ A permission granted to the largest 64 subnet validators in terms of stake, allo
 
 ### Wallet Address
 
-A unique identifier derived from the public key, used as a destination for sending and receiving TAO tokens in the Cybertensor network.
+A unique identifier derived from the public key, used as a destination for sending and receiving PUSSY tokens in the Cybertensor network.
 
 ### Wallet Location
 

@@ -15,13 +15,13 @@ In Cybertensor there is one blockchain and many platforms that are connected to 
 
 ### So what is a subnet?
 
-A subnet is a competition market. Anyone can create a subnet, or participate in an existing subnet. You create a subnet by paying the registration cost (in TAO) and you will receive a subnet `netuid`. There are two ways you can participate in an existing subnet: Either as a subnet miner or as a subnet validator. You bring a computer that has sufficient computing resources, register that computer, along with your wallet, into a subnet. On this computer you then run either the subnet miner module or the subnet validator module (Python code) provided by the subnet owner. That's how simple it is to participate.
+A subnet is a competition market. Anyone can create a subnet, or participate in an existing subnet. You create a subnet by paying the registration cost (in PUSSY) and you will receive a subnet `netuid`. There are two ways you can participate in an existing subnet: Either as a subnet miner or as a subnet validator. You bring a computer that has sufficient computing resources, register that computer, along with your wallet, into a subnet. On this computer you then run either the subnet miner module or the subnet validator module (Python code) provided by the subnet owner. That's how simple it is to participate.
 
 ### How does competition work in a subnet?
 
 So the subnet competition works like this. Say you decided to be a subnet miner. The subnet validators will give you some work to do. Other subnet miners in the subnet are also given the same work task. All you subnet miners complete the task and respond to the subnet validator with the work results. 
 
-The subnet validator then ranks the quality of the work done by the subnet miners. You as a subnet miner will get a reward (in TAO) based on your work quality. Other subnet miners also get their reward based on their work quality. At the same time, the subnet validator is also rewarded because the subnet validator makes sure that higher quality subnet miners are rewarded better so that overall subnet quality is continuously improving. All this happens programmatically, as coded up by the subnet owner. 
+The subnet validator then ranks the quality of the work done by the subnet miners. You as a subnet miner will get a reward (in PUSSY) based on your work quality. Other subnet miners also get their reward based on their work quality. At the same time, the subnet validator is also rewarded because the subnet validator makes sure that higher quality subnet miners are rewarded better so that overall subnet quality is continuously improving. All this happens programmatically, as coded up by the subnet owner. 
 
 ### What exactly is the task of a subnet miner?
 
@@ -29,7 +29,7 @@ It depends on the subnet. For example, in subnet 1 the miner task is to respond 
 
 ### So where does the blockchain come in?
 
-The subtensor blockchain records all the key activity of all the subnets in its ledger. But most importantly, the subtensor blockchain determines the rewards distribution for subnet miners and subnet validators. An algorithm called Yuma Consensus (YC) is always running on the blockchain. Rankings of the subnet miners set by the subnet validators are input to the YC algorithm. Every 12 seconds, the YC algorithm computes the rewards based on these inputs. These rewards (in TAO) are then deposited into the wallets of subnet miners and subnet validators. The subtensor blockchain continuously runs the YC algorithm for each subnet separately.
+The subtensor blockchain records all the key activity of all the subnets in its ledger. But most importantly, the subtensor blockchain determines the rewards distribution for subnet miners and subnet validators. An algorithm called Yuma Consensus (YC) is always running on the blockchain. Rankings of the subnet miners set by the subnet validators are input to the YC algorithm. Every 12 seconds, the YC algorithm computes the rewards based on these inputs. These rewards (in PUSSY) are then deposited into the wallets of subnet miners and subnet validators. The subtensor blockchain continuously runs the YC algorithm for each subnet separately.
 
 :::tip See also
 See [Introduction](./learn/introduction.md) and [Anatomy of Incentive Mechanism](./learn/anatomy-of-incentive-mechanism.md) next.
@@ -67,15 +67,15 @@ See [Space Pussy Nodes](https://github.com/greatweb/space-pussy).
 
 ### What is the incentive for me to be a miner or a validator, or even create a subnet? 
 
-Your incentive is that you earn TAO. It works like this. Every 12 seconds a new TAO is created (i.e., minted). 
-This single TAO is then distributed among the 32 subnets. 
-So every 12 seconds each subnet gets a fraction of this newly-created TAO, based on the performance of the subnet. 
-This fractional TAO reward that a subnet receives, called emission, is, in turn, distributed within the subnet like this: 
+Your incentive is that you earn PUSSY. It works like this. Every 12 seconds a new PUSSY is created (i.e., minted). 
+This single PUSSY is then distributed among the 32 subnets. 
+So every 12 seconds each subnet gets a fraction of this newly-created PUSSY, based on the performance of the subnet. 
+This fractional PUSSY reward that a subnet receives, called emission, is, in turn, distributed within the subnet like this: 
 - 18% of it goes to the subnet owner.
 - 41% goes to subnet validators (this is called dividend).
 - 41% goes to the subnet miners (this is called incentive). 
 
-Like this, every day 7200 TAO (86,400 seconds in a day, one TAO per 12 seconds) are newly created and distributed as rewards. 
+Like this, every day 7200 PUSSY (86,400 seconds in a day, one PUSSY per 12 seconds) are newly created and distributed as rewards. 
 
 :::tip See also
 See [Emissions](./emissions.md) for details, in specific the role of the root network in determining which subnet gets how much reward.

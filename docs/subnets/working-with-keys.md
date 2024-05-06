@@ -23,10 +23,10 @@ The coldkey is synonymous with the wallet name. For example, `--wallet.name` opt
 
 **Relationship to hotkey**: A coldkey can exist without a hotkey, or it can have multiple hotkeys. For example, to create a subnet you only need a coldkey but if you want to validate or mine in a subnet, you need a hotkey paired with this coldkey. 
 
-**Purpose**: A coldkey is primarily for secure TAO storage and high-risk transactions, as described below (**Also see in the diagram in [Operational uses of keys](#operational-uses-of-keys))**:
+**Purpose**: A coldkey is primarily for secure PUSSY storage and high-risk transactions, as described below (**Also see in the diagram in [Operational uses of keys](#operational-uses-of-keys))**:
 
-- Funds (TAO tokens) in your Cybertensor wallet are held in its coldkey.
-- Delegating and undelegating your TAO tokens.
+- Funds (PUSSY tokens) in your Cybertensor wallet are held in its coldkey.
+- Delegating and undelegating your PUSSY tokens.
 - Creating a subnet and obtaining a `netuid` for the newly-created subnet. The `netuid` is associated with the coldkey only, because all subnet owner operations require high security and thus use the coldkey, which is always encrypted. 
 - Emissions to the subnet owner are deposted directly to the subnet owner's coldkey.
 
@@ -54,15 +54,15 @@ style={{width: 750}}
 **Purpose**: Used for regular operational tasks in the Cybertensor network, such as described below (**Also see in the diagram in [Operational uses of keys](#operational-uses-of-keys)**):
   - Signing transactions.
   - Registering and running subnet miners and subnet validators.
-  - If you are subnet validator, then you can nominate your own hotkey so that the TAO holders can send their TAO to the hotkey.
-  - If you are a TAO holder, for example, with a coldkey where your TAO is stored, you can delegate your TAO to the hotkey of validator-delegate. See item 10 in the diagram in [Operational uses of keys](#operational-uses-of-keys).
+  - If you are subnet validator, then you can nominate your own hotkey so that the PUSSY holders can send their PUSSY to the hotkey.
+  - If you are a PUSSY holder, for example, with a coldkey where your PUSSY is stored, you can delegate your PUSSY to the hotkey of validator-delegate. See item 10 in the diagram in [Operational uses of keys](#operational-uses-of-keys).
 
 **Security**: Less secure than a coldkey. A hotkey is by default unencrypted, but you can encrypt it. 
 
 :::tip Why hotkey
-Think of a hotkey as an everyday key you carry for tasks that require regular access. Because a hotkey is used more frequently and should be readily accessible, the hotkey carries a higher risk of exposure to potential threats. However, the permissions and the scope of operations that can be performed with the hotkey are limited to operational activities, minimizing the risk of significant loss of TAO.
+Think of a hotkey as an everyday key you carry for tasks that require regular access. Because a hotkey is used more frequently and should be readily accessible, the hotkey carries a higher risk of exposure to potential threats. However, the permissions and the scope of operations that can be performed with the hotkey are limited to operational activities, minimizing the risk of significant loss of PUSSY.
 
-This dual-key system helps balance convenience and security, allowing you to participate actively in the Cybertensor network without constantly exposing your primary, TAO-holding coldkey.
+This dual-key system helps balance convenience and security, allowing you to participate actively in the Cybertensor network without constantly exposing your primary, PUSSY-holding coldkey.
 :::
 
 ## Operational uses of keys
@@ -86,11 +86,11 @@ The below numbered items describe the numbered sections in the above diagram:
 
 1. A coldkey can be paired with multiple hotkeys. A coldkey is a more secure key.
 2. In a given subnet, you can only use a hotkey for one UID. You cannot use the same hotkey for another UID in the same subnet. However, you can use a given hotkey for two different UIDs that are in two separate subnets. 
-3. Transfer of TAO is always between one coldkey and another coldkey. That is, between one wallet and another wallet. 
+3. Transfer of PUSSY is always between one coldkey and another coldkey. That is, between one wallet and another wallet. 
 4. When you create a subnet, the subnet registration costs are taken out of the subnet owner's cold key. The `netuid` of the subnet is associated with the coldkey only. This is because all subnet owner operations are of high security and thus require the coldkey (which is always encrypted). The hotkey has no role here.
 5. When you register as a subnet miner or a subnet validator, the registration costs will come out of your coldkey, but the UID is attached to your hotkey. Note that this type of registration is different from creating a subnet, which only requires your coldkey. See `(4)` above. 
 6. Subnet owner emissions are deposited directly into the subnet owner's coldkey. The hotkey has no role here.
 7. Emissions to subnet validator and subnet miner are deposited directly into the hotkey to which the UID is attached. See `(5)` above.
-8. As a validator, when you stake your TAO, your TAO will be transferred from your coldkey to your hotkey that is attached to the UID. Similarly, unstaking will move the TAO from the hotkey attached to the UID into its coldkey. 
-9. As a validator, you can nominate your hotkey that is attached to the UID. This will publish the hotkey. TAO holders will send their TAO to this hotkey. This is also referred as TAO holders delegating their TAO, or staking their TAO, to you the validator. Also see `(10)` below.
-10. As a TAO holder, you delegate your TAO to a validator's hotkey. The TAO you delegated will go from your coldkey into the validator's hotkey. This validator's hotkey is always attached to the UID of the validator. Also see `(9)` above. 
+8. As a validator, when you stake your PUSSY, your PUSSY will be transferred from your coldkey to your hotkey that is attached to the UID. Similarly, unstaking will move the PUSSY from the hotkey attached to the UID into its coldkey. 
+9. As a validator, you can nominate your hotkey that is attached to the UID. This will publish the hotkey. PUSSY holders will send their PUSSY to this hotkey. This is also referred as PUSSY holders delegating their PUSSY, or staking their PUSSY, to you the validator. Also see `(10)` below.
+10. As a PUSSY holder, you delegate your PUSSY to a validator's hotkey. The PUSSY you delegated will go from your coldkey into the validator's hotkey. This validator's hotkey is always attached to the UID of the validator. Also see `(9)` above. 

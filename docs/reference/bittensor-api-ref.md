@@ -34,13 +34,13 @@ Designates the wallet's hotkey as a delegate.
 
 #### delegate
 ```python
-delegate(self, wallet: 'cybertensor.wallet', delegate_ss58: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
+delegate(self, wallet: 'cybertensor.wallet', delegate: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
 ```
 Adds a specific amount of stake to a delegate using a wallet.
 
 #### undelegate
 ```python
-undelegate(self, wallet: 'cybertensor.wallet', delegate_ss58: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
+undelegate(self, wallet: 'cybertensor.wallet', delegate: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
 ```
 Removes a specific amount of stake from a delegate using a wallet.
 
@@ -60,7 +60,7 @@ Registers the wallet to the chain.
 ```python
 burned_register(self, wallet: 'cybertensor.Wallet', netuid: int, wait_for_inclusion: bool = False, wait_for_finalization: bool = True, prompt: bool = False) -> bool
 ```
-Registers the wallet to the chain by recycling TAO.
+Registers the wallet to the chain by recycling PUSSY.
 
 #### transfer
 ```python
@@ -96,27 +96,27 @@ Starts serving a Prometheus server on a specific port for a given netuid.
 
 #### add_stake
 ```python
-add_stake(self, wallet: 'cybertensor.wallet', hotkey_ss58: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
+add_stake(self, wallet: 'cybertensor.wallet', hotkey: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
 ```
 Adds a specific amount of stake to a hotkey uid.
 
 #### add_stake_multiple
 ```python
-add_stake_multiple(self, wallet: 'cybertensor.wallet', hotkey_ss58s: List[str], amounts: List[Union[Balance, float]] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
+add_stake_multiple(self, wallet: 'cybertensor.wallet', hotkeys: List[str], amounts: List[Union[Balance, float]] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
 ```
 Adds stake to each hotkey in the list from a common coldkey.
 
 
 #### unstake
 ```python
-unstake(self, wallet: 'cybertensor.wallet', hotkey_ss58: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion:bool = True, wait_for_finalization:bool = False, prompt: bool = False) -> bool
+unstake(self, wallet: 'cybertensor.wallet', hotkey: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion:bool = True, wait_for_finalization:bool = False, prompt: bool = False) -> bool
 ```
 Removes stake into the wallet coldkey from the specified hotkey uid.
 
 
 #### unstake_multiple
 ```python
-unstake_multiple(self, wallet: 'cybertensor.wallet', hotkey_ss58s: List[str], amounts: List[Union[Balance, float]] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
+unstake_multiple(self, wallet: 'cybertensor.wallet', hotkeys: List[str], amounts: List[Union[Balance, float]] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
 ```
 Removes stake from each hotkey in the list to a common coldkey.
 
@@ -271,54 +271,54 @@ Returns the network Tempo hyperparameter if the network exists. Inputs are `netu
 
 ### get_total_stake_for_hotkey
 ```python
-get_total_stake_for_hotkey( self, ss58_address: str, block: Optional[int] = None ) -> Optional['cybertensor.Balance']
+get_total_stake_for_hotkey( self, address: str, block: Optional[int] = None ) -> Optional['cybertensor.Balance']
 ```
-Returns the total stake held on a hotkey including delegated. Inputs are `ss58_address` and an optional `block` number.
+Returns the total stake held on a hotkey including delegated. Inputs are `address` and an optional `block` number.
 
 
 ### get_total_stake_for_coldkey
 ```python
-get_total_stake_for_coldkey( self, ss58_address: str, block: Optional[int] = None ) -> Optional['cybertensor.Balance']
+get_total_stake_for_coldkey( self, address: str, block: Optional[int] = None ) -> Optional['cybertensor.Balance']
 ```
-Returns the total stake held on a coldkey across all hotkeys including delegates. Inputs are `ss58_address` and an optional `block` number.
+Returns the total stake held on a coldkey across all hotkeys including delegates. Inputs are `address` and an optional `block` number.
 
 
 ### get_stake_for_coldkey_and_hotkey
 ```python
-get_stake_for_coldkey_and_hotkey( self, hotkey_ss58: str, coldkey_ss58: str, block: Optional[int] = None ) -> Optional['cybertensor.Balance']
+get_stake_for_coldkey_and_hotkey( self, hotkey: str, coldkey: str, block: Optional[int] = None ) -> Optional['cybertensor.Balance']
 ```
-Returns the stake under a coldkey - hotkey pairing. Inputs are `hotkey_ss58`, `coldkey_ss58` and an optional `block` number.
+Returns the stake under a coldkey - hotkey pairing. Inputs are `hotkey`, `coldkey` and an optional `block` number.
 
 ### get_stake
 ```python
-get_stake( self, hotkey_ss58: str, block: Optional[int] = None ) -> List[Tuple[str,'cybertensor.Balance']]
+get_stake( self, hotkey: str, block: Optional[int] = None ) -> List[Tuple[str,'cybertensor.Balance']]
 ```
-Returns a list of stake tuples (coldkey, balance) for each delegating coldkey including the owner. Inputs are `hotkey_ss58` and an optional `block` number.
+Returns a list of stake tuples (coldkey, balance) for each delegating coldkey including the owner. Inputs are `hotkey` and an optional `block` number.
 
 ### does_hotkey_exist
 ```python
-does_hotkey_exist( self, hotkey_ss58: str, block: Optional[int] = None ) -> bool
+does_hotkey_exist( self, hotkey: str, block: Optional[int] = None ) -> bool
 ```
-Returns true if the hotkey is known by the chain and there are accounts. Inputs are `hotkey_ss58` and an optional `block` number.
+Returns true if the hotkey is known by the chain and there are accounts. Inputs are `hotkey` and an optional `block` number.
 
 ### get_hotkey_owner
 ```python
-get_hotkey_owner( self, hotkey_ss58: str, block: Optional[int] = None ) -> Optional[str]
+get_hotkey_owner( self, hotkey: str, block: Optional[int] = None ) -> Optional[str]
 ```
-Returns the coldkey owner of the passed hotkey if it exists. Inputs are `hotkey_ss58` and an optional `block` number.
+Returns the coldkey owner of the passed hotkey if it exists. Inputs are `hotkey` and an optional `block` number.
 
 
 ### get_axon_info
 ```python
-get_axon_info( self, hotkey_ss58: str, block: Optional[int] = None ) -> Optional[axon_info]
+get_axon_info( self, hotkey: str, block: Optional[int] = None ) -> Optional[axon_info]
 ```
-Returns the axon information for the specified hotkey account if it exists. Inputs are `hotkey_ss58` and an optional `block` number.
+Returns the axon information for the specified hotkey account if it exists. Inputs are `hotkey` and an optional `block` number.
 
 ### get_prometheus_info
 ```python
-get_prometheus_info( self, hotkey_ss58: str, block: Optional[int] = None ) -> Optional[axon_info]
+get_prometheus_info( self, hotkey: str, block: Optional[int] = None ) -> Optional[axon_info]
 ```
-Returns the prometheus information for the specified hotkey account if it exists. Inputs are `hotkey_ss58` and an optional `block` number.
+Returns the prometheus information for the specified hotkey account if it exists. Inputs are `hotkey` and an optional `block` number.
 
 ## Global state 
 
@@ -432,28 +432,28 @@ Returns information about a subnet with a given `netuid` as of a specified block
 
 ### is_hotkey_delegate
 ```python
-is_hotkey_delegate( self, hotkey_ss58: str ) -> bool
+is_hotkey_delegate( self, hotkey: str ) -> bool
 ```
 Checks if a delegate with the specified hotkey exists.
 
 
 ### get_delegate_take
 ```python
-get_delegate_take( self, hotkey_ss58: str, block: Optional[int] = None ) -> Optional[float]
+get_delegate_take( self, hotkey: str, block: Optional[int] = None ) -> Optional[float]
 ```
 Returns the 'take' (portion of the reward a delegate receives from staking) of a delegate specified by a hotkey as of a given block. If no block is provided, the default is the current block.
 
 
 ### get_nominators_for_hotkey
 ```python
-get_nominators_for_hotkey( self, hotkey_ss58: str, block: Optional[int] = None ) -> List[Tuple[str, Balance]]
+get_nominators_for_hotkey( self, hotkey: str, block: Optional[int] = None ) -> List[Tuple[str, Balance]]
 ```
 Returns a list of tuples, each containing a nominator's address and balance for the delegate specified by a hotkey as of a given block. If no block is provided, the default is the current block.
 
 
 ### get_delegate_by_hotkey
 ```python
-get_delegate_by_hotkey( self, hotkey_ss58: str, block: Optional[int] = None ) -> Optional[DelegateInfo]
+get_delegate_by_hotkey( self, hotkey: str, block: Optional[int] = None ) -> Optional[DelegateInfo]
 ```
 Returns information about a delegate specified by a hotkey as of a given block. If no block is provided, the default is the current block.
 
@@ -467,7 +467,7 @@ Returns a list of all delegates as of a specified block. If no block is provided
 
 ### get_delegated
 ```python
-get_delegated( self, coldkey_ss58: str, block: Optional[int] = None ) -> List[Tuple[DelegateInfo, Balance]]
+get_delegated( self, coldkey: str, block: Optional[int] = None ) -> List[Tuple[DelegateInfo, Balance]]
 ```
 Returns a list of delegates that a given coldkey is staked to, as of a specified block. If no block is provided, the default is the current block. Each item in the list is a tuple containing the delegate's information and the staked balance.
 
@@ -475,56 +475,56 @@ Returns a list of delegates that a given coldkey is staked to, as of a specified
 
 ### is_hotkey_registered_any
 ```python
-is_hotkey_registered_any( self, hotkey_ss58: str, block: Optional[int] = None) -> bool
+is_hotkey_registered_any( self, hotkey: str, block: Optional[int] = None) -> bool
 ```
 Returns True if the hotkey is registered on any subnet. If no block is specified, the current block is used.
 
 
 ### is_hotkey_registered_on_subnet
 ```python
-is_hotkey_registered_on_subnet( self, hotkey_ss58: str, netuid: int, block: Optional[int] = None) -> bool
+is_hotkey_registered_on_subnet( self, hotkey: str, netuid: int, block: Optional[int] = None) -> bool
 ```
 Returns True if the hotkey is registered on a specified subnet. If no block is specified, the current block is used.
 
 
 ### is_hotkey_registered
 ```python
-is_hotkey_registered( self, hotkey_ss58: str, netuid: int, block: Optional[int] = None) -> bool
+is_hotkey_registered( self, hotkey: str, netuid: int, block: Optional[int] = None) -> bool
 ```
 Returns True if the hotkey is registered on a specified subnet. If no block is specified, the current block is used.
 
 
 ### get_uid_for_hotkey_on_subnet
 ```python
-get_uid_for_hotkey_on_subnet( self, hotkey_ss58: str, netuid: int, block: Optional[int] = None) -> int
+get_uid_for_hotkey_on_subnet( self, hotkey: str, netuid: int, block: Optional[int] = None) -> int
 ```
 Returns the user id (uid) for the hotkey on a specified subnet. If no block is specified, the current block is used.
 
 
 ### get_all_uids_for_hotkey
 ```python
-get_all_uids_for_hotkey( self, hotkey_ss58: str, block: Optional[int] = None) -> List[int]
+get_all_uids_for_hotkey( self, hotkey: str, block: Optional[int] = None) -> List[int]
 ```
 Returns a list of all user ids (uids) for the hotkey. If no block is specified, the current block is used.
 
 
 ### get_netuids_for_hotkey
 ```python
-get_netuids_for_hotkey( self, hotkey_ss58: str, block: Optional[int] = None) -> List[int]
+get_netuids_for_hotkey( self, hotkey: str, block: Optional[int] = None) -> List[int]
 ```
 Returns a list of all network user ids (netuids) for the hotkey. If no block is specified, the current block is used.
 
 
 ### get_neuron_for_pubkey_and_subnet
 ```python
-get_neuron_for_pubkey_and_subnet( self, hotkey_ss58: str, netuid: int, block: Optional[int] = None ) -> Optional[NeuronInfo]
+get_neuron_for_pubkey_and_subnet( self, hotkey: str, netuid: int, block: Optional[int] = None ) -> Optional[NeuronInfo]
 ```
 Returns the neuron information for the hotkey on a specified subnet. If no block is specified, the current block is used.
 
 
 ### get_all_neurons_for_pubkey
 ```python
-get_all_neurons_for_pubkey( self, hotkey_ss58: str, block: Optional[int] = None ) -> List[NeuronInfo]
+get_all_neurons_for_pubkey( self, hotkey: str, block: Optional[int] = None ) -> List[NeuronInfo]
 ```
 Returns a list of all neurons for the hotkey. If no block is specified, the current block is used.
 

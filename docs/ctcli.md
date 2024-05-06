@@ -12,7 +12,7 @@ After you [install Cybertensor](/getting-started/installation.md) you can use `c
 ctcli [COMMAND]
 usage: ctcli <command> <command args>
 positional arguments:
-  {subnets,s,subnet,root,r,roots,wallet,w,wallets,stake,st,stakes,sudo,su,sudos,legacy,l}
+  {subnets,s,subnet,root,r,roots,wallet,w,wallets,stake,st,stakes,sudo,su,sudos}
     subnets (s, subnet)
                         Commands for managing and viewing subnetworks.
     root (r, roots)     Commands for managing and viewing the root network.
@@ -20,7 +20,11 @@ positional arguments:
                         Commands for managing and viewing wallets.
     stake (st, stakes)  Commands for staking and removing stake from hotkey accounts.
     sudo (su, sudos)    Commands for subnet management
-    legacy (l)          Miscellaneous commands.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --print-completion {bash,zsh,tcsh}
+                        Print shell tab completion script
 ```
 ---
 
@@ -52,19 +56,6 @@ ctcli wallet overview --help
 ```
 for full options.
 
-### Show history
-
-```bash
-ctcli wallet history --wallet.name <YOUR WALLET NAME>
-```
-
-Displays the last 1000 transactions performed with `<YOUR WALLET NAME>` by querying the [Taostats](https://taostats.io/) GraphQL indexer. It shows the `From`, `To`, `Amount`, `Extrinsic Id` and `Block Number`.
-
-Run,
-```bash
-ctcli wallet history --help
-```
-for help.
 
 ### List wallets
 
@@ -74,15 +65,14 @@ ctcli wallet list [OPTIONS]
 
 
 - Lists all wallets locally stored on your machine under path `--wallet.path`. 
-- Output addresses are [SS58 encoded](https://docs.substrate.io/reference/address-formats/#:~:text=case%20L%20(l)-,Address%20type,address%20bytes%20that%20follow%20it.&text=Simple%20account%2Faddress%2Fnetwork%20identifier,directly%20as%20such%20an%20identifier). 
 - Required as destinations for ```ctcli transfer```
 
 ```bash 
 ctcli wallet list
 Wallets
 └─
-    my_wallet (<ss58_address>)
-       └── my_first_hotkey (<ss58_address>)
+    my_wallet (pussy1...)
+       └── my_first_hotkey (pussy1...)
 ```
 
 ### Check balance in all wallets
@@ -111,7 +101,7 @@ ctcli w balance
 ctcli wallet new_coldkey [OPTIONS]
 ```
 
-Create a new wallet with encrypted coldkey [EdDSA cryptographic keypair](https://en.wikipedia.org/wiki/EdDSA#Ed25519):
+Create a new wallet with encrypted coldkey:
 
 ```bash
 ctcli wallet new_coldkey
@@ -123,7 +113,7 @@ ctcli wallet new_coldkey
 ctcli wallet new_hotkey [OPTIONS]
 ```
 
-Create a [EdDSA cryptographic keypair](https://en.wikipedia.org/wiki/EdDSA#Ed25519) hotkey associated with a wallet:
+Create a hotkey associated with a wallet:
 
 ```bash
 ctcli wallet new_hotkey
@@ -163,35 +153,11 @@ Regenerate a wallet with just the public seed of your coldkey:
 ctcli wallet regen_coldkeypub
 ```
 
-### Get identity
-
-```
-ctcli wallet get_identity --key <s58_address> [OPTIONS]
-```
-
-- `--key` [Optional] is the SS58 address of the coldkey or hotkey.
-
-Displays the identity details of a user's coldkey or hotkey associated with the Cybertensor network.
-
-### Set identity
-
-```bash
-ctcli wallet set_identity [OPTIONS]
-```
-
-Creates or updates a delegate's on-chain identity. This identity includes various attributes such as display name, legal name, web URL, PGP fingerprint, and contact information, among others.
-
-:::caution
-This command should only be used if the user is willing to incur the 1 TAO transaction fee associated with setting an identity on the blockchain. It is a high-level command that makes changes to the blockchain state and should not be used programmatically as part of other scripts or applications.
-:::
-
----
-
 ## Subnets
 
 ### List subnets
 
-Lists the existing subnets and shows their detailed information. In addition to the subnet details, the command fetches delegate information and provides the name of the subnet owner where available. If the owner's name is not available, the owner's SS58 address is displayed.
+Lists the existing subnets and shows their detailed information. In addition to the subnet details, the command fetches delegate information and provides the name of the subnet owner where available. If the owner's name is not available, the owner's address is displayed.
 
 Defaults to subnets on the mainchain. 
 
@@ -340,8 +306,7 @@ to see the available OPTIONS.
 ctcli wallet transfer [OPTIONS]
 ```
 
-- Transfers TAO from a wallet coldkey to another wallet public key address. 
-- Destination addresses must be [SS58 encoded](https://docs.substrate.io/reference/address-formats/#:~:text=case%20L%20(l)-,Address%20type,address%20bytes%20that%20follow%20it.&text=Simple%20account%2Faddress%2Fnetwork%20identifier,directly%20as%20such%20an%20identifier).
+- Transfers PUSSY from a wallet coldkey to another wallet public key address.
 
 ```bash
 ctcli wallet transfer
@@ -353,7 +318,7 @@ ctcli wallet transfer
 ctcli stake add [OPTIONS]
 ```
 
-Stake TAO from the coldkey balance to the hotkey staking account.
+Stake PUSSY from the coldkey balance to the hotkey staking account.
 
 ```bash
 ctcli stake add
@@ -366,7 +331,7 @@ ctcli stake add
 ctcli stake remove [OPTIONS]
 ```
 
-Remove stake TAO from the hotkey staking account and add it to the coldkey.
+Remove stake PUSSY from the hotkey staking account and add it to the coldkey.
 
 ```bash
 ctcli stake remove
@@ -382,7 +347,7 @@ ctcli stake remove
 ctcli root list_delegates
 ```
 
-List all active delegates available for delegated TAO. Displays the below output:
+List all active delegates available for delegated PUSSY. Displays the below output:
 
 [![List Delegates](/img/docs/list_delegates_screenshot.png 'Output of List Delegates')](/img/docs/list_delegates_screenshot.png)
 
@@ -393,7 +358,7 @@ List all active delegates available for delegated TAO. Displays the below output
 ctcli root delegate [OPTIONS]
 ```
 
-Delegate TAO from the coldkey balance to the hotkey staking account of a delegate.
+Delegate PUSSY from the coldkey balance to the hotkey staking account of a delegate.
 
 ```bash
 ctcli root delegate
@@ -425,7 +390,7 @@ ctcli root set_delegate_take --wallet.name my_wallet --wallet.hotkey my_hotkey -
 ```bash
 ctcli root undelegate [OPTIONS]
 ```
-Remove TAO from the hotkey balance of delegate you have previously delegated to.
+Remove PUSSY from the hotkey balance of delegate you have previously delegated to.
 
 ```bash
 ctcli root undelegate
@@ -456,106 +421,14 @@ ctcli root list
 Lists all the root network members. Shows the top 64 validators in the root network.
 
 
-### Boost weights
-
-
-```bash
-ctcli root boost [OPTIONS]
-```
-
-This command allows boosting (increasing) of weights for different subnets within the root network.
-
-Optional arguments:
-  - `--netuid` (int): A single `netuid` for which weights are to be boosted (increased).
-  - `--increase` (float): The corresponding increase in the weight for this subnet.
-
-Example:
-
-```bash
-ctcli root boost --netuid 1 --increase 0.01
-```
-
-### Slash weights
-
-
-```bash
-ctcli root slash [OPTIONS]
-```
-
-This command allows slashing (decreasing) the weights for different subnets within the root network.
-
-Optional arguments:
-  - `--netuid` (int): A single `netuid` for which weights are to be slashed (decreased).
-  - `--decrease` (float): The corresponding decrease in the weight for this subnet.
-
-Example:
-
-```bash
-ctcli root slash --netuid 1 --decrease 0.01
-```
-
----
-
-## Governance
-
-### View proposals
-
-```bash
-ctcli root proposals
-```
-
-List all active proposals for the Senate to vote on. Displays an output similar to below:
-
-[![Proposals](/img/list_proposals.png 'Output of Proposals')](/img/list_proposals.png)
-
-
-### Proposal votes
-
-```bash
-ctcli root proposals [OPTIONS]
-```
-Inspect the votes for a single proposal.
-
-```bash 
-ctcli root proposals --proposal=[PROPOSAL_HASH]
-```
-
-### Senate register
+### Root register
 
 ```bash
 ctcli root register [OPTIONS]
 ```
 
-Elect to join the Senate with your nominated hotkey.
+Elect to join the root subnet with your nominated hotkey.
 
 ```bash dark
 ctcli root register
-```
-
-### Senate vote
-
-```bash
-ctcli root senate_vote [OPTIONS]
-```
-
-Participate in a triumvirate proposal by voting with your senate hotkey.
-
-```bash 
-ctcli root senate_vote --proposal=[PROPOSAL_HASH]
-```
-
----
-
-## Misc
-
-### Update Cybertensor
-
-```bash
-ctcli legacy update [OPTIONS]
-```
-
-Update your Cybertensor installation.
-
-```bash 
-ctcli legacy update
 ```

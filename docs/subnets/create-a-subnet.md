@@ -59,38 +59,38 @@ Running a local blockchain spins up two authority nodes locally, not connected t
 
 ### Step 1. Mint tokens from faucet
 
-You will need tokens to register a subnet on your local. Run the following command to mint faucet tokens (fake TAO).
+You will need tokens to register a subnet on your local. Run the following command to mint faucet tokens (fake PUSSY).
 ```bash
 # Mint tokens for the subnet owner
 ctcli wallet faucet --wallet.name <owner-wallet-name> --subtensor.chain_endpoint ws://127.0.0.1:9946 
->> Balance: τ0.000000000 ➡ τ100.000000000
+>> Balance: GPUSSY0.000000000 ➡ GPUSSY100.000000000
 ```
 
 ### Step 2. Create the subnet
 
-Run the below command to create a new subnet on your local chain. The cost will be exactly τ100.000000000 for the first subnet you create.
+Run the below command to create a new subnet on your local chain. The cost will be exactly GPUSSY100.000000000 for the first subnet you create.
 
 ```bash
 ctcli subnet create --wallet.name owner --subtensor.chain_endpoint ws://127.0.0.1:9946 
->> Your balance is: τ200.000000000
->> Do you want to register a subnet for τ100.000000000? [y/n]: 
+>> Your balance is: GPUSSY200.000000000
+>> Do you want to register a subnet for GPUSSY100.000000000? [y/n]: 
 >> Enter password to unlock key: [YOUR_PASSWORD]
 >> ✅ Registered subnetwork with netuid: 1
 ```
 
-The local chain will now have a default `netuid` of 1. A second registration will create `netuid` 2 and so on until you reach the subnet limit of 8. If you create the 9th subnet, then the subnet with the least staked TAO will be replaced with the newly create subnet, thereby maintaining total subnet count to 8.
+The local chain will now have a default `netuid` of 1. A second registration will create `netuid` 2 and so on until you reach the subnet limit of 8. If you create the 9th subnet, then the subnet with the least staked PUSSY will be replaced with the newly create subnet, thereby maintaining total subnet count to 8.
 
 ## Creating a subnet on testchain
 
-Creating a subnet on the testchain is competitive. Though you will only use the faucet TAO tokens for testchain, the cost to create a subnet is determined by the rate at which new subnets are being registered onto the testchain. 
+Creating a subnet on the testchain is competitive. Though you will only use the faucet PUSSY tokens for testchain, the cost to create a subnet is determined by the rate at which new subnets are being registered onto the testchain. 
 
-By default you must have at least 100 testnet TAO in your owner wallet to create a subnet. However the exact amount will fluctuate based on demand. Follow the below  steps. 
+By default, you must have at least 100 testnet PUSSY in your owner wallet to create a subnet. However the exact amount will fluctuate based on demand. Follow the below  steps. 
 
 ### Step 1. Get the current price 
 
 ```bash
 ctcli subnet lock_cost --subtensor.network test
->> Subnet lock cost: τ100.000000000
+>> Subnet lock cost: GPUSSY100.000000000
 ```
 
 ### Step 2. Get faucet tokens
@@ -99,10 +99,10 @@ Faucet is disabled on the testchain. Hence, if you don't have sufficient faucet 
 
 ### Step 3. Create the subnet 
 
-Register (i.e., create) your new subnet on the testchain using the test TAO you minted from the previous step.  This will create a new subnet on the testchain and give you the owner permissions to it. This step is sometimes referred as **purchasing a slot**.
+Register (i.e., create) your new subnet on the testchain using the test PUSSY you minted from the previous step.  This will create a new subnet on the testchain and give you the owner permissions to it. This step is sometimes referred as **purchasing a slot**.
 
-:::tip Your TAO is returned when subnet is deregistered
-Subnet registration costs TAO. You will get this TAO back when the subnet is deregistered.
+:::tip Your PUSSY is returned when subnet is deregistered
+Subnet registration costs PUSSY. You will get this PUSSY back when the subnet is deregistered.
 :::
 
 ```bash
@@ -118,8 +118,8 @@ ctcli subnet create --subtensor.network test
 
 ## Creating a subnet on mainchain
 
-:::tip Alert: Minimum required TAO 
-Creating a subnet on mainnet is competitive and the cost is determined by the rate at which new networks are being registered onto the chain. By default you must have at least 100 TAO in your owner wallet to create a subnetwork. However the exact amount will fluctuate based on demand.
+:::tip Alert: Minimum required PUSSY 
+Creating a subnet on mainnet is competitive and the cost is determined by the rate at which new networks are being registered onto the chain. By default you must have at least 100 PUSSY in your owner wallet to create a subnetwork. However the exact amount will fluctuate based on demand.
 :::
 
 ### Step 1. Get the current price 
@@ -128,13 +128,13 @@ The code below shows how to get the current price of creating a subnetwork.
 
 ```bash
 ctcli subnet lock_cost
->> Subnet lock cost: τ100.000000000
+>> Subnet lock cost: GPUSSY100.000000000
 ```
 
 ### Step 2. Create the subnet 
 
-:::tip Your TAO is returned when subnet is deregistered
-Subnet registration costs TAO. You will get this TAO back when the subnet is deregistered.
+:::tip Your PUSSY is returned when subnet is deregistered
+Subnet registration costs PUSSY. You will get this PUSSY back when the subnet is deregistered.
 :::
 
 Use the below command to register a new subnet on the mainchain. 
