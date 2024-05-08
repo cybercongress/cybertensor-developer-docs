@@ -12,7 +12,7 @@ import { SiRootssage } from "react-icons/si";
 This section presents key information for each subnet. Click on a subnet card to go to its details page. 
 
 :::tip Updating subnet details page
-If your subnet details page need updates, then [submit a GitHub issue](https://github.com/opentensor/developer-docs/issues/new).
+If your subnet details page need updates, then [submit a GitHub issue](https://github.com/cybercongress/cybertensor-developer-docs/issues/new).
 :::
 
 <Cards>

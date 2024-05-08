@@ -114,9 +114,6 @@ const sidebars = {
     "root-network",
     // "reference/cybertensor-api-ref",
     "yuma-consensus",
-    "governance",
-    "senate",
-    "utilities",
     "glossary",
   ],
 };

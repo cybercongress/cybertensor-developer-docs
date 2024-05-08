@@ -50,16 +50,14 @@ Each category of the digital commodity is produced in a distinct **subnet**. App
 
 Subnets, which exist outside the blockchain and are connected to it, are off-chain competitions where only the best producers are rewarded. A subnet consists of off-chain **subnet validators** who initiate the competition for a specific digital commodity, and off-chain **subnet miners** who compete and respond by producing the best quality digital commodity. 
 
-Scores are assigned to the top subnet miners and subnet validators. The on-chain Yuma Consensus determines **the PUSSY rewards for these top performers**. The Cybertensor blockchain, called **subtensor**, runs on decentralized validation nodes, just like any blockchain. 
-
-For example, in the [Subnet 1 Prompting](https://github.com/opentensor/prompting) the subnet miners compete to generate answers that are closest to a machine learning base model chosen by the subnet validators. 
+Scores are assigned to the top subnet miners and subnet validators. The on-chain Yuma Consensus determines **the PUSSY rewards for these top performers**. The Cybertensor blockchain, called **subtensor**, runs on decentralized validation nodes, just like any blockchain.
 
 
 :::tip looking for a non-technical introduction to Cybertensor?
 See [Questions and Answers](./questions-and-answers.md).
 :::
 
-Opentensor Foundation provides all the open source tools, the codebase and the documentation, with step-by-step tutorials and guides, to enable you to participate in the Cybertensor ecosystem. 
+Cybercongress provides the open source tools, the codebase and the documentation, with step-by-step tutorials and guides, to enable you to participate in the Cybertensor ecosystem. 
 
 :::danger This documentation is for Cybertensor platform only
 
@@ -117,16 +115,6 @@ You can participate in an existing subnet as either a subnet validator or a subn
     title='4. Staking and Delegation'
     link='staking-and-delegation'
     body='Get to know how staking and delegating your PUSSY works in the Cybertensor network.' />
-    <Card
-    icon={RiGovernmentLine}
-    title='Governance'
-    link='governance'
-    body='Learn how the Cybertensor governance works as it transitions into full community-ownership over time.' />
-    <Card
-    icon={FaGalacticSenate}
-    title='Senate'
-    link='senate'
-    body='Understand what Senate is, requirements to participate in a Senate and how voting works.' />
     
 </Cards>
 

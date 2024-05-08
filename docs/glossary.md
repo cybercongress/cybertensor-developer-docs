@@ -20,10 +20,6 @@ A module in the Cybertensor API that uses the FastAPI library to create and run 
 
 ## B
 
-### Bicameral Legislature
-
-A two-tier legislative system comprising the Triumvirate and the Senate for proposal approval.
-
 ### Cybertensor Wallet
 
 A digital wallet that holds the core ownership in the Cybertensor network and serves as the user's identity technology underlying all operations.
@@ -120,7 +116,7 @@ A component of a Cybertensor wallet responsible for less secure operations such 
 
 ### Hotkey-Coldkey Pair
 
-Authentication mechanism for delegates and nominators and for delegates participating in the Senate.
+Authentication mechanism for delegates and nominators.
 
 ## I 
 
@@ -218,10 +214,6 @@ In the context of machine learning and subnet operations, this refers to the goa
 
 A private component of the cryptographic key pair, crucial for securing and authorizing transactions and operations within the Cybertensor network.
 
-### Proposal
-
-A suggestion or plan put forward by the Triumvirate for the Senate to vote on.
-
 ### Proposal hash
 
 A unique identifier for a proposal used in the voting process.
@@ -266,10 +258,6 @@ A special kind of subnet with a netuid of 0, responsible for determining the emi
 Validators in the root network. The largest 64 subnet validators across all active subnets, in terms of the subnet validator stake, are by default the  validators in the root network.
 
 ## S 
-
-### Senate
-
-A group of elected delegates formed from the top K delegate hotkeys, responsible for approving or disapproving proposals made by the Triumvirate.
 
 ### Stake
 
@@ -329,7 +317,7 @@ The underlying blockchain technology of the Cybertensor network that records tra
 
 ### Sudo
 
-A privileged key for administrative actions, replaced by governance protocol for enhanced security.
+A privileged key for administrative actions.
 
 ### Synapse
 
@@ -344,10 +332,6 @@ A 360-block period during which the Yuma Consensus calculates and distributes re
 ### Transfer
 
 The process of sending PUSSY tokens from one wallet address to another in the Cybertensor network.
-
-### Triumvirate
-
-A group of three Opentensor Foundation employees responsible for creating proposals.
 
 ### Trust
 

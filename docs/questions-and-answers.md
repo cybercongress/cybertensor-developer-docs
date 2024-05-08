@@ -55,10 +55,10 @@ See more here in [How a subnet works](learn/introduction.md#how-a-subnet-works).
 
 ### So is there a separate blockchain validation on Cybertensor?
 
-Yes. As we saw in the above [So where does the blockchain come in](#so-where-does-the-blockchain-come-in) section, the subtensor blockchain is an essential part of the Cybertensor. 
-This subtensor blockchain is like any blockchain, i.e., there are validator nodes, hosted by the Opentensor Foundation and functioning via Proof-of-Authority, that validate the transactions coming into the subtensor blockchain and post them in the subtensor blockchain ledger. 
-Blocks containing such transactions are processed at the rate of one block every 12 seconds. 
-You can run your own public subtensor node to synchronize with the Cybertensor mainchain or testchain. 
+Yes. As we saw in the above [So where does the blockchain come in](#so-where-does-the-blockchain-come-in) section, the Cybertensor based on the space-pussy blockchain. 
+This space-pussy blockchain is like any blockchain, i.e., there are validator nodes functioning via Proof-of-Stake, that validate the transactions coming into the space-pussy blockchain and post them in the space-pussy blockchain ledger. 
+Blocks containing such transactions are processed at the rate of one block every 5 seconds. 
+You can run your own public space-pussy node to synchronize with the Cybertensor. 
 
 :::tip See also
 See [Space Pussy Nodes](https://github.com/greatweb/space-pussy). 
@@ -84,10 +84,6 @@ See [Emissions](./emissions.md) for details, in specific the role of the root ne
 ### I don't want to create a subnet, can I just be a miner or a validator?
 
 Yes. But remember, you have 32 different subnets to choose from. Requirements for mining or validating are subnet-specific. Start with this [Checklist for Validating and Mining](./subnets/checklist-for-validating-mining.md). Then see the step by step instructions in [Register, Validate and Mine](./subnets/register-validate-mine.md).
-
-### Is there a central place where I can see compute requirements for mining and validating for all subnets?
-
-Unfortunately no. Not all subnets are run or managed by Opentensor Foundation. Moreover, a poor-performing subnet might be removed from a `netuid` and a new subnet may have taken its place. We have not automated tracking the subnets this way yet. Your best approach is to visit each subnet's GitHub repo for documentation via [Subnet Pages](./subnet-pages/index.md).
 
 ### Can I be a subnet miner or a subnet validator forever?
 

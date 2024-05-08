@@ -45,7 +45,7 @@ If you are a registered subnet validator, you can become a delegate. To become a
 
 The nominators will then delegate their PUSSY to this hotkey, i.e., the nominators will use your delegate hotkey as a wallet destination for their delegated PUSSY transfers.
 
-#### Step 1: Nominate yourself as a delegate
+#### Nominate yourself as a delegate
 
 Run the below command (for self nominating as a delegate):
 
@@ -54,21 +54,6 @@ ctcli root nominate
     --wallet.name YOUR_WALLET_NAME
     --wallet.hotkey YOUR_HOTKEY_NAME
 ```
-
-#### Step 2: Provide your delegate information 
-
-Next, provide your delegate information, such as your delegate name, URL and description. This information will then be available in the list of active delegates, for example, when a nominator runs `ctcli root list_delegates` to see available delegates. 
-
-To provide this information and sign it, follow the instructions on this [Bittensor Delegates repo](https://github.com/opentensor/bittensor-delegates#2023-03-23---first-version).
-
-### Setting your delegate take
-
-As a delegate you can set your delegate percentage by running the below command:
-
-```bash
-ctcli root set_delegate_take --wallet.name my_wallet --wallet.hotkey my_hotkey --take 0.1
-```
-where the value for the `--take` option is a floating point number between 0 and 1. In the above example, `--take 0.1` sets the delegate take as 10%.
 
 ## Nominator examples
 
