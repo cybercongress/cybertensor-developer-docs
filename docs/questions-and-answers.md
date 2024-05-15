@@ -29,7 +29,7 @@ It depends on the subnet. For example, in subnet 1 the miner task is to respond 
 
 ### So where does the blockchain come in?
 
-The subtensor blockchain records all the key activity of all the subnets in its ledger. But most importantly, the subtensor blockchain determines the rewards distribution for subnet miners and subnet validators. An algorithm called Yuma Consensus (YC) is always running on the blockchain. Rankings of the subnet miners set by the subnet validators are input to the YC algorithm. Every 12 seconds, the YC algorithm computes the rewards based on these inputs. These rewards (in PUSSY) are then deposited into the wallets of subnet miners and subnet validators. The subtensor blockchain continuously runs the YC algorithm for each subnet separately.
+The blockchain records all the key activity of all the subnets in its ledger. But most importantly, the cybertensor contract determines the rewards distribution for subnet miners and subnet validators. An algorithm called Yuma Consensus (YC) is always running on the blockchain. Rankings of the subnet miners set by the subnet validators are input to the YC algorithm. Every 5 seconds, the YC algorithm computes the rewards based on these inputs. These rewards (in PUSSY) are then deposited into the wallets of subnet miners and subnet validators. The cybertensor contract continuously runs the YC algorithm for each subnet separately.
 
 :::tip See also
 See [Introduction](./learn/introduction.md) and [Anatomy of Incentive Mechanism](./learn/anatomy-of-incentive-mechanism.md) next.
@@ -37,7 +37,7 @@ See [Introduction](./learn/introduction.md) and [Anatomy of Incentive Mechanism]
 
 ### So we have 32 subnets, do they talk to each other?
 
-A new abstract base class, called `SubnetsAPI` is released in Cybertensor `6.8.0` and your application can use this to enable cross subnet communication. Normally, however, if you are not using the `SubnetsAPI`, then the subtensor blockchain does not mix data from one subnet with another subnet data and a subnet does not communicate with another subnet. 
+A new abstract base class, called `SubnetsAPI` is released in Cybertensor `6.8.0` and your application can use this to enable cross subnet communication. Normally, however, if you are not using the `SubnetsAPI`, then the cybertensor contract does not mix data from one subnet with another subnet data and a subnet does not communicate with another subnet. 
 
 :::tip See also
 See [Cybertensor Subnets API](https://github.com/cybercongress/cybertensor/blob/master/README.md#bittensor-subnets-api).
@@ -67,15 +67,15 @@ See [Space Pussy Nodes](https://github.com/greatweb/space-pussy).
 
 ### What is the incentive for me to be a miner or a validator, or even create a subnet? 
 
-Your incentive is that you earn PUSSY. It works like this. Every 12 seconds a new PUSSY is created (i.e., minted). 
+Your incentive is that you earn PUSSY. It works like this. Every 5 seconds a new PUSSY is created (i.e., minted). 
 This single PUSSY is then distributed among the 32 subnets. 
-So every 12 seconds each subnet gets a fraction of this newly-created PUSSY, based on the performance of the subnet. 
+So every 5 seconds each subnet gets a fraction of this newly-created PUSSY, based on the performance of the subnet. 
 This fractional PUSSY reward that a subnet receives, called emission, is, in turn, distributed within the subnet like this: 
 - 18% of it goes to the subnet owner.
 - 41% goes to subnet validators (this is called dividend).
 - 41% goes to the subnet miners (this is called incentive). 
 
-Like this, every day 7200 PUSSY (86,400 seconds in a day, one PUSSY per 12 seconds) are newly created and distributed as rewards. 
+Like this, every day 7200 PUSSY (86,400 seconds in a day, one PUSSY per 5 seconds) are newly created and distributed as rewards. 
 
 :::tip See also
 See [Emissions](./emissions.md) for details, in specific the role of the root network in determining which subnet gets how much reward.

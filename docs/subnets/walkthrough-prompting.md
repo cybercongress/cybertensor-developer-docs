@@ -25,7 +25,7 @@ You can see the prompting subnet in action on the [Cybertensor explorer (select 
 
 If you are new to Cybertensor subnets and building blocks, read the following sections before you proceed further:
 
-- [Cybertensor Building Blocks](../learn/bittensor-building-blocks).
+- [Cybertensor Building Blocks](../learn/cybertensor-building-blocks).
 - [Anatomy of Incentive Mechanism](../learn/anatomy-of-incentive-mechanism).
 
 The below diagram shows a typical subnet with many subnet miners and subnet validators together executing the subnet incentive mechanism code. On the [Taostats explorer (select Subnet 01: Text Prompting from the top menu)](https://taostats.io/) the **Metagraph** view for this Subnet 1: Prompting shows the performance details for each subnet miner and validator. 

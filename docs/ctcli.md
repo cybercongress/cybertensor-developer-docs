@@ -195,7 +195,7 @@ to see the available OPTIONS.
 This command is intended for advanced users of the Cybertensor network who wish to contribute by adding new subnets. It requires a clear understanding of the Cybertensor network's functioning and the roles of subnets. Users should ensure that they have secured their wallet and are aware of the implications of adding a new subnetwork to the Cybertensor ecosystem.
 :::
 
-Creates and registers a new subnet. This involves interaction with the user's wallet and the Cybertensor subtensor. It ensures that the user has the necessary credentials and configurations to successfully register a new subnet.
+Creates and registers a new subnet. This involves interaction with the user's wallet and the Cybertensor contract. It ensures that the user has the necessary credentials and configurations to successfully register a new subnet.
 
 ```bash
 ctcli subnets create [OPTIONS]

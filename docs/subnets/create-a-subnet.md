@@ -49,11 +49,11 @@ Registering a subnet will create the subnet. This step is also referred as **pur
 
 ## Creating a local subnet (staging)
 
-### Local blockchain vs local subtensor node 
+### Local blockchain vs local node 
 
-Running a local blockchain is sometimes synonymously referred as **running on staging**. This is **different** from running a local subtensor node that connects to the Cybertensor mainchain. 
+Running a local blockchain is sometimes synonymously referred as **running on staging**. This is **different** from running a local node that connects to the Cybertensor mainchain. 
 
-A local subtensor node will connect to the mainchain and sync with the mainchain, giving you your own access point to the mainchain. 
+A local node will connect to the mainchain and sync with the mainchain, giving you your own access point to the mainchain. 
 
 Running a local blockchain spins up two authority nodes locally, not connected to any other nodes or testchain or mainchain. The below instructions are applicable when you want to create a local subnet together with creating a local blockchain. 
 
@@ -62,7 +62,7 @@ Running a local blockchain spins up two authority nodes locally, not connected t
 You will need tokens to register a subnet on your local. Run the following command to mint faucet tokens (fake PUSSY).
 ```bash
 # Mint tokens for the subnet owner
-ctcli wallet faucet --wallet.name <owner-wallet-name> --subtensor.chain_endpoint ws://127.0.0.1:9946 
+ctcli wallet faucet --wallet.name <owner-wallet-name> --cwtensor.chain_endpoint ws://127.0.0.1:9946 
 >> Balance: GPUSSY0.000000000 ➡ GPUSSY100.000000000
 ```
 
@@ -71,7 +71,7 @@ ctcli wallet faucet --wallet.name <owner-wallet-name> --subtensor.chain_endpoint
 Run the below command to create a new subnet on your local chain. The cost will be exactly GPUSSY100.000000000 for the first subnet you create.
 
 ```bash
-ctcli subnet create --wallet.name owner --subtensor.chain_endpoint ws://127.0.0.1:9946 
+ctcli subnet create --wallet.name owner --cwtensor.chain_endpoint ws://127.0.0.1:9946 
 >> Your balance is: GPUSSY200.000000000
 >> Do you want to register a subnet for GPUSSY100.000000000? [y/n]: 
 >> Enter password to unlock key: [YOUR_PASSWORD]
@@ -89,7 +89,7 @@ By default, you must have at least 100 testnet PUSSY in your owner wallet to cre
 ### Step 1. Get the current price 
 
 ```bash
-ctcli subnet lock_cost --subtensor.network test
+ctcli subnet lock_cost --cwtensor.network test
 >> Subnet lock cost: GPUSSY100.000000000
 ```
 
@@ -107,7 +107,7 @@ Subnet registration costs PUSSY. You will get this PUSSY back when the subnet is
 
 ```bash
 # Run the register subnetwork command on the testchain.
-ctcli subnet create --subtensor.network test 
+ctcli subnet create --cwtensor.network test 
 # Enter the owner wallet name which gives permissions to the coldkey to later define running hyper parameters.
 >> Enter wallet name (default): owner # Enter your owner wallet name
 >> Enter password to unlock key: # Enter your wallet password.

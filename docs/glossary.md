@@ -12,11 +12,11 @@ A UID slot that is considered active within a specific subnet, allowing the asso
 
 ### Archive Node
 
-A type of public subtensor node that stores the entire blockchain history, allowing for full data access and querying capabilities.
+A type of public blockchain node that stores the entire blockchain history, allowing for full data access and querying capabilities.
 
 ### Axon
 
-A module in the Cybertensor API that uses the FastAPI library to create and run API servers. Axons receive incoming Synapse objects. Typically an Axon is the entry point advertised by a subnet miner on the Cybertensor blockchain, allowing subnet validators to communicate with the miner.
+A module in the Cybertensor API that uses the FastAPI library to create and run API servers. Axons receive incoming Synapse objects. Typically, an Axon is the entry point advertised by a subnet miner on the Cybertensor blockchain, allowing subnet validators to communicate with the miner.
 
 ## B
 
@@ -26,7 +26,7 @@ A digital wallet that holds the core ownership in the Cybertensor network and se
 
 ### Block
 
-A unit of data in the Cybertensor blockchain, containing a collection of transactions and a unique identifier (block hash). A single block is processed every 12 seconds in the Cybertensor blockchain. 
+A unit of data in the Cybertensor blockchain, containing a collection of transactions and a unique identifier (block hash). A single block is processed every 5 seconds in the Cybertensor blockchain. 
 
 ## C
 
@@ -41,6 +41,10 @@ A combination of two keys, a coldkey for secure storage and high-risk operations
 ### Consensus
 
 A measure of a subnet validator's agreement with other validators on the network, calculated based on their trust scores. This is a κ-centered sigmoid of trust, influencing the emission calculation.
+
+### Cwtensor
+
+A Cybertensor object that handles interactions with the cybertensor contract, whether it is a local, testchain, or mainchain.
 
 ## D
 
@@ -136,7 +140,7 @@ A system that drives the behavior of subnet miners and governs consensus among s
 
 ### Lite Node
 
-A type of public subtensor node that stores limited blockchain data and relies on archive nodes for full historical data.
+A type of public space-pussy node that stores limited blockchain data and relies on archive nodes for full historical data.
 
 ### Local Blockchain
 
@@ -222,9 +226,9 @@ A unique identifier for a proposal used in the voting process.
 
 A cryptographic key that is publicly available and used for verifying signatures, encrypting messages, and identifying accounts in the Cybertensor network. This is the publicly shareable part of the cryptographic key pair associated with both the coldkey and hotkey, allowing others to securely interact with the wallet.
 
-### Public Subtensor
+### Public Node
 
-A publicly accessible node in the Cybertensor network that can be run as a lite node or an archive node and synchronized with either the mainchain or testchain.
+A publicly accessible node in the space-pussy network that can be run as a lite node or an archive node and synchronized with either the mainchain or testchain.
 
 ### PUSSY
 
@@ -258,6 +262,10 @@ A special kind of subnet with a netuid of 0, responsible for determining the emi
 Validators in the root network. The largest 64 subnet validators across all active subnets, in terms of the subnet validator stake, are by default the  validators in the root network.
 
 ## S 
+
+### Space-Pussy Blockchain
+
+The underlying blockchain technology of the Cybertensor network that records transactions, rankings, and the distribution of rewards.
 
 ### Stake
 
@@ -307,14 +315,6 @@ A type of node in a subnet that creates tasks, evaluates the performance of subn
 
 The importance assigned to each subnet by the root network validators, used to determine the percentage allocation of PUSSY to each subnet.
 
-### Subtensor
-
-A Cybertensor object that handles interactions with the Subtensor blockchain, whether it is a local, testchain, or mainchain.
-
-### Subtensor Blockchain
-
-The underlying blockchain technology of the Cybertensor network that records transactions, rankings, and the distribution of rewards.
-
 ### Sudo
 
 A privileged key for administrative actions.
@@ -327,7 +327,7 @@ A data object used by subnet validators and subnet miners as the main vehicle to
 
 ### Tempo
 
-A 360-block period during which the Yuma Consensus calculates and distributes reward PUSSY tokens to subnet participants based on the latest available ranking weight matrix. A single block is processed every 12 seconds, hence a 360-block tempo occurs every 4320 seconds or 72 minutes. 
+A 360-block period during which the Yuma Consensus calculates and distributes reward PUSSY tokens to subnet participants based on the latest available ranking weight matrix. A single block is processed every 5 seconds, hence a 360-block tempo occurs every 1800 seconds or 30 minutes. 
 
 ### Transfer
 

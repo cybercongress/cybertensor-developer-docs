@@ -11,7 +11,7 @@ ctcli subnet hyperparameters
 ```
 
 :::tip Current hyperparameters list
-**Not all the hyperparameters in the output of `ctcli subnet hyperparameters` are editable**. See [this line of code](https://github.com/opentensor/bittensor/blob/30d3d646571ed462e36c65c399c09ec866de7c79/bittensor/commands/network.py#L293) for the editable hyperparameters.
+**Not all the hyperparameters in the output of `ctcli subnet hyperparameters` are editable**. See [this code](https://github.com/cybercongress/cybertensor/blob/57fb4aee79aba34843686f2fa39aa2afdb4b7c63/cybertensor/commands/network.py#L310-L326) for the editable hyperparameters.
 ::: 
 
 ## Setting the hyperparameters
@@ -126,7 +126,7 @@ Immunity period also exists for a subnet. See [Immunity period for a subnet](./c
 
 ### Example
 
-Consider Subnet-1, that has its `immunity_period` set to 7200 blocks. The duration of a block is 12 seconds. Hence a subnet validator or a subnet miner at any UID in Subnet-1 has 24 hours (=7200 blocks) from the moment they have registered, before they will be considered for deregistration. 
+Consider Subnet-1, that has its `immunity_period` set to 7200 blocks. The duration of a block is 5 seconds. Hence, a subnet validator or a subnet miner at any UID in Subnet-1 has 24 hours (=7200 blocks) from the moment they have registered, before they will be considered for deregistration. 
 
 :::tip Managing node deregistration during major updates
 The subnet owner may modify the [`immunity_period`](#immunity_period) at any given time, as well as temporarily turn off [`network_registration_allowed`] to allow established nodes (miners and/or validators) to adjust to major codebase updates without being deregistered.
@@ -152,7 +152,7 @@ The value of `min_allowed_weights` sets a lower bound for the consensus. A highe
 
 A subnet validator can be considered as poorly performing if they set weights on only five subnet miners, when the `min_allowed_weights` is set to 8. This might occur due to a variety of reasons, for example: Maybe the subnet validator does not have enough stake to query the subnet miners, or maybe the subnet validator is part of a cabal engaged in cheating the system. 
 
-In this case, none of the actual weight-setting extrinsics that the subnet validator sends to the chain will be accepted. Hence on the chain it will look like this subnet validator has not set any weights at all. The Yuma Consensus may conclude that this subnet validator is performing poorly and after the `immunity_period` expires, this subnet validator could be deregistered to make room for others waiting to be miners or validators.
+In this case, none of the actual weight-setting extrinsics that the subnet validator sends to the chain will be accepted. Hence, on the chain it will look like this subnet validator has not set any weights at all. The Yuma Consensus may conclude that this subnet validator is performing poorly and after the `immunity_period` expires, this subnet validator could be deregistered to make room for others waiting to be miners or validators.
 
 :::important Minimum 1000 PUSSY required to set weights 
 A validate function will blacklist set-weights transactions from keys with less than 1000 PUSSY. This is designed to reduce chain bloat and make it easier for validators and root network participants to set weights on the chain. 
@@ -186,7 +186,7 @@ A factor that controls the subnet registrations adjustment interval. This hyperp
 For example: If the target registration was `2` and there was `1` burn registration in the interval, the registration cost halving would apply to POW. On the other hand, if there were 1 POW registration, it would decrease the registration burn costs by half. In this way the `adjustment_alpha` mechanism tries to balance out the registration burn and POW costs.
 
 :::important
-By default this change from `0` to `0.97` does not effect already registered subnets. However, to take advantage of the new value, we strongly recommend that existing subnet owners update this value by setting it through the CLI, by running the below command. The `--value 17893341751498265066` corresponds to setting the `adjustment_alpha` to `0.97`. See [this line of code](https://github.com/opentensor/subtensor/pull/249/files#diff-731a2a37ce113771b45fd0a44bf63d71307465bcb1ce26353eed95c1f4d4c26cR728).
+By default this change from `0` to `0.97` does not affect already registered subnets. However, to take advantage of the new value, we strongly recommend that existing subnet owners update this value by setting it through the CLI, by running the below command. The `--value 17893341751498265066` corresponds to setting the `adjustment_alpha` to `0.97`. See [this line of code](https://github.com/opentensor/subtensor/pull/249/files#diff-731a2a37ce113771b45fd0a44bf63d71307465bcb1ce26353eed95c1f4d4c26cR728).
 :::
 
 ```bash

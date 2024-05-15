@@ -30,7 +30,7 @@ const sidebars = {
       collapsed: false,
       items: [
         "learn/introduction",
-        "learn/bittensor-building-blocks",
+        "learn/cybertensor-building-blocks",
         "learn/anatomy-of-incentive-mechanism",
       ],
     },

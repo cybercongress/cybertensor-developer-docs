@@ -6,22 +6,22 @@ title: "Cybertensor API Reference"
 
 ## ct.cwtensor 
 
-The `Cwtensor` is utilized for managing interactions with the subtensor chain. It serves as an interface to communicate with "Finney", Cybertensor's main blockchain network, or others, enabling operations like querying and transacting.
+The `Cwtensor` is utilized for managing interactions with the space-pussy chain. It serves as an interface to communicate with "space-pussy", Cybertensor's main blockchain network, or others, enabling operations like querying and transacting.
 
 ### Examples 
 
 ```python dark
-# Creating a default chain connection to remote finney instance.
-sub = ct.cwtensor()
+# Creating a default chain connection to remote space-pussy instance.
+cw = ct.cwtensor()
 
-# Parsing --subtensor.network and --subtensor.chain_endpoint from the command line
-sub = ct.cwtensor( config = ct.cwtensor.config() )
+# Parsing --cwtensor.network and --cwtensor.chain_endpoint from the command line
+cw = ct.cwtensor( config = ct.cwtensor.config() )
 
-# Connecting subtensor's default local entrypoint "ws://127.0.0.1:9944"
-sub = ct.cwtensor( network = 'local' )
+# Connecting cwtensor's default local entrypoint "grpc+http://localhost:9090"
+cw = ct.cwtensor( network = 'local' )
 
 # Connecting to a specific endpoint
-sub = ct.cwtensor( chain_endpoint = "ws://127.0.0.1:9944" )
+cw = ct.cwtensor( chain_endpoint = "grpc+http://localhost:9090" )
 ```
 
 ### Methods 
@@ -34,7 +34,8 @@ Designates the wallet's hotkey as a delegate.
 
 #### delegate
 ```python
-delegate(self, wallet: 'cybertensor.wallet', delegate: Optional[str] = None, amount: Union[Balance, float] = None, wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
+delegate(self, wallet: 'cybertensor.Wallet', delegate: Optional[str] = None, amount: Union[Balance, float] = None, 
+wait_for_inclusion: bool = True, wait_for_finalization: bool = False, prompt: bool = False) -> bool
 ```
 Adds a specific amount of stake to a delegate using a wallet.
 
@@ -626,16 +627,16 @@ obj = ct.cwtensor( config, network, chain_endpoint )
 ### Arguments 
 
 - `config (ct.Config, optional, defaults=ct.cwtensor.config())`:
-    Subtensor config object containing arguments from ct.cwtensor.config() which are automatically parsed from command line and ENV vars.
-- `network (str, optional, default='finney')`:
-    The subtensor network flag. The likely choices are:
+    Cwtensor config object containing arguments from ct.cwtensor.config() which are automatically parsed from command line and ENV vars.
+- `network (str, optional, default='space-pussy')`:
+    The cwtensor network flag. The likely choices are:
             -- local (local running network)
-            -- finney (main network)
+            -- space-pussy (main network)
             -- mock (mock network for testing.)
-    If this option is set it overloads subtensor.chain_endpoint with
+    If this option is set it overloads cwtensor.chain_endpoint with
     an entry point node from that network.
 - `chain_endpoint (str, default=None)`:
-    The subtensor endpoint flag. If set, overrides the network argument.
+    The cwtensor endpoint flag. If set, overrides the network argument.
 
 
 ## ct.metagraph
@@ -649,13 +650,13 @@ The `Metagraph` class holds the chain state of a particular subnetwork at a spec
 ```python dark
 import cybertensor as ct
 
-# Creating metagraph and sync state from a netuid parameter, defaults to connecting to network `finney`
+# Creating metagraph and sync state from a netuid parameter, defaults to connecting to network `space-pussy`
 metagraph = ct.metagraph( netuid = 1 )
 
 # Create metagraph and sync with lite = False to sync weights and bonds matrices.
 metagraph = ct.metagraph( netuid = 1, lite = False)
 
-# Create metagraph and sync state from local entrypoint, assuming a subtensor chain is currently running.
+# Create metagraph and sync state from local entrypoint, assuming a space-pussy chain is currently running.
 metagraph = ct.metagraph( netuid = 1, network = 'local' )
 
 # Create an empty metagraph object with no state syncing.
@@ -787,7 +788,7 @@ Returns a dictionary of Metagraph metadata.
 
 #### __init__
 ```python
-def __init__(self, netuid: int, network: str = 'finney', lite: bool = True, sync: bool = True) -> 'metagraph'
+def __init__(self, netuid: int, network: str = 'space-pussy', lite: bool = True, sync: bool = True) -> 'metagraph'
 ```
 Initializes a new instance of the Metagraph.
 

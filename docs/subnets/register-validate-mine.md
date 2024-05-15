@@ -149,7 +149,7 @@ sources={{
 style={{width: 990}}
 />
 
-- Blocks are processed in the subtensor (Cybertensor blockchain) at every 12 seconds. 
+- Blocks are processed in the space-pussy blockchain at every 5 seconds. 
 - A subnet miner registers a hotkey and receives a UID&mdash;and its immunity period starts.
 - The subnet miner starts running and publishes its Axon's `IP:PORT` for the subnet validators.
 - The subnet validators refresh their metagraph and will know about the hotkey change on the UID and the new miner Axon's ``IP:PORT`` information. 
@@ -208,7 +208,7 @@ In the below code, replace the `hotkey` field value with the address of your hot
 import cybertensor as ct
 # Replace below with your hotkey 
 hotkey = "5HEo565WAy4Dbq3Sv271SAi7syBSofyfhhwRNjFNSM2gP9M2"
-network = "finney"
+network = "space-pussy"
 sub = ct.cwtensor(network)
 print(f"Registration status for hotkey {hotkey} is: {sub.is_hotkey_registered(hotkey)}")
 ```
@@ -221,7 +221,7 @@ In the below code, replace the `hotkey` field value with the address of your hot
 import cybertensor as ct
 # Replace below with your hotkey 
 hotkey = "5HEo565WAy4Dbq3Sv271SAi7syBSofyfhhwRNjFNSM2gP9M2"
-network = "finney"
+network = "space-pussy"
 netuid = 1 # subnet uid
 sub = ct.cwtensor(network)
 mg = sub.metagraph(netuid)
@@ -239,7 +239,7 @@ Additionally, if you also know your UID, replace `uid` value with your UID:
 import cybertensor as ct
 # Replace below with your hotkey 
 hotkey = "5HEo565WAy4Dbq3Sv271SAi7syBSofyfhhwRNjFNSM2gP9M2"
-network = "finney"
+network = "space-pussy"
 netuid = 1 # subnet uid
 sub = ct.cwtensor(network)
 mg = sub.metagraph(netuid)
