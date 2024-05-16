@@ -7,12 +7,12 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # OCR Subnet Tutorial
 
-In this tutorial you will learn how to quickly convert your validated idea into a functional Bittensor subnet. This tutorial begins with a Python notebook that contains the already validated code for optical character recognition (OCR). We demonstrate how straightforward it is to start with such notebooks and produce a working subnet.
+In this tutorial you will learn how to quickly convert your validated idea into a functional Cybertensor subnet. This tutorial begins with a Python notebook that contains the already validated code for optical character recognition (OCR). We demonstrate how straightforward it is to start with such notebooks and produce a working subnet.
 
 
 ## Motivation 
 
-Bittensor subnets are:
+Cybertensor subnets are:
 - Naturally suitable for continuous improvement of the subnet miners. 
 - High throughput environments to accomplish such improvements. 
 
@@ -23,7 +23,7 @@ This is the motivation for creating an OCR subnet for this tutorial. By using th
 When you complete this tutorial, you will know the following:
 
 - How to convert your Python notebook containing the validated idea into a working Bittensor subnet.  
-- How to use the [Bittensor Subnet Template](https://github.com/opentensor/bittensor-subnet-template) to accomplish this goal.
+- How to use the [Cybertensor Subnet Template](https://github.com/cybercongress/cybertensor-subnet-template) to accomplish this goal.
 - How to perform subnet validation and subnet mining.
 - How to design your own subnet incentive mechanism.
 
@@ -50,10 +50,10 @@ For the rest of this tutorial we will proceed by demonstrating which blocks of P
 
 ### Required reading
 
-If you are new to Bittensor, read the following sections before you proceed:
+If you are new to Cybertensor, read the following sections before you proceed:
 
-1. [Introduction](../learn/introduction.md) that describes how subnets form the heartbeat of the Bittensor network.
-2. [Bittensor Building Blocks](../learn/bittensor-building-blocks.md) that presents the basic building blocks you use to develop your subnet incentive mechanism.
+1. [Introduction](../learn/introduction.md) that describes how subnets form the heartbeat of the Cybertensor network.
+2. [Bittensor Building Blocks](../learn/cybertensor-building-blocks) that presents the basic building blocks you use to develop your subnet incentive mechanism.
 3. [Anatomy of Incentive Mechanism](../learn/anatomy-of-incentive-mechanism.md) that introduces the general concept of a subnet incentive mechanism. 
 
 ## OCR subnet summary
@@ -75,7 +75,7 @@ sources={{
 
 <!-- ## Step 1. Clone the template
 
-1. Go to [Bittensor Subnet Template](https://github.com/opentensor/bittensor-subnet-template) and click on the **Use this template** dropdown on the top right. 
+1. Go to [Bittensor Subnet Template](https://github.com/cybercongress/cybertensor-subnet-template) and click on the **Use this template** dropdown on the top right. 
 2. Click on **Create a new repository** and give your preferred name in the **Repository name** field. We will use the name **ocr_subnet** in this tutorial. 
 3. Optionally provide a description in the **Description** field. 
 4. Choose either **Public** or **Private**.
@@ -178,14 +178,14 @@ However, in a Bittensor subnet, any communication between a subnet validator and
 #### Code snapshot
 
 ```python
-# OCRSynapse class, using bt.Synapse as its base.
+# OCRSynapse class, using ct.Synapse as its base.
 # This protocol enables communication between the miner and the validator.
 # Attributes:
 #    - image: A pdf image to be processed by the miner.
 #    - response: List[dict] containing data extracted from the image.
-class OCRSynapse(bt.Synapse):
+class OCRSynapse(ct.Synapse):
    """
-    A simple OCR synapse protocol representation which uses bt.Synapse as its base.
+    A simple OCR synapse protocol representation which uses ct.Synapse as its base.
     This protocol enables communication betweenthe miner and the validator.
 
     Attributes:
@@ -218,7 +218,7 @@ See the `OCRSynapse` class definition in [**ocr_subnet/protocol.py**](https://gi
 ```
 
 :::tip Study tip
-See [Neuron-to-neuron communication](../learn/bittensor-building-blocks.md#neuron-to-neuron-communication).
+See [Neuron-to-neuron communication](../learn/cybertensor-building-blocks#neuron-to-neuron-communication).
 :::
 
 #### Send OCRSynapse to miners

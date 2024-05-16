@@ -17,11 +17,11 @@ The weights for the subnets are set by the root network validators. These root n
 
 ## Subnet owner
 
-Opentensor Foundation
+[pussy1ggda2n35v7zkwucufzp25mp34p0adp0x9zqrt3](https://spacepussy.ai/neuron/pussy1ggda2n35v7zkwucufzp25mp34p0adp0x9zqrt3)
 
 ## GitHub
 
-https://github.com/opentensor/bittensor
+https://github.com/cybercongress/cybertensor
 
 <!-- 
 ## Hyperparameters

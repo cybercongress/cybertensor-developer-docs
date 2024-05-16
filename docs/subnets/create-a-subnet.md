@@ -5,13 +5,13 @@ title: "Create a Subnet"
 # Create a Subnet
 
 :::tip Note to miners and validators
-You **do not** have to create a subnet to mine or validate on the Bittensor network. See the [Checklist for Validating and Mining](./checklist-for-validating-mining.md) for information on mining and validating on Bittensor.
+You **do not** have to create a subnet to mine or validate on the Cybertensor network. See the [Checklist for Validating and Mining](./checklist-for-validating-mining.md) for information on mining and validating on Cybertensor.
 :::
 
 Before you create your first subnet, we strongly recommend that you follow the below order:
 1. First create a subnet on your local, and develop and test your incentive mechanism on the local subnet. 
-2. After you are satisfied with it, next create a subnet on the Bittensor testchain, and test and debug your incentive mechanism on this testchain subnet. 
-3. Finally, only after you completed the above steps, create a subnet on the Bittensor mainchain. 
+2. After you are satisfied with it, next create a subnet on the Cybertensor testchain, and test and debug your incentive mechanism on this testchain subnet. 
+3. Finally, only after you completed the above steps, create a subnet on the Cybertensor mainchain. 
 
 :::tip Subnet Registration Limits
 Subnet registrations are limited to **one registration per 7200 blocks** (approximately one day).
@@ -21,7 +21,7 @@ Subnet registrations are limited to **one registration per 7200 blocks** (approx
 
 The notion of [immunity_period](./subnet-hyperparameters.md#immunity_period) applies to a subnet also. It works like this:
 
-- Subnets are competitive and only 32 subnet slots exist in the Bittensor network. As a result, subnet performance is continously monitored, poor-performing subnets are deregistered and the registration cost will be returned to the deregistered subnet owner. 
+- Subnets are competitive and only 32 subnet slots exist in the Cybertensor network. As a result, subnet performance is continously monitored, poor-performing subnets are deregistered and the registration cost will be returned to the deregistered subnet owner. 
 
 - A subnet's performance is measured using the emissions earned by the subnet: The lower the emission earned by the subnet, the poorer is the subnet's performance. See [Emissions](../emissions.md).
 
@@ -40,7 +40,7 @@ When a subnet is deregistered, all its UIDs are also deregistered along with it.
 
 To create a subnet, whether locally or on testchain or on mainchain, make sure that:
 
-- You [installed Bittensor](../getting-started/installation.md). 
+- You [installed Cybertensor](../getting-started/installation.md). 
 - You have already [created a wallet or know how to create one](../getting-started/wallets.md#creating-a-local-wallet). 
 
 :::tip Registering vs creating vs purchasing a slot 
@@ -49,65 +49,65 @@ Registering a subnet will create the subnet. This step is also referred as **pur
 
 ## Creating a local subnet (staging)
 
-### Local blockchain vs local subtensor node 
+### Local blockchain vs local node 
 
-Running a local blockchain is sometimes synonymously referred as **running on staging**. This is **different** from running a local subtensor node that connects to the Bittensor mainchain. 
+Running a local blockchain is sometimes synonymously referred as **running on staging**. This is **different** from running a local node that connects to the Cybertensor mainchain. 
 
-A local subtensor node will connect to the mainchain and sync with the mainchain, giving you your own access point to the mainchain. 
+A local node will connect to the mainchain and sync with the mainchain, giving you your own access point to the mainchain. 
 
 Running a local blockchain spins up two authority nodes locally, not connected to any other nodes or testchain or mainchain. The below instructions are applicable when you want to create a local subnet together with creating a local blockchain. 
 
 ### Step 1. Mint tokens from faucet
 
-You will need tokens to register a subnet on your local. Run the following command to mint faucet tokens (fake TAO).
+You will need tokens to register a subnet on your local. Run the following command to mint faucet tokens (fake PUSSY).
 ```bash
 # Mint tokens for the subnet owner
-btcli wallet faucet --wallet.name <owner-wallet-name> --subtensor.chain_endpoint ws://127.0.0.1:9946 
->> Balance: τ0.000000000 ➡ τ100.000000000
+ctcli wallet faucet --wallet.name <owner-wallet-name> --cwtensor.chain_endpoint ws://127.0.0.1:9946 
+>> Balance: GPUSSY0.000000000 ➡ GPUSSY100.000000000
 ```
 
 ### Step 2. Create the subnet
 
-Run the below command to create a new subnet on your local chain. The cost will be exactly τ100.000000000 for the first subnet you create.
+Run the below command to create a new subnet on your local chain. The cost will be exactly GPUSSY100.000000000 for the first subnet you create.
 
 ```bash
-btcli subnet create --wallet.name owner --subtensor.chain_endpoint ws://127.0.0.1:9946 
->> Your balance is: τ200.000000000
->> Do you want to register a subnet for τ100.000000000? [y/n]: 
+ctcli subnet create --wallet.name owner --cwtensor.chain_endpoint ws://127.0.0.1:9946 
+>> Your balance is: GPUSSY200.000000000
+>> Do you want to register a subnet for GPUSSY100.000000000? [y/n]: 
 >> Enter password to unlock key: [YOUR_PASSWORD]
 >> ✅ Registered subnetwork with netuid: 1
 ```
 
-The local chain will now have a default `netuid` of 1. A second registration will create `netuid` 2 and so on until you reach the subnet limit of 8. If you create the 9th subnet, then the subnet with the least staked TAO will be replaced with the newly create subnet, thereby maintaining total subnet count to 8.
+The local chain will now have a default `netuid` of 1. A second registration will create `netuid` 2 and so on until you reach the subnet limit of 8. If you create the 9th subnet, then the subnet with the least staked PUSSY will be replaced with the newly create subnet, thereby maintaining total subnet count to 8.
 
 ## Creating a subnet on testchain
 
-Creating a subnet on the testchain is competitive. Though you will only use the faucet TAO tokens for testchain, the cost to create a subnet is determined by the rate at which new subnets are being registered onto the testchain. 
+Creating a subnet on the testchain is competitive. Though you will only use the faucet PUSSY tokens for testchain, the cost to create a subnet is determined by the rate at which new subnets are being registered onto the testchain. 
 
-By default you must have at least 100 testnet TAO in your owner wallet to create a subnet. However the exact amount will fluctuate based on demand. Follow the below  steps. 
+By default, you must have at least 100 testnet PUSSY in your owner wallet to create a subnet. However the exact amount will fluctuate based on demand. Follow the below  steps. 
 
 ### Step 1. Get the current price 
 
 ```bash
-btcli subnet lock_cost --subtensor.network test
->> Subnet lock cost: τ100.000000000
+ctcli subnet lock_cost --cwtensor.network test
+>> Subnet lock cost: GPUSSY100.000000000
 ```
 
 ### Step 2. Get faucet tokens
 
-Faucet is disabled on the testchain. Hence, if you don't have sufficient faucet tokens, ask the [Bittensor Discord community](https://discord.com/channels/799672011265015819/830068283314929684) for faucet tokens.
+Faucet is disabled on the testchain. Hence, if you don't have sufficient faucet tokens, ask the [Cybertensor Discord community](https://discord.com/channels/799672011265015819/830068283314929684) for faucet tokens.
 
 ### Step 3. Create the subnet 
 
-Register (i.e., create) your new subnet on the testchain using the test TAO you minted from the previous step.  This will create a new subnet on the testchain and give you the owner permissions to it. This step is sometimes referred as **purchasing a slot**.
+Register (i.e., create) your new subnet on the testchain using the test PUSSY you minted from the previous step.  This will create a new subnet on the testchain and give you the owner permissions to it. This step is sometimes referred as **purchasing a slot**.
 
-:::tip Your TAO is returned when subnet is deregistered
-Subnet registration costs TAO. You will get this TAO back when the subnet is deregistered.
+:::tip Your PUSSY is returned when subnet is deregistered
+Subnet registration costs PUSSY. You will get this PUSSY back when the subnet is deregistered.
 :::
 
 ```bash
 # Run the register subnetwork command on the testchain.
-btcli subnet create --subtensor.network test 
+ctcli subnet create --cwtensor.network test 
 # Enter the owner wallet name which gives permissions to the coldkey to later define running hyper parameters.
 >> Enter wallet name (default): owner # Enter your owner wallet name
 >> Enter password to unlock key: # Enter your wallet password.
@@ -118,8 +118,8 @@ btcli subnet create --subtensor.network test
 
 ## Creating a subnet on mainchain
 
-:::tip Alert: Minimum required TAO 
-Creating a subnet on mainnet is competitive and the cost is determined by the rate at which new networks are being registered onto the chain. By default you must have at least 100 TAO in your owner wallet to create a subnetwork. However the exact amount will fluctuate based on demand.
+:::tip Alert: Minimum required PUSSY 
+Creating a subnet on mainnet is competitive and the cost is determined by the rate at which new networks are being registered onto the chain. By default you must have at least 100 PUSSY in your owner wallet to create a subnetwork. However the exact amount will fluctuate based on demand.
 :::
 
 ### Step 1. Get the current price 
@@ -127,21 +127,21 @@ Creating a subnet on mainnet is competitive and the cost is determined by the ra
 The code below shows how to get the current price of creating a subnetwork.
 
 ```bash
-btcli subnet lock_cost
->> Subnet lock cost: τ100.000000000
+ctcli subnet lock_cost
+>> Subnet lock cost: GPUSSY100.000000000
 ```
 
 ### Step 2. Create the subnet 
 
-:::tip Your TAO is returned when subnet is deregistered
-Subnet registration costs TAO. You will get this TAO back when the subnet is deregistered.
+:::tip Your PUSSY is returned when subnet is deregistered
+Subnet registration costs PUSSY. You will get this PUSSY back when the subnet is deregistered.
 :::
 
 Use the below command to register a new subnet on the mainchain. 
 
 ```bash
 # Run the below command to create a subnet on the mainchain (default is mainchain)
-btcli subnet create
+ctcli subnet create
 >> Enter wallet name (default): owner # Enter your owner wallet name
 >> Enter password to unlock key: # Enter your wallet password.
 >> Register subnet? [y/n]: <y/n> # Select yes (y)

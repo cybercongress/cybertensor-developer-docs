@@ -24,10 +24,10 @@ The POW and Recycle difficulties are adaptively adjusted every 100 blocks based 
 ### Viewing current difficulty
 Using the cli
 ```bash dark
-btcli subnets list
-NETUID  NEURONS  MAX_N   DIFFICULTY  TEMPO  CON_REQ  EMISSION  BURN(τ)
-1       691    1.02 K   198.08 T    99     None     28.44%   τ4.75710
-3      4096    4.10 K   320.81 T    99     None     71.56%   τ1.00000
+ctcli subnets list
+NETUID  NEURONS  MAX_N   DIFFICULTY  TEMPO  CON_REQ  EMISSION  BURN(GPUSSY)
+1       691    1.02 K   198.08 T    99     None     28.44%   GPUSSY4.75710
+3      4096    4.10 K   320.81 T    99     None     71.56%   GPUSSY1.00000
     DIFFICULTY: Current proof of work difficulty
     BURN: Current cost to register a key via recycle registration.
 ```

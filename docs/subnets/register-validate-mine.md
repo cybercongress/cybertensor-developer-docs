@@ -14,7 +14,7 @@ To participate either as a subnet validator or subnet miner, you must register f
 Run the below command to register your keys. The `YOUR_PREFERRED_NETUID` is the `netuid` of your preferred subnet.
 
 ```bash
-btcli subnet register --netuid YOUR_PREFERRED_NETUID --wallet.name YOUR_COLDKEY --wallet.hotkey YOUR_HOTKEY
+ctcli subnet register --netuid YOUR_PREFERRED_NETUID --wallet.name YOUR_COLDKEY --wallet.hotkey YOUR_HOTKEY
 ```
 
 Registering works like this:
@@ -23,7 +23,7 @@ Registering works like this:
 - Your hotkey, which is part of your wallet, becomes the holder of the UID slot. **The terms "account" and "hotkey" are used synonymously.**
 
 :::tip Ownership belongs to a hotkey
-Ownership belongs to a hotkey. Hence, for example, when you delegate your TAO to a subnet validator, you attach your delegated TAO to the hotkey of the subnet validator. See [Delegation](../staking-and-delegation/delegation.md). 
+Ownership belongs to a hotkey. Hence, for example, when you delegate your PUSSY to a subnet validator, you attach your delegated PUSSY to the hotkey of the subnet validator. See [Delegation](../staking-and-delegation/delegation.md). 
 
 A hotkey can hold multiple UIDs across **separate** subnets. However within one subnet, each UID must have a unique hotkey. 
 :::
@@ -38,7 +38,7 @@ While wallet transactions like delegating, transfer, registering, staking can be
 
 To become a subnet validator, you must:
 1. Register your keys to the subnet (as described above).
-2. Stake sufficient TAO on your hotkey to secure [validator permit](#validator-permit).
+2. Stake sufficient PUSSY on your hotkey to secure [validator permit](#validator-permit).
 
 ### Staking
 
@@ -46,25 +46,25 @@ To become a subnet validator, you must:
 See also [Delegation](../staking-and-delegation/delegation.md)
 :::
 
-You stake by attaching TAO to your hotkey. Attaching TAO to your hotkey can be achieved in two ways:
+You stake by attaching PUSSY to your hotkey. Attaching PUSSY to your hotkey can be achieved in two ways:
 
-#### Stake your own TAO
+#### Stake your own PUSSY
 
-By staking your own TAO funds to your hotkey that holds the UID in the subnet where you want to validate.
+By staking your own PUSSY funds to your hotkey that holds the UID in the subnet where you want to validate.
 ```bash
 # Stake funds to your hotkey account within the subnet.
-btcli stake add
+ctcli stake add
     --wallet.name YOUR_WALLET_NAME
     --wallet.hotkey YOUR_HOTKEY_NAME
 ```
 
 #### Attract delegated stake 
 
-By attracting delegated stake from the nominators. For this you must first nominate your hotkey as a delegate and then advertising your hotkey. The nominators can then delegate their TAO to your hotkey. 
+By attracting delegated stake from the nominators. For this you must first nominate your hotkey as a delegate and then advertising your hotkey. The nominators can then delegate their PUSSY to your hotkey. 
 
 ```bash
 # Nominate your hotkey as a delegate
-btcli root nominate
+ctcli root nominate
     --wallet.name YOUR_WALLET_NAME
     --wallet.hotkey YOUR_HOTKEY_NAME
 ```
@@ -77,25 +77,25 @@ See [Becoming a delegate](../staking-and-delegation/delegation.md#becoming-a-del
 
 Only the largest 64 subnet validators, in terms of stake, on any particular subnet are considered to have **validator permit**. Only the subnet validators with permit are considered active in a subnet. 
 
-#### Calculate TAO required 
+#### Calculate PUSSY required 
 
-The amount of TAO needed to acquire a validator permit depends on how the other largest 64 wallets distribute TAO across themselves. You can calculate the minimum using [bt.metagraph](../reference/bittensor-api-ref.md#btmetagraph):
+The amount of PUSSY needed to acquire a validator permit depends on how the other largest 64 wallets distribute PUSSY across themselves. You can calculate the minimum using [ct.metagraph](../reference/bittensor-api-ref.md#btmetagraph):
 
 ```python
-import bittensor as bt
-subnet = bt.metagraph(1)
+import cybertensor as ct
+subnet = ct.metagraph(1)
 top_64_stake = subnet.S.sort()[0][-64:].tolist()
-print (f'Current requirement for validator permits based on the top 64 stake stands at {min(top_64_stake)} tao')
+print (f'Current requirement for validator permits based on the top 64 stake stands at {min(top_64_stake)} pussy')
 ```
 
 #### Check the permit status 
 
 This information can be obtained from the metagraph using your UID.
 ```python
-import bittensor as bt
-subnet = bt.metagraph(1)
-wallet = bt.wallet( name = 'my_wallet_name', hotkey = 'my_validator_hotkey_name' )
-my_uid = subnet.hotkeys.index( wallet.hotkey.ss58_address )
+import cybertensor as ct
+subnet = ct.metagraph(1)
+wallet = ct.Wallet( name = 'my_wallet_name', hotkey = 'my_validator_hotkey_name' )
+my_uid = subnet.hotkeys.index( wallet.hotkey.address )
 print ('validator permit', subnet.validator_permit[ my_uid ])
 ```
 
@@ -149,7 +149,7 @@ sources={{
 style={{width: 990}}
 />
 
-- Blocks are processed in the subtensor (Bittensor blockchain) at every 12 seconds. 
+- Blocks are processed in the space-pussy blockchain at every 5 seconds. 
 - A subnet miner registers a hotkey and receives a UID&mdash;and its immunity period starts.
 - The subnet miner starts running and publishes its Axon's `IP:PORT` for the subnet validators.
 - The subnet validators refresh their metagraph and will know about the hotkey change on the UID and the new miner Axon's ``IP:PORT`` information. 
@@ -166,29 +166,29 @@ Note that the subnet miner incentive, instead of growing as a continuous graph a
 After you obtain a UID slot you can view the status of your registered wallet by running:
 
 ```bash
-btcli wallet overview --netuid
+ctcli wallet overview --netuid
 ```
 
 After providing your wallet name at the prompt, you will see the following output:
 
-| Parameter         | Value | Description |
-| :---------------- | :------: | :---- |
-| COLDKEY        |   my_coldkey   | The name of the coldkey associated with your slot. |
-| HOTKEY      | my_first_hotkey      |    The name of the hotkey associated with your slot.                          |
-| UID         | 5                    |    The index of the uid out of available uids.                                   |
-| ACTIVE      | True                 |    Whether or not the uid is considered active.                                  |
-| STAKE(τ)    | 71.296               |    The amount of stake in this wallet.                                           |
-| RANK        | 0.0629               |    This miner's absolute ranking according to validators on the network.         |
-| TRUST       | 0.2629               |    This miner's trust as a proportion of validators on the network.              |
-| CONSENSUS   | 0.89                 |    This validator's aggregate consensus score.                                       |
-| INCENTIVE   | 0.029                |    This miner's incentive, TAO emission attained via mining.                     |
-| DIVIDENDS   | 0.001                |    This validator's dividends, TAO emission attained via validating.                 |
-| EMISSION    | 29_340_153           |    This miner's total emission in RAO ( 10<sup>-9</sup> TAO ) per block.                   |
-| VTRUST      | 0.96936              |    This validators trust score as a validator.                                   |
-| VPERMIT     | *                    |    Whether this miner is considered active for validating on this subnetwork.    |
-| UPDATED     | 43                   |    Blocks since this miner set weights on the chain.                             |
-| AXON        | 131.186.56.85:8091   |    The entrypoint advertised by this miner on bittensor blockchain.              |
-| HOTKEY_SS58 | 5F4tQyWr...          |    The raw ss58 encoded address of the miner's hotkey.                           |
+| Parameter    | Value | Description                                                                |
+|:-------------| :------: |:---------------------------------------------------------------------------|
+| COLDKEY      |   my_coldkey   | The name of the coldkey associated with your slot.                         |
+| HOTKEY       | my_first_hotkey      | The name of the hotkey associated with your slot.                          |
+| UID          | 5                    | The index of the uid out of available uids.                                |
+| ACTIVE       | True                 | Whether or not the uid is considered active.                               |
+| STAKE(GPUSSY)     | 71.296               | The amount of stake in this wallet.                                        |
+| RANK         | 0.0629               | This miner's absolute ranking according to validators on the network.      |
+| TRUST        | 0.2629               | This miner's trust as a proportion of validators on the network.           |
+| CONSENSUS    | 0.89                 | This validator's aggregate consensus score.                                |
+| INCENTIVE    | 0.029                | This miner's incentive, PUSSY emission attained via mining.                |
+| DIVIDENDS    | 0.001                | This validator's dividends, PUSSY emission attained via validating.        |
+| EMISSION     | 29_340_153           | This miner's total emission in PUSSY ( 10<sup>-9</sup> GPUSSY ) per block. |
+| VTRUST       | 0.96936              | This validators trust score as a validator.                                |
+| VPERMIT      | *                    | Whether this miner is considered active for validating on this subnetwork. |
+| UPDATED      | 43                   | Blocks since this miner set weights on the chain.                          |
+| AXON         | 131.186.56.85:8091   | The entrypoint advertised by this miner on bittensor blockchain.           |
+| HOTKEY       | 5F4tQyWr...          | The address of the miner's hotkey.                                         |
 
 
 In the above table, the `ACTIVE` row is applicable only for UIDs that are subnet validators. It shows whether the UID is actively setting the weights within the [`activity_cutoff`](./subnet-hyperparameters#activity_cutoff) window. If the UID has not set weights on the blockchain for `activity_cutoff` duration, then the Yuma Consensus will consider this subnet validator as offline, i.e., turned off (`False`).
@@ -200,30 +200,30 @@ To check the registration status of your UID, use any one of the below Python co
 - **Using Python interpreter**: A straightforward way is to type "python" or "python3" on your macOS or Linux terminal and it will open up a Python interpreter. Copy and paste the entire code fragment into it and hit "Return" and see the output.
 - **Using Python binary**: Or you can use the Python binary. Copy the code fragment into a file, say, "check_reg.py" and run the command `python3 check_reg.py` or `python check_reg.py` on your terminal command line and see the output.
 
-### With SS58 hotkey
+### With hotkey
 
-In the below code, replace the `hotkey` field value with the SS58 version of your hotkey:
+In the below code, replace the `hotkey` field value with the address of your hotkey:
 
 ```python
-import bittensor as bt
-# Replace below with your SS58 hotkey 
+import cybertensor as ct
+# Replace below with your hotkey 
 hotkey = "5HEo565WAy4Dbq3Sv271SAi7syBSofyfhhwRNjFNSM2gP9M2"
-network = "finney"
-sub = bt.subtensor(network)
+network = "space-pussy"
+sub = ct.cwtensor(network)
 print(f"Registration status for hotkey {hotkey} is: {sub.is_hotkey_registered(hotkey)}")
 ```
 
-### With SS58 hotkey and netuid
+### With hotkey and netuid
 
-In the below code, replace the `hotkey` field value with the SS58 version of your hotkey and the `netuid` field value with the `netuid` of the subnet you have registered into:
+In the below code, replace the `hotkey` field value with the address of your hotkey and the `netuid` field value with the `netuid` of the subnet you have registered into:
 
 ```python
-import bittensor as bt
-# Replace below with your SS58 hotkey 
+import cybertensor as ct
+# Replace below with your hotkey 
 hotkey = "5HEo565WAy4Dbq3Sv271SAi7syBSofyfhhwRNjFNSM2gP9M2"
-network = "finney"
+network = "space-pussy"
 netuid = 1 # subnet uid
-sub = bt.subtensor(network)
+sub = ct.cwtensor(network)
 mg = sub.metagraph(netuid)
 if hotkey not in mg.hotkeys:
   print(f"Hotkey {hotkey} deregistered")
@@ -231,17 +231,17 @@ else:
   print(f"Hotkey {hotkey} is registered")
 ```
 
-### With UID and SS58 hotkey
+### With UID and hotkey
 
 Additionally, if you also know your UID, replace `uid` value with your UID:
 
 ```python
-import bittensor as bt
-# Replace below with your SS58 hotkey 
+import cybertensor as ct
+# Replace below with your hotkey 
 hotkey = "5HEo565WAy4Dbq3Sv271SAi7syBSofyfhhwRNjFNSM2gP9M2"
-network = "finney"
+network = "space-pussy"
 netuid = 1 # subnet uid
-sub = bt.subtensor(network)
+sub = ct.cwtensor(network)
 mg = sub.metagraph(netuid)
 uid = 2 # Your UID
 registered = mg.hotkeys[uid] == hotkey

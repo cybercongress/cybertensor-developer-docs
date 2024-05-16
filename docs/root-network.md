@@ -6,7 +6,7 @@ title: "Root Network"
 
 The root network is a special kind of subnet. The root network has the `netuid` of 0.
 
-**Root network validators**: The largest 64 subnet validators, in terms of their stake, from amongst all the subnet validators in all the active subnets in the Bittensor network, are, by default, the validators in the root network. 
+**Root network validators**: The largest 64 subnet validators, in terms of their stake, from amongst all the subnet validators in all the active subnets in the Cybertensor network, are, by default, the validators in the root network. 
 
 **Root network miners**: There are no network miners in the root network. Instead, the 32 subnets take their place. The 64 root network validators set the weights for the 32 subnets. 
     
@@ -22,8 +22,8 @@ Structurally speaking, a root network is not that different from any other subne
 
 Behaviorally speaking, root network validators behave much the same way as any other subnet validator. A root network validator expresses their opinion on the quality of the subnets, similar to how a non-root subnet validator expresses their opinion on the quality of subnet miners in its subnet. 
 
-:::important Minimum 1000 TAO required to set weights 
-A validate function will blacklist set-weights transactions from keys with less than 1000 TAO. This is designed to reduce chain bloat and make it easier for validators and root network participants to set weights on the chain. 
+:::important Minimum 1000 PUSSY required to set weights 
+A validate function will blacklist set-weights transactions from keys with less than 1000 PUSSY. This is designed to reduce chain bloat and make it easier for validators and root network participants to set weights on the chain. 
 :::
 
 See the [Emissions](./emissions.md) document where we consider the subnet weights (set by the root validators) as **inputs** and proceed to present emission calculations as **outputs**. 

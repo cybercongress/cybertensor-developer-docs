@@ -9,11 +9,11 @@ var darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 
 var config = {
-  title: 'Bittensor',
+  title: 'Cybertensor',
   tagline: 'Developer Documentation',
   favicon: 'img/favicon.ico',
   // Set the production url of your site here
-  url: 'https://docs.bittensor.com',
+  url: 'https://docs.spacepussy.ai',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -52,14 +52,14 @@ var config = {
     navbar: {
       title: '',
       logo: {
-        alt: 'Bittensor',
+        alt: 'Cybertensor',
         src: 'img/logo.svg'
       },
       items: []
     },
     footer: {
       style: 'dark',
-      copyright: "Built in ".concat(new Date().getFullYear(), " by <a href=\"https://bittensor.com\">Bittensor</a> with Docusaurus.")
+      copyright: "Built in ".concat(new Date().getFullYear(), " by <a href=\"https://spacepussy.ai/cybernet\">Cybertensor</a> with Docusaurus.")
     },
     prism: {
       theme: lightCodeTheme,

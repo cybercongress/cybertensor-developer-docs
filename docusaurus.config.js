@@ -11,20 +11,20 @@ const darkTheme = themes.dracula;
 const math = require("remark-math");
 const katex = require("rehype-katex");
 
-/** @type {import('@docusaurus/types').Config} */
+/** @type {import("@docusaurus/types").Config} */
 const config = {
-  title: "Bittensor",
+  title: "Cybertensor",
   tagline: "Developer Documentation",
   favicon: "img/favicon.ico",
   // Set the production url of your site here
-  url: "https://docs.bittensor.com",
+  url: "http://docs.spacepussy.ai",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "opentensor", // Usually your GitHub org/user name.
-  projectName: "developer-docs", // Usually your repo name.
+  organizationName: "cybercongress", // Usually your GitHub org/user name.
+  projectName: "cybertensor-developer-docs", // Usually your repo name.
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   // Even if you don't use internalization, you can use this field to set useful
@@ -34,18 +34,18 @@ const config = {
   customFields: {
     enableIssueLinks: true, // Set to true to enable issue links
     enableEditUrlLinks: true, // Set to true to enable edit url links
-    issueBaseUrl: "https://github.com/opentensor/developer-docs/issues",
-    enableFeedback: false, // Set to false to disable feedback
+    issueBaseUrl: "https://github.com/cybercongress/cybertensor-developer-docs/issues",
+    enableFeedback: false // Set to false to disable feedback
   },
 
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en"]
   },
   presets: [
     [
       "@docusaurus/preset-classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      /** @type {import("@docusaurus/preset-classic").Options} */
       ({
         docs: {
           routeBasePath: "/",
@@ -56,13 +56,13 @@ const config = {
           sidebarCollapsible: true,
           showLastUpdateTime: true,
           docItemComponent: "@theme/DocItem",
-          editUrl: "https://github.com/opentensor/developer-docs/blob/main/",
+          editUrl: "https://github.com/cybercongress/cybertensor-developer-docs/blob/main/"
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
-        },
-      }),
-    ],
+          customCss: require.resolve("./src/css/custom.css")
+        }
+      })
+    ]
   ],
   plugins: [
     "@gracefullight/docusaurus-plugin-vercel-analytics",
@@ -71,40 +71,40 @@ const config = {
       {
         redirects: [
           {
-            to: "/btcli",
-            from: "/reference/btcli",
+            to: "/ctcli",
+            from: "/reference/ctcli"
           },
           {
             to: "/subnets/checklist-for-validating-mining",
-            from: "/subnets/checklist-for-subnet",
+            from: "/subnets/checklist-for-subnet"
           },
           {
             to: "/subnets/register-validate-mine",
-            from: "/subnets/register-and-participate",
+            from: "/subnets/register-and-participate"
           },
           {
             to: "/staking-and-delegation/delegation",
-            from: "/delegation",
+            from: "/delegation"
           },
           {
-            to: "/staking-and-delegation/staking-polkadot-js",
-            from: "/staking/staking-polkadot-js",
+            to: "/staking-and-delegation/staking",
+            from: "/staking/staking"
           },
           {
             to: "/staking-and-delegation",
-            from: "/staking",
+            from: "/staking"
           },
           {
             to: "/subnets/walkthrough-prompting",
-            from: "/subnets/code-walkthrough-text-prompting",
-          },
-          {
-            to: "/subtensor-nodes",
-            from: "/getting-started/running-a-public-subtensor",
-          },
-        ],
-      },
-    ],
+            from: "/subnets/code-walkthrough-text-prompting"
+          }
+          // {
+          //   to: "/subtensor-nodes",
+          //   from: "/getting-started/running-a-public-subtensor",
+          // },
+        ]
+      }
+    ]
   ],
   // scripts: [
   //   // String format.
@@ -122,37 +122,40 @@ const config = {
       type: "text/css",
       integrity:
         "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
-      crossorigin: "anonymous",
-    },
+      crossorigin: "anonymous"
+    }
   ],
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  /** @type {import("@docusaurus/preset-classic").ThemeConfig} */
     ({
       // Replace with your project's social card
       image: "img/bittensor-dev-docs-social-card.png",
+      colorMode: {
+        defaultMode: "dark"
+      },
       docs: {
         sidebar: {
           autoCollapseCategories: true,
-          hideable: false,
-        },
+          hideable: false
+        }
       },
 
       navbar: {
         logo: {
-          alt: "Bittensor",
-          src: "img/logo.svg",
-          srcDark: "img/logo-dark-mode.svg",
-          href: "https://bittensor.com",
+          alt: "Cybertensor",
+          src: "img/logo-dark-mode.png",
+          srcDark: "img/logo-dark-mode.png",
+          href: "https://spacepussy.ai/cybernet",
           style: {
             objectFit: "contain",
-            width: 21,
-          },
+            width: 48
+          }
         },
         items: [
           // {
           //   position: "left",
           //   label: "Bittensor API",
-          //   to: "bt-api-ref",
+          //   to: "ct-api-ref",
           // },
           // {
           //   position: "left",
@@ -167,20 +170,20 @@ const config = {
           {
             type: "search",
             position: "left",
-            className: "custom_algolia",
+            className: "custom_algolia"
           },
-          // {
-          //   href: "https://github.com/opentensor/developer-docs",
-          //   label: "Docs GitHub",
-          //   position: "right",
-          // },
-        ],
+          {
+            href: "https://github.com/cybercongress/cybertensor-developer-docs",
+            label: "Docs GitHub",
+            position: "right",
+          },
+        ]
       },
 
       prism: {
         theme: lightTheme,
         darkTheme: darkTheme,
-        additionalLanguages: ["bash", "python", "diff", "json"],
+        additionalLanguages: ["bash", "python", "diff", "json"]
       },
       algolia: {
         appId: "B07G29NY9F",
@@ -188,19 +191,19 @@ const config = {
         indexName: "new--alpha",
         contextualSearch: true,
         insights: true,
-        debug: false,
+        debug: false
       },
       footer: {
         copyright: `
 					<div className="copyRight">
-						© ${new Date().getFullYear()} <a href="https://bittensor.com">Bittensor</a> • Opentensor Foundation. <span>all rights reserved.</span>
+						© ${new Date().getFullYear()} <a href="https://spacepussy.ai/cybernet">Cybertensor</a> • <a href="https://github.com/opentensor">Opentensor Foundation</a>  • <a href="https://github.com/cybercongress">Cybercongress</a>
 					</div>
-					<a href='https://bittensor.com/'>
-					<img src="img/logo-dark-mode.svg" alt="logo"/>
+					<a href='https://spacepussy.ai/cybernet/'>
+					<img src="img/logo-dark-mode.png" alt="logo"/>
 					</a>
-				`,
-      },
-    }),
+				`
+      }
+    })
 };
 
 module.exports = config;
