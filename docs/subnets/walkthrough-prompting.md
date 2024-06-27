@@ -18,7 +18,7 @@ In this section we present a high-level walkthrough of the [Subnet 1: Prompting]
 This subnet is driven by large language models (LLMs). These LLMs search the internet and utilize specialized simulator modules to produce factually accurate and mathematically correct responses. 
 
 :::tip Subnet 1 Explorer
-You can see the prompting subnet in action on the [Cybertensor explorer (select Subnet 1)](https://spacepussy.ai/cybernet/subnets). 
+You can see the prompting subnet in action on the [Cybertensor explorer (select Subnet 1)](https://spacepussy.ai/cyberver/verses/pussy/ml/faculties). 
 :::
 
 ## Before you proceed

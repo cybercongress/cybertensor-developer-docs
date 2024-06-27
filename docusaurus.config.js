@@ -145,7 +145,7 @@ const config = {
           alt: "Cybertensor",
           src: "img/logo-dark-mode.png",
           srcDark: "img/logo-dark-mode.png",
-          href: "https://spacepussy.ai/cybernet",
+          href: "https://spacepussy.ai/cyberver/verses/pussy/ml",
           style: {
             objectFit: "contain",
             width: 48
@@ -196,9 +196,9 @@ const config = {
       footer: {
         copyright: `
 					<div className="copyRight">
-						© ${new Date().getFullYear()} <a href="https://spacepussy.ai/cybernet">Cybertensor</a> • <a href="https://github.com/opentensor">Opentensor Foundation</a>  • <a href="https://github.com/cybercongress">Cybercongress</a>
+						© ${new Date().getFullYear()} <a href="https://spacepussy.ai/cyberver/verses/pussy/ml">Cybertensor</a> • <a href="https://github.com/opentensor">Opentensor Foundation</a>  • <a href="https://github.com/cybercongress">Cybercongress</a>
 					</div>
-					<a href='https://spacepussy.ai/cybernet/'>
+					<a href='https://spacepussy.ai/cyberver/verses/pussy/ml'>
 					<img src="img/logo-dark-mode.png" alt="logo"/>
 					</a>
 				`
